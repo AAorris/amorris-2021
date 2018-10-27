@@ -1,0 +1,16 @@
+import React from 'react'
+import App, {Container} from 'next/app'
+
+export default class MyApp extends App {
+  render () {
+    const {Component, pageProps} = this.props
+    return <Container>
+      <style jsx global>{`
+        body {
+          margin: 0;
+        }
+      `}</style>
+      <Component {...pageProps} />
+    </Container>
+  }
+}

@@ -1,0 +1,21 @@
+{
+  "name": "amorris",
+  "scripts": {
+    "start": "next dev",
+    "build": "next build",
+    "export": "next export"
+  },
+  "dependencies": {
+    "@babel/preset-stage-0": "^7.0.0",
+    "@mdx-js/mdx": "^0.15.5",
+    "@zeit/next-mdx": "^1.2.0",
+    "matter": "^0.2.0",
+    "mdx-deck": "next",
+    "next": "^7.0.2",
+    "react": "^16.6.0",
+    "react-dom": "^16.6.0",
+    "rebass": "next",
+    "stringify-object": "^3.3.0",
+    "styled-components": "^4.0.2"
+  }
+}
