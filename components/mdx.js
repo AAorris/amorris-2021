@@ -6,9 +6,6 @@ import {
   space,
   color
 } from 'styled-system'
-// import Notes from './Notes'
-// import Mono from './Mono'
-// import Code from './Code'
 
 const css = key => props => props.theme[key]
 
