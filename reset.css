@@ -1,0 +1,13 @@
+html, body {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  color: #333;
+  font-size: 18pt;
+}
+
+h1, h2, h3, h4, h5 {
+  font-weight: lighter;
+}
