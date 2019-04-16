@@ -4,10 +4,14 @@ html, body {
 }
 
 body {
-  color: #333;
+  color: var(--body);
   font-size: 18pt;
 }
 
 h1, h2, h3, h4, h5 {
   font-weight: lighter;
+}
+
+.underline {
+  text-decoration: underline;
 }

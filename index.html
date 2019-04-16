@@ -10,118 +10,135 @@
     <meta name="og:url" content="https://amorris.ca/">
     <meta name="og:image" content="https://amorris.ca/portrait.jpg">
     <meta name="google-site-verification" content="fkirvSljItXe5zerAIyJ7YgmPZ1sCS6sn3hM7g_3nb0" />
-    <link rel="stylesheet" href="reset.css">
-    <link rel="social" href="social.html">
+    <link rel="stylesheet" href="/reset.css">
+    <link rel="stylesheet" href="/simplewhite.css">
+    <link rel="next news" href="news/">
     <style media="screen">
-      html {
-        background-color: #fcfbfa
+      :root {
+        --link: rgba(255,255,255,0.83);
+        --bg: #101010;
+        --h3: rgba(255,255,255,0.7);
+        --li: var(--link);
+        --p: var(--link);
+        --body: #efefef;
       }
-      body {
-        margin: 1.5in;
+      html {
+        background-color: var(--bg);
+      }
+      @media(max-width: 600px) {
+        /* html {
+          background-position: 0% 50%;
+        } */
+        a {
+          display: block;
+        }
       }
       h1 {
-        font-size: 180%;
+        font-size: 42pt;
       }
       h3 {
-        color: #404248;
+        font-size: 24pt;
       }
-      hr {
-        border: 0;
-        height: 0.25em;
+      p, q, a {
+        font-size: 18pt;
+      }
+      header {
+        position: absolute;
+        top: 0.5in;
+        right: 0.5in;
+      }
+      .hide {
+        display: none;
+      }
+      @media(min-width: 600px) {
+        .perspective {
+          perspective: 1px;
+          perspective-origin: bottom;
+          height: 100vh;
+          overflow-y: auto;
+          overflow-x: hidden;
+        }
+      }
+      .content-bg {
+        /* position: absolute;
+        left: 0;
+        top: 0; */
+        /* padding: 100vh 0; */
+
+      }
+      .content-bg {
+        position: absolute;
+        top: 0;
+        left: 0;
         width: 100%;
+        height: 1920px;
+        transform: translateZ(-1px) translateY(-1000px);
       }
-      li {
-        list-style-type: none;
-        margin: 1.8em 0;
-        padding-left: 0.8em;
-        border-left: 0.25em solid #eee;
+      .content-bg img {
+        /* position: absolute;
+        top: 0%;
+        right: 0%; */
+        transform: translate(-0%, 0%) scale(1.2);
       }
-      a {
-        text-decoration: none;
-        color: #000;
+       main > span {
+        position: absolute;
+        top: 50%;
+        left: 60%;
+        width: 100%;
+        padding-top: 20vh;
+        padding-bottom: 20vh;
+        transform: translate(-40%, 0%) scale(1);
       }
-      p, q {
-        color: #aaa;
-        display: block;
+      main {
+        width: 100%;
+        transform: translateZ(0px);
       }
-      p[itemprop="disambiguatingDescription"] {
-        max-width: 600px;
-        text-align: justify;
-        letter-spacing: 0.8px;
-      }
-      a[itemprop="sameAs"] {
-        color: #aaa;
-        text-decoration: underline;
-        letter-spacing: 1px;
-        margin-right: 8px;
+
+      @media(max-width: 600px) {
+        img {
+          display: none;
+        }
       }
     </style>
   </head>
   <body>
-    <span itemscope itemtype="https://schema.org/Person">
-      <link itemprop="url" href="https://amorris.ca/">
-      <link itemprop="image" href="https://amorris.ca/portrait.jpg">
-      <h1><span itemprop="name">Aaron Morris</span></h1>
-      <h3>
-        <span itemprop="jobTitle">Media Lead</span> |
-        <span itemprop="worksFor">Industrial Light & Magic</span>
-      </h3>
-      <h4 itemprop="homeLocation">Vancouver, British Columbia</h4>
-      <p itemprop="disambiguatingDescription">
-        I'm a software developer in Vancouver, currently working for ILM
-        as the lead of the media team. I'm most happy with a flat white,
-        sunlight, and some retro music.<br/>Studied at Carleton University.
-      </p>
-      <a itemprop="sameAs" href="https://github.com/aaorris">github</a>
-      <a itemprop="sameAs" href="https://twitter.com/aaorris">twitter</a>
-      <a itemprop="sameAs" href="http://www.facebook.com/aaorris">facebook</a>
-      <a itemprop="sameAs" href="https://www.instagram.com/amorrisa/">instagram</a>
-      <a itemprop="sameAs" href="https://www.linkedin.com/in/aaorris/">linkedin</a>
-    </span>
-    <hr />
-    <h4>Nerd links</h4>
-    <ul>
-      <li>
-        <a href="https://www.trevorwalkerphotography.com/">
-          Trevor Walker Photography
-          <q>Great portrait photography here in British Columbia.</q>
-        </a>
-      </li>
-      <li>
-        <a href="https://css-tricks.com/an-introduction-to-web-components/">
-          Intro to Web Components
-          <q>Like React, but native. Build your own DOM nodes.</q>
-        </a>
-      </li>
-      <li>
-        <a href="https://github.com/matthewp/haunted">
-          Haunted
-          <q>Create web components with a react-hooks function based style.</q>
-        </a>
-      </li>
-      <li>
-        <a href="https://medium.com/react-in-depth/inside-fiber-in-depth-overview-of-the-new-reconciliation-algorithm-in-react-e1c04700ef6e">
-          React Fiber in depth
-          <q>Fiber(Virtual DOM) under the hood.</q>
-        </a>
-      </li>
-      <li>
-        <a href="https://www.cocoawithlove.com/blog/an-aside-about-flatmap-and-monads.html">
-          Cocoa with love on monads
-          <q>A nice article on Monads in and out of functional languages</q>
-      </li>
-      <li>
-        <a href="https://fosdem.org/2019/schedule/event/netflix_freebsd/attachments/slides/3103/export/events/attachments/netflix_freebsd/slides/3103/FOSDEM_2019_Netflix_and_FreeBSD.pdf">
-          Netflix CDN hardware uses open source
-          <q>90Gb/s over TLS at 55% CPU with the Open connect Appliance</q>
-        </a>
-      </li>
-      <li>
-        <a href="https://github.com/developit/htm#--htm-hyperscript-tagged-markup--">
-          HTM (Hyperscript Tagged Markup)
-          <q>React/JSX Build-free, in your browser</q>
-        </a>
-      </li>
-    </ul>
+    <div class="perspective">
+        <div class="content-bg">
+            <img src="portrait.jpg"></img>
+          </div>
+          <main>
+            <span itemscope itemtype="https://schema.org/Person">
+              <span class="identity">
+                <link itemprop="url" href="https://amorris.ca/">
+                <link itemprop="image" href="https://amorris.ca/portrait.jpg">
+                <h1><span itemprop="name">Aaron Morris</span></h1>
+                <h3>
+                  <span itemprop="jobTitle">Media Lead</span><br/>
+                  <span itemprop="worksFor">Industrial Light & Magic</span>
+                </h3>
+                <h4 itemprop="homeLocation">Vancouver, British Columbia</h4>
+              </span>
+                <p itemprop="disambiguatingDescription">
+                  Production Engineer<span class="hide">.</span>
+                  <br/>(Software Developer)<span class="hide">.</span>
+                  <br/>Studied at Carleton University<span class="hide">.</span>
+                  <br/>Thrive on fresh air and coffee<span class="hide">.</span>
+                  <br/>I live simply and sustainably<span class="hide">.</span>
+                  <br/>Seek out connectivity and expression<span class="hide">.</span>
+                </p>
+                <footer>
+                <span style="margin-right: 1em">Bookmark </span>
+                <a rel="next news" href="news/" style="text-decoration: underline">
+                  My News Links
+                </a>
+                <br />
+                <br />
+                <span style="margin-right: .9em">Connect to</span>
+                <a itemprop="sameAs" href="https://www.linkedin.com/in/aaorris/">linkedin</a>
+                <a itemprop="sameAs" href="https://github.com/aaorris">github</a>
+              </footer>
+            </span>
+          </main>
+    </div>
   </body>
 </html>

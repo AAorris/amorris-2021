@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>Gravity View</title>
+    <style media="screen">
+      a {
+        display: block;
+      }
+    </style>
+    <link rel="stylesheet" href="/reset.css">
+    <link rel="stylesheet" href="/simplewhite.css">
+  </head>
+  <body>
+    <div id="view">
+    </div>
+    <script type="module">
+      import { html, render } from 'https://unpkg.com/htm/preact/standalone.mjs'
+
+      const friends = [
+        "https://amorrisca-lmbizggags.now.sh/"
+      ]
+
+      friends.map(url => {
+        fetch(url).then(resp => resp.text()).then(text => {
+          const parser = new DOMParser()
+          const doc = parser.parseFromString(text, "text/html")
+          const links = doc.querySelectorAll('a')
+          const newsPaths = Array.filter(links, ({attributes}) => (
+            Array.filter(attributes, ({nodeName, nodeValue}) => (
+              nodeName === 'rel' && nodeValue.split(' ').includes('news')
+            )).length !== 0
+          ))
+          if (newsPaths.length != 0) {
+            const path = newsPaths[0].attributes.href.value
+            console.log(path)
+            fetch(`${url}${path}`).then(resp => resp.text()).then(text => {
+              const newsParser = new DOMParser()
+              const newsDoc = parser.parseFromString(text, "text/html")
+              const newsLinks = newsDoc.querySelector('.news').querySelectorAll('a')
+              // console.log(newsLinks)
+              const allLinks = []
+              for (let link of newsLinks.values()) {
+                allLinks.push(link)
+              }
+              render(html`
+                <div>
+                  <h3>${url}</h3>
+                  ${allLinks.map(x=>html`<a class="underline" href=${x.toString()}>${x.innerText.trim().replace(/\n/g, ' - ')}</a>`)}
+                </div>
+              `, document.getElementById('view'))
+            })
+          }
+        })
+      })
+
+    </script>
+  </body>
+</html>
