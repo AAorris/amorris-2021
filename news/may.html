@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+<head>
+  <meta charset="utf-8">
+  <title>Aaron's News</title>
+  <meta name="description" content="
+      Aaron's news - mostly nerdy tech links
+    ">
+  <meta name="keywords" content="
+      april, 2019, tech, software, frontend, social, sustainability, vancouver
+    ">
+  <link rel="author" href="https://amorris.ca/">
+  <meta name="updated" content="2019-04-07 00:53:05" scheme="yyyy-mm-dd hh-mm-ss">
+  <!-- random external stuff -->
+  <meta name="twitter:card" content="Software news and updates by Aaron.">
+  <meta name="twitter:site" content="@aaorris">
+  <meta name="og:title" content="Aaron Morris">
+  <meta name="og:description" content="Software news and updates by Aaron.  ">
+  <meta name="og:url" content="https://amorris.ca/">
+  <meta name="og:image" content="https://amorris.ca/portrait.jpg">
+  <!-- -->
+  <link rel="stylesheet" href="/reset.css">
+  <link rel="stylesheet" href="/simplewhite.css">
+
+</head>
+
+<body>
+  <h2>
+    <a href="/news/">News</a>
+  </h2>
+  <h3>
+    <a href="/">Aaron Morris</a>
+  </h3>
+  <h4><a href="april.html" style="text-decoration: underline">April</a></h4>
+  <h4>May</h4>
+  <ul id="news" class="news">
+  </ul>
+  <script type="text/javascript">
+    let url = window.location.pathname.toString()
+    if (url[url.length - 1] !== '/') {
+      window.location.pathname = url + '/'
+    }
+    const cms = {
+      "data": {
+        "links": {
+          "edges": [
+            {
+              "node": {
+                "url": "https://medium.com/@jasonyuan/introducing-mercury-os-f4de45a04289",
+                "title": "Introducing Mercury OS",
+                "summary": "Wholesome reinvisioning of the operating system"
+              }
+            },
+           {
+              "node": {
+                "url": "https://cssgrid-generator.netlify.com/",
+                "title": "CSS Grid Generator",
+                "summary": "Interactive CSS grid code generation. Sweet!"
+              }
+            },
+            {
+              "node": {
+                "url": "https://atlassian.design/guidelines/product/overview",
+                "title": "Atlassian Design Guidelines",
+                "summary": "Nice design guidelines like Google and Material"
+              }
+            },
+            {
+              "node": {
+                "url": "https://zzz.dog/",
+                "title": "ZDog",
+                "summary": "Round, flat, pseudo 3D canvas rendering engine"
+              }
+            },
+            {
+              "node": {
+                "status": "DRAFT",
+                "updatedAt": "2019-05-22T02:46:49.690Z",
+                "createdAt": "2019-05-22T02:46:49.690Z",
+                "id": "cjvymm8uyzwon0a88vgd7t85p",
+                "url": "https://cppyy.readthedocs.io/en/latest/index.html",
+                "title": "cppyy - automatic Python C++ bindings",
+                "summary": "Based on cling, the c++ interpreter",
+                "year": 2019,
+                "month": "may"
+              }
+            },
+            {
+              "node": {
+                "status": "DRAFT",
+                "updatedAt": "2019-05-22T02:47:54.445Z",
+                "createdAt": "2019-05-22T02:47:54.445Z",
+                "id": "cjvymnmtpzwtj0a88z55jl9l6",
+                "url": "https://medium.com/tensorflow/introducing-tensorflow-graphics-computer-graphics-meets-deep-learning-c8e3877b7668",
+                "title": "Introducing Tensorflow Graphics",
+                "summary": "Tensorflow models and convolutions for 3D geometric scenes",
+                "year": 2019,
+                "month": "may"
+              }
+            },
+            {
+              "node": {
+                "status": "DRAFT",
+                "updatedAt": "2019-05-22T02:50:11.909Z",
+                "createdAt": "2019-05-22T02:50:11.909Z",
+                "id": "cjvymqkw6zx480a88q1w8ywvk",
+                "url": "https://github.com/xi-editor/xi-editor/issues/1187#issuecomment-491473599",
+                "title": "Xi Editor - CRDT based text editing retrospective",
+                "summary": "Thoughts after trying to build a collaborative text editor",
+                "year": 2019,
+                "month": "may"
+              }
+            },
+            {
+              "node": {
+                "status": "DRAFT",
+                "updatedAt": "2019-05-22T02:54:36.351Z",
+                "createdAt": "2019-05-22T02:54:36.351Z",
+                "id": "cjvymw8xrzxj80a88ysi0miam",
+                "url": "https://edgedb.com/blog/we-can-do-better-than-sql/",
+                "title": "We can do better than SQL",
+                "summary": "EdgeDB - looking back on relational databases from the seminal paper",
+                "year": 2019,
+                "month": "may"
+              }
+            },
+            {
+              "node": {
+                "status": "DRAFT",
+                "updatedAt": "2019-05-22T02:57:20.115Z",
+                "createdAt": "2019-05-22T02:57:20.115Z",
+                "id": "cjvymzrarzxtb0a88u955f8pt",
+                "url": "https://scopes.readthedocs.io/en/latest/tutorial.html",
+                "title": "Scopes - A prototyping language and compiler",
+                "summary": "Cool innovations in syntax and data definition",
+                "year": 2019,
+                "month": "may"
+              }
+            },
+            {
+              "node": {
+                "status": "DRAFT",
+                "updatedAt": "2019-05-22T02:57:59.294Z",
+                "createdAt": "2019-05-22T02:57:59.294Z",
+                "id": "cjvyn0lj2zxvq0a884bl1pq3q",
+                "url": "https://threejsfundamentals.org/threejs/lessons/threejs-fundamentals.html",
+                "title": "ThreeJS Fundamentals",
+                "summary": "Basic lessons for starting with threejs",
+                "year": 2019,
+                "month": "may"
+              }
+            },
+            {
+              "node": {
+                "status": "DRAFT",
+                "updatedAt": "2019-05-22T02:59:05.843Z",
+                "createdAt": "2019-05-22T02:59:05.843Z",
+                "id": "cjvyn20vnzxzq0a88dsm4mgd3",
+                "url": "https://www.forrestthewoods.com/blog/solving-advent-of-code-in-under-a-second/",
+                "title": "Advent of Code in under a second",
+                "summary": "Guy learning go, optimizing solutions to the coding advent calendar.",
+                "year": 2019,
+                "month": "may"
+              }
+            },
+            {
+              "node": {
+                "status": "DRAFT",
+                "updatedAt": "2019-05-22T03:02:24.824Z",
+                "createdAt": "2019-05-22T03:02:24.824Z",
+                "id": "cjvyn6aewzycv0a884sjhpvjq",
+                "url": "http://worrydream.com/refs/Lockhart-MathematiciansLament.pdf?fbclid=IwAR0jO-Vatk1Cl8LOs-7pZF9fc4oTrUZvCr1xy7ny0rlgGl9Dm6BnAcdd8zg",
+                "title": "A Mathematicians Lament",
+                "summary": "Lamenting how math is taught in school, and how we've outgrown it.",
+                "year": 2019,
+                "month": "may"
+              }
+            }
+          ]
+        }
+      }
+    }
+    const news = document.getElementById('news')
+    cms.data.links.edges.forEach(({node}) => {
+      const {url, title, summary} = node
+      const [li, a, q] = 'li,a,q'.split(',').map(x => document.createElement(x))
+      q.innerText = summary
+      a.innerText = title
+      a.href = url
+      let prev = q
+      const order = [a, li, news]
+      order.forEach(current => {
+        current.appendChild(prev)
+        prev = current
+      })
+    })
+
+    
+  </script>
+</body>
+
+</html>
