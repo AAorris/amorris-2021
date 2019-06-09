@@ -5,7 +5,6 @@ html, body {
 
 body {
   color: var(--body);
-  font-size: 18pt;
 }
 
 h1, h2, h3, h4, h5 {
