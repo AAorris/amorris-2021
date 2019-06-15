@@ -24,20 +24,16 @@
   <link rel="stylesheet" href="/theme.css">
 </head>
 
-<body>
-  <h2>
-    <a href="/news/">News</a>
-  </h2>
-  <h3>
-    <a href="/">Aaron Morris</a>
-  </h3>
+<body class="news">
+  <h2><a href="/news/">News</a></h2>
+  <h3><a href="/">Aaron Morris</a></h3>
   <section class="previous-months">
-  <h4>Earlier: </h4>
-  <h4><a href="2019/may.html" style="text-decoration: underline">May</a></h4>
-  <h4><a href="2019/april.html" style="text-decoration: underline">April</a></h4>
+    <div>Earlier: </div>
+    <h4><a href="2019/may.html" style="text-decoration: underline">May</a></h4>
+    <h4><a href="2019/april.html" style="text-decoration: underline">April</a></h4>
   </section>
   <h4>June</h4>
-  
+
   <ul id="news" class="news">
   </ul>
   <script type="text/javascript">
@@ -49,6 +45,49 @@
       "data": {
         "links": {
           "edges": [
+            {
+              node: {
+                url: "https://www.luna-lang.org/",
+                title: "Luna Lang",
+                summary: "Visual-Text hybrid programming language based on Haskell (!!)"
+              }
+            },
+            {
+              node: {
+                url: "https://blog.ploeh.dk/2017/10/04/from-design-patterns-to-category-theory/",
+                title: "From design patterns to category theory",
+                summary: "C# Developer's take on design patterns and what they lead to."
+              }
+            },
+            {
+              node: {
+                url: "http://frantic.im/onityper",
+                title: "Digital Typewriter",
+                summary: "Low latency, distraction free, cloud enabled typewriter."
+              }
+            },
+            {
+              node: {
+                url: "https://cfsamson.gitbook.io/green-threads-explained-in-200-lines-of-rust/final-200-lines-of-code",
+                title: "Green threads explained in 200 lines of rust",
+                summary: "A very detailed look into green threads, assembly, CPUs, and rust."
+              }
+            },
+            {
+              "node": {
+                url: 'https://en.wikipedia.org/wiki/G%C3%B6del,_Escher,_Bach',
+                title: "Douglas Hofstader's Preface to Godel, Escher, Bach",
+                summary: `What is a self, and how can it come out of stuff that is as selfless as a stone or a puddle?
+                  What is an 'I', and why are such things found (at least so far) only in association with, as poet Russell Edson once wonderfully phrased it, "Teetering bulbs of dread and dream" -- that is, only in association with certain kinds of gooey lumps encased in hard protective shells mounted atop mobile pedestals that roam the world on pairs of slightly fuzzy, jointed stilts?`
+              }
+            },
+            {
+              "node": {
+                "url": "https://dynamicland.org/",
+                "title": "Dynamic Land",
+                "summary": "Inventing a new computational medium where people work together with real objects in the real world, not alone with virtual objects on screens."
+              }
+            },
             {
               "node": {
                 "url": "http://www.righto.com/2017/03/inside-vintage-74181-alu-chip-how-it.html",
@@ -131,8 +170,8 @@
       }
     }
     const news = document.getElementById('news')
-    cms.data.links.edges.forEach(({node}) => {
-      const {url, title, summary} = node
+    cms.data.links.edges.forEach(({ node }) => {
+      const { url, title, summary } = node
       const [li, a, q] = 'li,a,q'.split(',').map(x => document.createElement(x))
       q.innerText = summary
       a.innerText = title
@@ -145,7 +184,7 @@
       })
     })
 
-    
+
   </script>
 </body>
 

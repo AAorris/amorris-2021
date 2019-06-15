@@ -3,18 +3,29 @@
   --bg1: rgba(248, 248, 248, 1);
   --bg2: #fdfdfd;
 
-  --link: rgba(128, 128, 128, 0.53);
-  --body: rgba(128, 128, 128, 0.53);
-  --h3: rgba(128, 128, 128, 0.9);
-  --li: rgba(128, 128, 128, 0.4);
-  --li-link: rgba(128, 128, 128, 0.53);
-  --p: rgba(75, 75, 75, 0.377);
+  --o100: 0.45;
+  --o200: 0.83;
+  --o300: 0.9;
+  --o050: 0.34;
+  --o030: 0.10;
+  --o010: 0.06;
+
+  --txt: 128;
+
+  --link: rgba(var(--txt), var(--txt), var(--txt), var(--o100));
+  --body: rgba(var(--txt), var(--txt), var(--txt), var(--o100));
+  --h3: rgba(var(--txt), var(--txt), var(--txt), var(--o300));
+  --li: rgba(var(--txt), var(--txt), var(--txt), var(--o050));  /* actually just its border */
+  --li-link: rgba(var(--txt), var(--txt), var(--txt), var(--o200));
+  --p: rgba(var(--txt), var(--txt), var(--txt), var(--o100));
 }
 @media (prefers-color-scheme: dark), (light-level: dim) {
   :root {
+    --o010: 0.12;
     --bg: black;
     --bg1: rgb(3, 3, 3);
     --bg2: #000000;
+    --txt: 134;
   }
 }
 
@@ -25,17 +36,24 @@ html {
 body {
   font-family: sans-serif;
 }
-.previous-months { display: flex; }
+body.news {
+  max-width: 768px;
+  margin: auto;
+}
+.previous-months { display: flex; align-items: center; }
 .previous-months > h4 { margin-left: 20px; }
 body {
   padding: 1.5in;
   font-size: 120%;
+  letter-spacing: 1px;
+  line-height: 1.4em;
 }
 h1 {
   font-size: 180%;
 }
 h3 {
   color: var(--h3);
+  letter-spacing: 3px;
 }
 hr {
   border: 0;
@@ -91,12 +109,27 @@ li {
   position: relative;
   background: var(--p);
   border-radius: 3px;
-  padding: 20px;
+  padding: 40px;
   background: var(--bg1);
 }
-li a {
+li a, li cite {
+  padding: 10px 0;
+  display: block;
   color: var(--li-link);
 }
 q {
   padding-top: 0.4em;
+}
+
+.background_header {
+  z-index: -1;
+  position: absolute;
+  top: 70px;
+  left: 80px;
+  margin: 0;
+  padding: 0;
+  line-height: 1em;
+  font-size: 144px;
+  overflow: hidden;
+  opacity: var(--o010);
 }
