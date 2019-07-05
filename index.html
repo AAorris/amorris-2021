@@ -27,12 +27,21 @@
       box-sizing: border-box;
     }
 
+    .icon { width: 40px; height: 40px; background-size: contain; }
+
     #webring {
-      width: 40px;
-      height: 40px;
       background-image: url(webring.svg);
-      background-size: contain;
       margin-top: -5px;
+      margin-right: 20px;
+    }
+
+    #github {
+      background-image: url(github.svg);
+      width: 26px; height: 26px;
+      margin: 8px;
+      margin-top: 5px;
+      margin-right: 20px;
+      box-sizing: border-box;
     }
 
     h1 {
@@ -40,7 +49,7 @@
     }
 
     [href="news/"] {
-      margin-left: 24px;
+      margin-right: 8px;
       font-size: 16px;
     }
 
@@ -82,13 +91,16 @@
           Production Engineer<span class="hide">.</span>
           <br />Always seeking for more out of less<span class="hide">.</span>
         </p>
+        <a rel="news" href="news/" style="text-decoration: underline;" title="Monthly links">news</a>
         <div class="timestamp"></div>
         <footer>
-          <a rel="next chat" href="https://feed.amorris.ca"
-            style="text-decoration: underline; width: 40px; display: inline-block">
-            <div id=webring title="Webring feed"></div>
+          <a rel="code" href="https://github.com/aaorris">
+            <div class=icon id=github title="Github Profile"></div>
           </a>
-          <a rel="next news" href="news/" style="text-decoration: underline;" title="Monthly links">news</a>
+          <a rel="feed" href="https://feed.amorris.ca"
+            style="width: 40px; display: inline-block">
+            <div class=icon id=webring title="Webring feed"></div>
+          </a>
         </footer>
       </span>
     </main>
