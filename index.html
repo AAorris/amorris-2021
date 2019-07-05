@@ -1,55 +1,105 @@
 <!DOCTYPE html>
 <html lang="en" dir="ltr">
-  <head>
-    <meta charset="utf-8">
-    <title>Aaron Morris | Vancouver Software Engineer</title>
-    <meta name="twitter:card" content="Nerdy software news here!">
-    <meta name="twitter:site" content="@aaorris">
-    <meta name="og:title" content="Aaron Morris">
-    <meta name="og:description" content="Media Lead, Production Engineer at Industrial Light & Magic in Vancouver">
-    <meta name="og:url" content="https://amorris.ca/">
-    <meta name="og:image" content="https://amorris.ca/portrait.jpg">
-    <meta name="google-site-verification" content="fkirvSljItXe5zerAIyJ7YgmPZ1sCS6sn3hM7g_3nb0" />
-    <link rel="stylesheet" href="/reset.css">
-    <link rel="stylesheet" href="/theme.css">
-    <link rel="next news" href="news/">
-    <style media="screen">
-      html, body { height: 100vh; }
-      body { display: flex; justify-content: center; align-items: center; box-sizing: border-box; }
-      #webring { width: 40px; height: 40px; background-image: url(webring.svg); background-size: contain; margin-top: -5px; }
-      h1 { box-shadow: 0px 200px 300px #88888888; }
-      [href="news/"] { margin-left: 24px; }
-      footer { position: fixed; bottom: 40px; right: 40px; display: flex; align-items: center; }
-    </style>
-  </head>
-  <body>
-    <div class="perspective">
-        <div class="content-bg">
-          </div>
-          <main>
-            <span itemscope itemtype="https://schema.org/Person">
-              <span class="identity">
-                <link itemprop="url" href="https://amorris.ca/">
-                <link itemprop="image" href="https://amorris.ca/portrait.jpg">
-                <h1><span itemprop="name">Aaron Morris</span></h1>
-                <h3>
-                  <span itemprop="jobTitle">Media Lead</span><br/>
-                  <span itemprop="worksFor">Industrial Light & Magic</span>
-                </h3>
-                <h4 itemprop="homeLocation">Vancouver, British Columbia</h4>
-              </span>
-                <p itemprop="disambiguatingDescription">
-                  Production Engineer<span class="hide">.</span>
-                  <br/>Always seeking for more out of less<span class="hide">.</span>
-                </p>
-                <footer>
-                  <a rel="next chat" href="https://feed.amorris.ca" style="text-decoration: underline; width: 40px; display: inline-block">
-                    <div id=webring title="Webring feed"></div>
-                  </a>
-                  <a rel="next news" href="news/" style="text-decoration: underline;" title="Monthly links">news</a>
-              </footer>
-            </span>
-          </main>
+
+<head>
+  <meta charset="utf-8">
+  <title>Aaron Morris | Vancouver Software Engineer</title>
+  <meta name="twitter:card" content="Nerdy software news here!">
+  <meta name="twitter:site" content="@aaorris">
+  <meta name="og:title" content="Aaron Morris">
+  <meta name="og:description" content="Media Lead, Production Engineer at Industrial Light & Magic in Vancouver">
+  <meta name="og:url" content="https://amorris.ca/">
+  <meta name="og:image" content="https://amorris.ca/portrait.jpg">
+  <meta name="google-site-verification" content="fkirvSljItXe5zerAIyJ7YgmPZ1sCS6sn3hM7g_3nb0" />
+  <link rel="stylesheet" href="/reset.css">
+  <link rel="stylesheet" href="/theme.css">
+  <link rel="next news" href="news/">
+  <style media="screen">
+    html,
+    body {
+      height: 100vh;
+    }
+
+    body {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      box-sizing: border-box;
+    }
+
+    #webring {
+      width: 40px;
+      height: 40px;
+      background-image: url(webring.svg);
+      background-size: contain;
+      margin-top: -5px;
+    }
+
+    h1 {
+      box-shadow: 0px 200px 300px #88888888;
+    }
+
+    [href="news/"] {
+      margin-left: 24px;
+      font-size: 16px;
+    }
+
+    footer {
+      position: fixed;
+      bottom: 40px;
+      right: 40px;
+      display: flex;
+      align-items: center;
+    }
+    .timestamp {
+      position: fixed;
+      top: 40px;
+      right: 40px;
+      text-align: right;
+      font-size: 16px;
+      font-weight: lighter;
+    }
+  </style>
+</head>
+
+<body>
+  <div class="perspective">
+    <div class="content-bg">
     </div>
-  </body>
+    <main>
+      <span itemscope itemtype="https://schema.org/Person">
+        <span class="identity">
+          <link itemprop="url" href="https://amorris.ca/">
+          <link itemprop="image" href="https://amorris.ca/portrait.jpg">
+          <h1><span itemprop="name">Aaron Morris</span></h1>
+          <h3>
+            <span itemprop="jobTitle">Media Lead</span><br />
+            <span itemprop="worksFor">Industrial Light & Magic</span>
+          </h3>
+          <h4 itemprop="homeLocation">Vancouver, British Columbia</h4>
+        </span>
+        <p itemprop="disambiguatingDescription">
+          Production Engineer<span class="hide">.</span>
+          <br />Always seeking for more out of less<span class="hide">.</span>
+        </p>
+        <div class="timestamp"></div>
+        <footer>
+          <a rel="next chat" href="https://feed.amorris.ca"
+            style="text-decoration: underline; width: 40px; display: inline-block">
+            <div id=webring title="Webring feed"></div>
+          </a>
+          <a rel="next news" href="news/" style="text-decoration: underline;" title="Monthly links">news</a>
+        </footer>
+      </span>
+    </main>
+  </div>
+  <script type=module>
+    import Neralie from 'https://self.amorris.ca/neralie.js'
+    import Orisil from 'https://self.amorris.ca/orisil.js'
+    const d = new Orisil()
+    const t = new Neralie().toString()
+    document.querySelector('.timestamp').textContent = `${d} ${t}`
+  </script>
+</body>
+
 </html>
