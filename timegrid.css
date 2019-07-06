@@ -1,6 +1,7 @@
 /* Displays life events as a normalized 100x100 grid */
 
 .timegrid {
+    pointer-events: none;
     position: fixed;
     top: 0; left: 0;
     margin: 0;
@@ -17,6 +18,7 @@
 }
 
 .-cell, ._cell {
+    pointer-events: all;
     background: rgba(128, 128, 128, 0.7);
     border-radius: 8px;
     margin: 0 2px 0 2px;
