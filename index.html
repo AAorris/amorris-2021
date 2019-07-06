@@ -13,6 +13,7 @@
   <meta name="google-site-verification" content="fkirvSljItXe5zerAIyJ7YgmPZ1sCS6sn3hM7g_3nb0" />
   <link rel="stylesheet" href="/reset.css">
   <link rel="stylesheet" href="/theme.css">
+  <link rel="stylesheet" href="/timegrid.css">
   <link rel="next news" href="news/">
   <style media="screen">
     html,
@@ -50,7 +51,7 @@
 
     [href="news/"] {
       margin-right: 8px;
-      font-size: 16px;
+      font-size: 80%;
     }
 
     footer {
@@ -65,7 +66,6 @@
       top: 40px;
       right: 40px;
       text-align: right;
-      font-size: 16px;
       font-weight: lighter;
     }
   </style>
@@ -103,14 +103,74 @@
           </a>
         </footer>
       </span>
+      <div class=timegrid style="opacity: 0">
+          <div class=_cell date=1993-8-11  title=born></div>
+          <div class=-cell date=1995-7-18  title="sister born"></div>
+          <div class=-cell date=2000-3-9   title="brothers (twins) born"></div>
+          <div class=_cell date=2009-7-24  title="made a parkour video"></div>
+          <div class=_cell date=2007-2-1   title="cashier"></div>
+          <div class=_cell date=2010-3-20  title="speed skating"></div>
+          <div class=-cell date=2010-5-8   title="10k race"></div>
+          <div class=-cell date=2010-9-20  title="freediving in lake ontario"></div>
+          <div class=-cell date=2011-5-1   title="trip to Nicaragua"></div>
+          <div class=-cell date=2011-6-1   title="graduated high school"></div>
+          <div class=-cell date=2011-8-15  title="intern at an organic farm"></div>
+          <div class=_cell date=2011-9-24  title="shaved head bald"></div>
+          <div class=_cell date=2011-10-6  title="baking artisan bread"></div>
+          <div class=-cell date=2011-11-21 title="attended Occupy Toronto"></div>
+          <div class=_cell date=2012-1-20  title="modded Overgrowth with cool jump physics and new weapons"></div>
+          <div class=-cell date=2012-2-02  title="implemented verlet integration in a web browser"></div>
+          <div class=-cell date=2012-6-3   title="15k race"></div>
+          <div class=_cell date=2012-6-22  title="grew my first salad greens"></div>
+          <div class=-cell date=2012-7-27  title="rode bike from PEI to Halifax"></div>
+          <div class=_cell date=2013-3-23  title="winter camping - slept in a quinzhee"></div>
+          <div class=_cell date=2013-7-1   title="software development summer job at uni"></div>
+          <div class=_cell date=2013-6-1   title="summer job at aluminium factory"></div>
+          <div class=_cell date=2014-3-28  title="all nighters making short film"></div>
+          <div class=-cell date=2015-8-15  title="SIGGRAPH 2015 student volunteer"></div>
+          <div class=-cell date=2015-9-11  title="atd @ Method Studios"></div>
+          <div class=_cell date=2015-11-11 title="new road bike"></div>
+          <div class=_cell date=2016-1-30  title="game jam"></div>
+          <div class=-cell date=2016-3-14  title="show td @ Method Studios"></div>
+          <div class=_cell date=2016-5-8   title="fired my first guns"></div>
+          <div class=-cell date=2016-6-4   title="120km 4000m elevation bike ride"></div>
+          <div class=-cell date=2016-7-4   title="rock climb 5.11a"></div>
+          <div class=-cell date=2016-9-12  title="core dev @ Method Studios"></div>
+          <div class=_cell date=2016-9-27  title="credited in Dr. Strange"></div>
+          <div class=-cell date=2017-9-23  title="jumped out of a plane"></div>
+          <div class=_cell date=2018-8-26  title="visited Riot games"></div>
+          <div class=_cell date=2018-10-27 title="wrote a python assembly DSL"></div>
+          <div class=_cell date=2018-11-9  title="camping @ garibaldi park"></div>
+          <div class=-cell date=2018-9-10  title="media lead @ ILM"></div>
+          <div class=-cell date=2019-6-24  title="built a self publishing webpage"></div>
+          <div class=-cell date=2019-7-4   title="joined the webring"></div>
+          <div class=now></div>
+      </div>
     </main>
   </div>
   <script type=module>
     import Neralie from 'https://self.amorris.ca/neralie.js'
     import Orisil from 'https://self.amorris.ca/orisil.js'
-    const d = new Orisil()
-    const t = new Neralie().toString()
-    document.querySelector('.timestamp').textContent = `${d} ${t}`
+    const now = new Orisil()    
+    const time = new Neralie().toString()
+    document.querySelector('.timestamp').textContent = `${now} ${time}`
+    const [y, x] = now.values
+    const el = document.querySelector('.now')
+    el.style.gridRow = y + 1
+    el.style.gridColumn = x
+    el.title = now.toString() + ' (today)'
+    document.querySelectorAll('[date]').forEach(dated => {
+        const parts = dated.getAttribute('date').split(/-/)
+        parts[1] = parts[1] - 1  // month starts at 0?
+        const date = new Date(...parts)
+        const moment = new Orisil(date)
+        dated.setAttribute('style', `--x: ${moment.week}; --y: ${moment.year}`)
+        dated.title = (`Life Moment ${moment}\n${dated.title}`)
+    })
+    const grid = document.querySelector('.timegrid')
+    document.addEventListener('keydown', e => { if (e.key === 'Shift') grid.style.opacity = 1.0 })
+    document.addEventListener('keyup', e => { if (e.key === 'Shift') grid.style.opacity = 0.1 })
+    grid.style.opacity = 0.1
   </script>
 </body>
 
