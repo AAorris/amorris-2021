@@ -14,12 +14,12 @@
 }
 .now {
     border-radius: 3px;
-    background: rgba(128, 128, 128, 1);            
+    background: rgba(160, 160, 160, 1);            
 }
 
 .-cell, ._cell {
     pointer-events: all;
-    background: rgba(128, 128, 128, 0.7);
+    background: rgba(160, 160, 160, 0.7);
     border-radius: 8px;
     margin: 0 2px 0 2px;
     box-sizing: border-box;
@@ -27,5 +27,5 @@
     grid-row: calc(var(--y) + 1);
 }
 ._cell {
-    background: rgba(128, 128, 128, 0.4);
+    background: rgba(160, 160, 160, 0.4);
 }
