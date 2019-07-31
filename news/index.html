@@ -29,174 +29,58 @@
   <h3><a href="/">Aaron Morris</a></h3>
   <section class="previous-months">
     <div>Earlier: </div>
+    <h4><a href="2019/june.html" style="text-decoration: underline">June</a></h4>
     <h4><a href="2019/may.html" style="text-decoration: underline">May</a></h4>
     <h4><a href="2019/april.html" style="text-decoration: underline">April</a></h4>
   </section>
   <h4>June</h4>
+  <template id=item>
+    <li>
+      <a href="${url}">"{title}"</a>
+      <q>"{summary}"</q>
+    </li>
+  </template>
+  <pre content-type=indental>
+    title            summary                                      url
+    Host yo self     Share web stuff in the browser from anything https://github.com/schollz/hostyoself
+    The Daily        Public radio podcast - looks interesting     https://radiopublic.com/TheDaily
+    Framer Motion    Open source react motion library             https://www.framer.com/motion/
+    Honu             Extensible extension of lisp syntax (2012)   http://www.cs.utah.edu/plt/publications/gpce12-rf.pdf
+    Liftbridge       Lightweight, fault tolerant message streams  https://github.com/liftbridge-io/liftbridge
+    Hundred Rabbits  Digital Nomads making software on a boat!!   https://100r.co/
+    XXIIVV Wiki      Devine's life's knowledge                    https://wiki.xxiivv.com/#home
+    XXIIVV Webring   Index of friends and repository of info      https://webring.xxiivv.com/
+    Mandelbrot       Javascript mandelbrot explorer               http://tilde.club/~david/m/
+    Wingfoiling      Windsurf on a paddleboard                    https://www.youtube.com/watch?v=67JgSz1bIk0
+    Flow GUI Pins    Pinterest page on node based guis            https://www.pinterest.ie/crozyx/flow-gui/
+    Nodes.io         Upcoming node editor using nodejs            http://nodes.io/story/
+    Dark Lang        Deploy code to production in 50ms            https://medium.com/darklang/how-dark-deploys-code-in-50ms-771c6dd60671
+    Neuralink        Neuralink did a live stream this month       https://youtu.be/r-vbh3t7WVI
+    Local Guru       Awesome animated imagery in lisp using Ronin https://www.local-guru.net/blog/2019/7/16/ronin-experiment-1
+
+  </pre>
 
   <ul id="news" class="news">
   </ul>
   <script type="text/javascript">
-    let url = window.location.pathname.toString()
-    if (url[url.length - 1] !== '/') {
-      window.location.pathname = url + '/'
-    }
-    const cms = {
-      "data": {
-        "links": {
-          "edges": [
-            {
-              node:{url:"https://lilianweng.github.io/lil-log/2019/06/23/meta-reinforcement-learning.html#meta-learning-the-loss-function",
-                title:"Meta reinforcement learning", summary:"Machine learning - adjusting on the fly with meta RL"}
-            },
-            {
-              node:{url:"https://deniskyashif.com/gödels-system-t-in-typescript/",
-                title:"Gödel's system-t in typescript", summary:"Basic type system for terminating programs"}
-            },
-            {node:{url:"https://cfsamson.gitbook.io/green-threads-explained-in-200-lines-of-rust/",
-              title: "Green threads explained in 200 lines of rust", summary: "Interesting intro to rust and green threads"}},
-            {node:{url:"https://github.com/google-research/bert#what-has-been-released-in-this-repository",
-              title:"Google - BERT", summary: "Tunable base model for natural language processing"}},
-            {
-              node: {
-                url: "https://www.luna-lang.org/",
-                title: "Luna Lang",
-                summary: "Visual-Text hybrid programming language based on Haskell"
-              }
-            },
-            {
-              node: {
-                url: "https://blog.ploeh.dk/2017/10/04/from-design-patterns-to-category-theory/",
-                title: "From design patterns to category theory",
-                summary: "C# Developer's take on design patterns and what they lead to."
-              }
-            },
-            {
-              node: {
-                url: "http://frantic.im/onityper",
-                title: "Digital Typewriter",
-                summary: "Low latency, distraction free, cloud enabled typewriter."
-              }
-            },
-            {
-              node: {
-                url: "https://cfsamson.gitbook.io/green-threads-explained-in-200-lines-of-rust/final-200-lines-of-code",
-                title: "Green threads explained in 200 lines of rust",
-                summary: "A very detailed look into green threads, assembly, CPUs, and rust."
-              }
-            },
-            {
-              "node": {
-                url: 'https://en.wikipedia.org/wiki/G%C3%B6del,_Escher,_Bach',
-                title: "Douglas Hofstader's Preface to Godel, Escher, Bach",
-                summary: `What is a self, and how can it come out of stuff that is as selfless as a stone or a puddle?
-                  What is an 'I', and why are such things found (at least so far) only in association with, as poet Russell Edson once wonderfully phrased it, "Teetering bulbs of dread and dream" -- that is, only in association with certain kinds of gooey lumps encased in hard protective shells mounted atop mobile pedestals that roam the world on pairs of slightly fuzzy, jointed stilts?`
-              }
-            },
-            {
-              "node": {
-                "url": "https://dynamicland.org/",
-                "title": "Dynamic Land",
-                "summary": "Inventing a new computational medium where people work together with real objects in the real world, not alone with virtual objects on screens."
-              }
-            },
-            {
-              "node": {
-                "url": "http://www.righto.com/2017/03/inside-vintage-74181-alu-chip-how-it.html",
-                "title": "Inside a vintage ALU Chip",
-                "summary": "A look into a historical arithmetic chip."
-              }
-            },
-            {
-              "node": {
-                "url": "https://osseeds.org/",
-                "title": "Open Source Seeds",
-                "summary": "A valuable effort to replicate open source software in the seed industry."
-              }
-            },
-            {
-              "node": {
-                "url": "https://www.newyorker.com/humor/daily-shouts/how-to-draw-a-horse",
-                "title": "How to draw a horse",
-                "summary": "Cute little picture story with horses and humor."
-              }
-            },
-            {
-              "node": {
-                "url": "https://scale.ai/blog/positive-externalities",
-                "title": "scale.ai - Positive Externalities",
-                "summary": "How data processing jobs for AI services work out for some employees."
-              }
-            },
-            {
-              "node": {
-                "url": "https://tsuyoshiwada.github.io/rs-monkey-lang/",
-                "title": "Rust implementation of monkey lang",
-                "summary": "Cool rust implementation of a small DIY programming language."
-              }
-            },
-            {
-              "node": {
-                "url": "https://swiftrocks.com/inside-swiftui-compiler-magic.html",
-                "title": "Swift UI Compiler Magic?",
-                "summary": "An inside look at the cool new syntax incoming for Swift."
-              }
-            },
-            {
-              "node": {
-                "url": "https://developer.apple.com/app-store/review/guidelines/#kids-category",
-                "title": "Apple guidelines review - kids category",
-                "summary": "Apps for kids helpfully disallow in-app purchases, ads, and external app links!"
-              }
-            },
-            {
-              "node": {
-                "url": "https://dave.autonoma.ca/blog/2019/06/06/web-of-knowledge/",
-                "title": "Web of knowledge",
-                "summary": "An interesting and pessemistic take on tech and surveillance."
-              }
-            },
-            {
-              "node": {
-                "url": "https://www.kerkour.fr/blog/bloom-a-free-and-open-source-google/",
-                "title": "Bloom - offering google like services in an open source manner",
-                "summary": "An open source approach to some of key services from google."
-              }
-            },
-            {
-              "node": {
-                "url": "https://secretgeek.github.io/html_wysiwyg/html.html",
-                "title": "A brutalist html quine",
-                "summary": "A page that is its own source code. Cool web hacks!"
-              }
-            },
-            {
-              "node": {
-                "url": "https://medium.com/@jasonyuan/introducing-mercury-os-f4de45a04289",
-                "title": "Introducing Mercury OS",
-                "summary": "Wholesome reinvisioning of the operating system"
-              }
-            }
-          ]
-        }
-      }
-    }
-    const news = document.getElementById('news')
-    cms.data.links.edges.forEach(({ node }) => {
-      const { url, title, summary } = node
-      const [li, a, q] = 'li,a,q'.split(',').map(x => document.createElement(x))
-      q.innerText = summary
-      a.innerText = title
-      a.href = url
-      let prev = q
-      const order = [a, li, news]
-      order.forEach(current => {
-        current.appendChild(prev)
-        prev = current
-      })
-    })
-
-
+    // let url = window.location.pathname.toString()
+    // if (url[url.length - 1] !== '/') {
+    //   window.location.pathname = url + '/'
+    // }
+    // const news = document.getElementById('news')
+    // cms.data.links.edges.forEach(({ node }) => {
+    //   const { url, title, summary } = node
+    //   const [li, a, q] = 'li,a,q'.split(',').map(x => document.createElement(x))
+    //   q.innerText = summary
+    //   a.innerText = title
+    //   a.href = url
+    //   let prev = q
+    //   const order = [a, li, news]
+    //   order.forEach(current => {
+    //     current.appendChild(prev)
+    //     prev = current
+    //   })
+    // })
   </script>
 </body>
 
