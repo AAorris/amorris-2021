@@ -4,12 +4,8 @@
 <head>
   <meta charset="utf-8">
   <title>Aaron's News</title>
-  <meta name="description" content="
-      Aaron's news - mostly nerdy tech links
-    ">
-  <meta name="keywords" content="
-      august, 2019, tech, software, frontend, social, sustainability, vancouver
-    ">
+  <meta name="description" content="Aaron's news - mostly nerdy tech links">
+  <meta name="keywords" content="august, 2019, tech, software, frontend, social, sustainability, vancouver">
   <link rel="author" href="https://amorris.ca/">
   <meta name="updated" content="2019-07-31" scheme="yyyy-mm-dd">
   <!-- random external stuff -->
@@ -35,34 +31,48 @@
     <h4><a href="/news/2019/april.html" style="text-decoration: underline">April</a></h4>
   </section>
   <h4>August</h4>
+  <h5>All Tags</h5>
+  <button
+    onclick="document.querySelectorAll('li.link-item').forEach(tag => tag.hidden = false); document.location.hash = ''">
+    Clear Filters
+  </button>
+  <ul class=all-tags id=allTags></ul>
   <template id=item>
-    <li>
+    <li class=link-item>
       <a href="url">title</a>
       <q>summary</q>
+      <ul class=tags></ul>
     </li>
   </template>
+  <template id=tagTemplate>
+    <li class=tag-item>
+      <a href="#tag" class=tag>#tag</a>
+    </li>
+  </template>
+  <h5>Links</h5>
   <pre content-type=tablatal>
-title              summary                                      url                                                                          
-Maria Web          Lisp dialect with great documentation        https://www.maria.cloud/quickstart
-Diablo Web         Play Diablo I in your browser                https://d07riv.github.io/diabloweb/
-Layers of Being    Short visualization of layered human modesl  https://layers.amorris.ca/
-Gerbil Scheme      Opinionated Lisp dialect built on Gambit     https://cons.io/guide/intro.html#standard-library
-Awk Basics         Nice little awk article                      https://start.jcolemorrison.com/understanding-enough-awk-to-search-piles-of-files-and-text/
-Dart Language      Highly cross platform and native language    https://renato.athaydes.com/posts/interesting-dart-features.html
-Linux Git Video    Gource video of linux kernel development     https://www.youtube.com/watch?v=5iFnzr73XXk
-LCD Pixel Effect   Cool LCD pixel effect made with Blender      https://twitter.com/chiu_hans/status/1157655821150330881
-C-Mera             Next level syntax for C like languages       https://github.com/kiselgra/c-mera
-Lisp Algorithms    Programming algorithms and data structures   https://lisp-univ-etc.blogspot.com/2019/08/programming-algorithms-data-structures.html
-JS Data Structures Data structures and algorithms walkthrough   https://github.com/amejiarosario/dsa.js-data-structures-algorithms-javascript
-Compositing Guide  A guide to alpha compositing                 https://ciechanow.ski/alpha-compositing/
-Algebraic Effects  They're like exceptions on steroids but not  https://overreacted.io/algebraic-effects-for-the-rest-of-us/
-MDN: Selection     Javascript selection API                     https://developer.mozilla.org/en-US/docs/Web/API/Selection
-Lib Five           Lisp for parametric and procedural design    https://libfive.com/
-Bivectors          Geometric algebra                            https://bivector.net/
-Dad is Cool        Book recommended to me about fatherhood      https://www.amazon.com/Dad-cool-Marcos-Piangers-ebook/dp/B0191QL9DU
-X-Tag              Pluggable and light web components library   https://x-tag.github.io/
-ErgoWrap           Crazy, cool, DIY keyboard with lots of stuff https://github.com/pseudoku/ErgoWarp
-Node mini server   DIY mini home server for decentralized web   https://n-o-d-e.net/node_mini_server2.html
+title              summary                                      tags       url                                                                                              
+Ameyama Link Dump  Link Dump 6                                  links      https://ameyama.com/blog/link-dump-006
+Maria Web          Lisp dialect with great documentation        lisp tech  https://www.maria.cloud/quickstart
+Diablo Web         Play Diablo I in your browser                game tech  https://d07riv.github.io/diabloweb/
+Layers of Being    Short visualization of layered human models  life       https://layers.amorris.ca/
+Gerbil Scheme      Opinionated Lisp dialect built on Gambit     lisp tech  https://cons.io/guide/intro.html#standard-library
+Awk Basics         Nice little awk article                      awk tech   https://start.jcolemorrison.com/understanding-enough-awk-to-search-piles-of-files-and-text/
+Dart Language      Highly cross platform and native language    dart tech  https://renato.athaydes.com/posts/interesting-dart-features.html
+Linux Git Video    Gource video of linux kernel development     video      https://www.youtube.com/watch?v=5iFnzr73XXk
+LCD Pixel Effect   Cool LCD pixel effect made with Blender      video      https://twitter.com/chiu_hans/status/1157655821150330881
+C-Mera             Next level syntax for C like languages       c tech     https://github.com/kiselgra/c-mera
+Lisp Algorithms    Programming algorithms and data structures   lisp tech  https://lisp-univ-etc.blogspot.com/2019/08/programming-algorithms-data-structures.html
+JS Data Structures Data structures and algorithms walkthrough   js tech    https://github.com/amejiarosario/dsa.js-data-structures-algorithms-javascript
+Compositing Guide  A guide to alpha compositing                 color      https://ciechanow.ski/alpha-compositing/
+Algebraic Effects  They're like exceptions on steroids but not  tech math  https://overreacted.io/algebraic-effects-for-the-rest-of-us/
+MDN: Selection     Javascript selection API                     js tech    https://developer.mozilla.org/en-US/docs/Web/API/Selection
+Lib Five           Lisp for parametric and procedural design    lisp tech  https://libfive.com/
+Bivectors          Geometric algebra                            tech math  https://bivector.net/
+Dad is Cool        Book recommended to me about fatherhood      dad books  https://www.amazon.com/Dad-cool-Marcos-Piangers-ebook/dp/B0191QL9DU
+X-Tag              Pluggable and light web components library   js tech    https://x-tag.github.io/
+ErgoWrap           Crazy, cool, DIY keyboard with lots of stuff hardware   https://github.com/pseudoku/ErgoWarp
+Node mini server   DIY mini home server for decentralized web   hardware   https://n-o-d-e.net/node_mini_server2.html
 </pre>
 
   <ul id="news" class="news">
@@ -72,7 +82,7 @@ Node mini server   DIY mini home server for decentralized web   https://n-o-d-e.
     const links = document.querySelector('pre')
     const data = tablatal(links.textContent)
     const output = document.createElement('ul')
-    const elements = data.forEach(({title, summary, url}) => {
+    const elements = data.forEach(({title, summary, tags, url}) => {
       // note: item is #item and importNode is instancing the template
       const element = document.importNode(item.content, true)
       const a = element.querySelector('a')
@@ -80,9 +90,39 @@ Node mini server   DIY mini home server for decentralized web   https://n-o-d-e.
       a.textContent = title
       const q = element.querySelector('q')
       q.textContent = summary
+      const tagContainer = element.querySelector('.tags')
+      const tagStrings = tags.split(/ /)
+      tagStrings.forEach(tag => {
+        const tagElement = document.importNode(tagTemplate.content, true)
+        const a = tagElement.querySelector('a')
+        a.textContent = a.href = `#${tag}`
+        const tagCopy = tagElement.cloneNode(true)
+        tagContainer.appendChild(tagElement)
+        if (allTags.querySelector(`[href="#${tag}"]`)) return
+        allTags.appendChild(tagCopy)
+      })
+      console.log(window.location.hash.replace('#', ''))
+      if (window.location.hash && !tagStrings.includes(window.location.hash.replace('#', ''))) {
+        element.querySelector('li').hidden = true
+      }
       output.appendChild(element)
     })
     links.replaceWith(output)
+
+    document.addEventListener('click', e => {
+      if (!e.target.classList.contains('tag')) return console.log(e.target.classList)
+      if (!e.target.tagName === 'A') return console.log('not a link')
+      const tagText = e.target.href
+      document.querySelectorAll('.link-item').forEach(item => {
+        console.log(item)
+        const tagLinks = item.querySelectorAll('.tag-item > a')
+        let match = false
+        tagLinks.forEach(item => {
+          if (item.href === tagText) match = true
+        })
+        item.hidden = !match
+      })
+    })
   </script>
 </body>
 
