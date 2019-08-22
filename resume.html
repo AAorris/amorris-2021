@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Aaron Morris | Résumé</title>
+    <link rel="stylesheet" href="lib/reset.css">
+    <link rel="stylesheet" href="lib/theme.css">
+    <link rel="stylesheet" href="lib/timegrid.css">
+    <meta name="og:title" content="Aaron Morris | Résumé">
+    <meta name="og:description" content="Media Lead, Production Engineer at Industrial Light & Magic in Vancouver">
+    <meta name="og:url" content="https://amorris.ca/">
+    <meta name="og:image" content="https://amorris.ca/portrait.jpg">
+    <style>
+        body {
+            padding: 0;
+            width: 80%;
+            margin: auto;
+            margin-top: 100px;
+            margin-bottom: 100px;
+            padding-bottom: 1in;
+            box-shadow: 0 19px 38px rgba(128, 128, 128, 0.30), 0 15px 12px rgba(128, 128, 128, 0.22);
+        }
+
+        article {
+            padding: 0px 1.5in;
+        }
+
+        hr {
+            display: hidden;
+            padding: 8px;
+        }
+
+        .banner {
+            display: grid;
+            grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
+            grid-template-rows: 1fr 1fr 1fr 1fr;
+            grid-column-gap: 0px;
+            grid-row-gap: 0px;
+            /* position: absolute;
+            top: 0;
+            left: 0; */
+            width: 100%;
+            height: 600px;
+        }
+
+        .banner>* {
+            flex-grow: 1;
+        }
+
+        #avatar {
+            align-self: center;
+            justify-self: center;
+            border-radius: 100%;
+            width: 200px;
+            height: 200px;
+            background: url('/avatar.webp');
+            border: 3px solid white;
+            box-shadow: 0px 3px 20px rgba(128, 128, 128, 0.40);
+            background-size: cover;
+            background-repeat: no-repeat;
+            background-position: 80% 50%;
+            grid-area: 3 / 1 / 5 / 3;
+        }
+
+        #banner {
+            width: 100%;
+            overflow: hidden;
+            background: url('/banner.webp');
+            background-position-y: 60%;
+            background-size: cover;
+            grid-area: 1 / 1 / 4 / 7;
+        }
+
+        .icon {
+            width: 40px;
+            height: 40px;
+            background-size: contain;
+        }
+
+        #github {
+            display: inline-block;
+            background-image: url(/lib/github.svg);
+            width: 26px;
+            height: 26px;
+            margin: 8px;
+            box-sizing: border-box;
+        }
+
+        p {
+            line-height: 2em;
+        }
+    </style>
+    <link rel="stylesheet" type="text/css" media="print" href="/print.css" />
+</head>
+
+<body>
+    <header class=banner>
+        <div id=banner></div>
+        <div id=avatar></div>
+    </header>
+    <article>
+        <h1>Aaron Morris</h1>
+        <h2>Media Lead | Industrial Light & Magic</h2>
+        <h3>Vancouver, British Columbia, Canada</h3>
+        <a rel="code" href="https://github.com/aaorris" style="display:flex;align-items:center">
+            <span>github.com/aaorris</span>
+            <div class=icon id=github title="Github Profile"></div>
+        </a>
+        <hr />
+        <h2>About Me</h2>
+        <p>
+            I encourage and embrace thorough design processes;
+            Deploy modern infrastructure making use of the likes of docker, nomad, ansible, consul, jenkins, and fabio;
+            Advocate for and adhere to strict coding standards;
+            Build full stack applications using tech including Python, Javascript, HTML, SQL, Elasticsearch, and others;
+            Act as product owner on agile projects.
+        </p>
+        <p>
+            Above all I focus on building culture in the workplace and having a positive human impact.
+            Fuelled by creative energy, passionate individuals, and collaboration.
+        </p>
+        <hr />
+        <h2>Work History</h2>
+        <ul class=work>
+            <li>
+                <h3>Production Engineer II</h3>
+                <h4>Industrial Light & Magic</h4>
+                <h5>Sep 2018 - Present (1 year)</h5>
+                <h5>Vancouver, Canada</h5>
+                <p>Lead of the Media team. Our team is responsible for the media catalog, real time communication tools,
+                    note taking, media ingestion, publishing, dailies, and client delivery applications, content
+                    delivery, and editorial workflow. We maintain existing production systems, introduce next generation
+                    infrastructure, and track key performance indicators - particularly the effectiveness and throughput
+                    of our review processes.</p>
+            </li>
+            <li>
+                <h3>Core Pipeline Developer</h3>
+                <h4>Method Studios</h4>
+                <h5>Sep 2016 - Sep 2018 (2 years)</h5>
+                <h5>Vancouver, Canada</h5>
+                <p>Lead of the Media team at Method Studios. Maintained legacy software, designed and implemented new
+                    infrastructure for deliveries, dailies, and review submissions. Resulted in more than doubling the
+                    speed and efficiency of dailies, delivery submissions, and show setup. Made the system robust to
+                    farm outages.</p>
+            </li>
+            <li>
+                <h3>Show Technical Director</h3>
+                <h4>Method Studios</h4>
+                <h5>Mar 2016 - Sep 2016 (7 months)</h5>
+                <h5>Vancouver, Canada</h5>
+                <p>Developer and point of contact for projects including Doctor Strange, Guardians of the Galaxy 2,
+                    Power Rangers, and Okja. Worked closely with production to implement new workflows and tools to
+                    solve technical challenges and improve efficiency.</p>
+            </li>
+            <li>
+                <h3>Assistant Technical Director</h3>
+                <h4>Method Studios</h4>
+                <h5>Sep 2015 - Mar 2016 (7 months)</h5>
+                <h5>Vancouver, Canada</h5>
+                <p>First point of contact for support and show setup. Implemented tools such as shot board generators
+                    for production, and Shotgun migration tools for produciton tracking.</p>
+            </li>
+            <li>
+                <h3>Software Engineer</h3>
+                <h4>Carleton University</h4>
+                <h5>Nov 2013 - Sep 2014 (11 months)</h5>
+                <h5>Ottawa, Canada</h5>
+                <p>Implemented networked simulation application for HCI (Human Computer Interaction) research on
+                    situational awareness in the context of fighting forest fires. Written in C++ and SDL2</p>
+            </li>
+        </ul>
+        <hr />
+        <h3>Education & Volunteer Experience</h3>
+        <ul>
+            <li>
+                <h3>Carleton University</h3>
+                <h4>Bachelor of Information Technology, Interactive Multimedia and Design</h4>
+                <h5>2012 - 2017</h5>
+            </li>
+            <li>
+                <h3>Maple Community Garden</h3>
+                <h4>Executive - IT Manager</h4>
+                <h5>2018 - Present</h5>
+            </li>
+            <li>
+                <h3>SIGGRAPH Student Volunteer</h3>
+                <h4>August 2015</h4>
+            </li>
+        </ul>
+    </article>
+</body>
+
+</html>
