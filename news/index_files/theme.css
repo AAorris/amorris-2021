@@ -1,0 +1,160 @@
+/* TODO:
+    Speckles: colourful speckles like https://www.noglu.fr/en/paris-75007/
+    Parallax: have mist and speckles scroll with parallax
+*/
+:root {
+  --bg: #fcfbfa;
+  --bg1: rgba(248, 248, 248, 1);
+  --bg2: #fdfdfd;
+
+  --o100: 0.7;
+  --o200: 0.83;
+  --o300: 0.9;
+  --o050: 0.34;
+  --o030: 0.10;
+  --o010: 0.06;
+
+  --txt: 128;
+
+  --link: rgba(var(--txt), var(--txt), var(--txt), var(--o100));
+  --body: rgba(var(--txt), var(--txt), var(--txt), var(--o100));
+  --h3: rgba(var(--txt), var(--txt), var(--txt), var(--o300));
+  --li: rgba(var(--txt), var(--txt), var(--txt), var(--o050));  /* actually just its border */
+  --li-link: rgba(var(--txt), var(--txt), var(--txt), var(--o200));
+  --p: rgba(var(--txt), var(--txt), var(--txt), var(--o100));
+}
+@media (prefers-color-scheme: dark), (light-level: dim) {
+  :root {
+    --o010: 0.12;
+    --bg: black;
+    --bg1: rgb(3, 3, 3);
+    --bg2: #000000;
+    --txt: 200;
+  }
+}
+
+html {
+  background-color: var(--bg);
+  background-image: linear-gradient(0deg, rgba(128,128,128,0.16) 0%, rgba(128,128,128,0.08) 100px, transparent 100%);
+}
+body {
+  font-family: sans-serif;
+  min-height: 100vh;
+}
+body.news {
+  max-width: 768px;
+  margin: auto;
+}
+.previous-months { display: flex; align-items: center; }
+.previous-months > h4 { margin-left: 20px; }
+body {
+  padding: 1.5in;
+  font-size: 100%;
+  letter-spacing: 1px;
+  line-height: 1.4em;
+}
+h1 {
+  font-size: 180%;
+}
+h1, h3 {
+  color: var(--h3);
+  letter-spacing: 3px;
+}
+hr {
+  border: 0;
+  height: 0.25em;
+  width: 100%;
+}
+li {
+  list-style-type: none;
+  margin: 1.8em 0;
+  padding-left: 0.8em;
+  border-left: 0.25em solid var(--li);
+  box-shadow: 0px 15px 40px rgba(0, 0, 0, 0.02);
+}
+a {
+  text-decoration: none;
+  color: var(--link);
+}
+q {
+  display: block;
+}
+p, q {
+  color: var(--p);
+  display: block;
+}
+p[itemprop="disambiguatingDescription"] {
+  max-width: 400px;
+  letter-spacing: 0.8px;
+  line-height: 2em;
+}
+a[itemprop="sameAs"] {
+  color: var(--p);
+  text-decoration: underline;
+  letter-spacing: 1px;
+  margin-right: 8px;
+}
+
+@media (max-width: 400px) {
+  p[itemprop="disambiguatingDescription"] {
+    text-align: left;
+  }
+}
+
+
+html {
+  background-color: var(--bg);
+}
+
+h2 a, h3 a {
+  color: var(--h3);
+}
+
+li {
+  position: relative;
+  background: var(--p);
+  border-radius: 3px;
+  padding: 8px;
+  padding-left: 40px;
+  background: var(--bg1);
+}
+li a, li cite {
+  padding: 4px 0;
+  display: block;
+  color: var(--li-link);
+}
+li.tag-item {
+  font-size: 0.8rem;
+  margin: 8px; 
+  padding: 0px 20px;
+  display: inline-block;
+  background: rgba(128,128,128,0.1);
+  opacity: 0.8;
+}
+li.tag-item a {
+  padding: 4px;
+}
+q {
+  /* padding-top: 0.4em; */
+}
+button {
+  padding: 8px;
+  background: var(--bg);
+  border: none;
+  color: var(--fg);
+  border: 1px solid var(--link);
+  border-radius: 8px;
+}
+
+.background_header {
+  z-index: -1;
+  position: absolute;
+  top: 70px;
+  left: 80px;
+  margin: 0;
+  padding: 0;
+  line-height: 1em;
+  font-size: 144px;
+  overflow: hidden;
+  opacity: var(--o010);
+}
