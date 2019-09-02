@@ -123,8 +123,11 @@ li a, li cite {
   display: block;
   color: var(--li-link);
 }
+ul.tags {
+  margin-top: 1em;
+}
 li.tag-item {
-  font-size: 0.8rem;
+  font-size: 1rem;
   margin: 8px; 
   padding: 0px 20px;
   display: inline-block;
