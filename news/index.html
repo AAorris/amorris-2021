@@ -32,17 +32,46 @@
     <h4><a href="https://amorris.ca/news/2019/april.html" style="text-decoration: underline">April</a></h4>
   </section>
   <h4>October</h4>
-  <pre content-type="tablatal" style="display: none;">title                  summary                                       tags           url                                                                                                                     
+  <h5>Todos</h5>
+  <pre id="todos" content-type="indental">
+Vulcain
+  read : read the page
+  test : deploy a test
+Node and Docker
+  test : deploy a test (see https://dev.to/grikomsn/how-i-deployed-a-dockerized-nodejs-app-on-zeit-now-358b)
+Bash tip
+  adopt : use the tip
+Pytorch Blitz
+  read : read the page
+  data : make a thumbnail dataset
+  test : try classifying some thumbnails
+WebWide
+  join : join the community
+  sell : try freelancing or something on it
+Category Theory
+  read : read the document
+  blog : summarize for engineers
+NUT
+  read : read the page
+  test : try it out
+  blog : compare to selenium
+</pre>
+<script type="module">
+  import indental from '/lib/indental.js'
+  console.log(indental(todos.textContent))
+</script>
+  <pre id="links" content-type="tablatal" style="display: none;">title                  summary                                       tags           url                                                                                                                     
+Take Notes             How to take notes on everything               life tech      https://dev.to/maxwell_dev/how-to-take-notes-on-everything-32fc
 Vulcain                REST compliant HTTP/2 spec similar to graphql tech protocol  https://github.com/dunglas/vulcain
 Resilience Engineering Managing failures in complex systems          tech           https://github.com/lorin/resilience-engineering#resilience-engineering-papers
 Obvious Design         The obvious UI is often the best one          tech design    https://medium.com/google-design/the-obvious-ui-is-often-the-best-ui-7a25597d79fd
 Node and Docker        Quick docker setup for dev/prod in nodejs     tech           https://jdlm.info/articles/2019/09/06/lessons-building-node-app-docker.html
-Bash up/down history   Little known bash tip                         tech           https://coderwall.com/p/oqtj8w/the-single-most-useful-thing-in-bash
-Pytorch 60min Blitz    Quick pytorch machine learning tutorial       tech           https://pytorch.org/tutorials/beginner/deep_learning_60min_blitz.html
+Bash tip               Little known bash tip                         tech           https://coderwall.com/p/oqtj8w/the-single-most-useful-thing-in-bash
+Pytorch Blitz          Quick pytorch machine learning tutorial       tech           https://pytorch.org/tutorials/beginner/deep_learning_60min_blitz.html
 WebWide                New online community for web developers       tech           https://hello.webwide.io
 Category Theory        The math perspective translated for science   math science   https://arxiv.org/pdf/1302.6946v1.pdf
 NUT                    Selenium like remote control lib in JS        tech           https://dev.to/s1hofmann/javascript-desktop-automation-1p4d
-    </pre>
+</pre>
   <h5>All Tags</h5>
   <button onclick="document.querySelectorAll('li.link-item').forEach(tag => tag.hidden = false); document.location.hash = ''">
     Clear Filters
@@ -278,7 +307,7 @@ NUT                    Selenium like remote control lib in JS        tech       
   </ul>
   <script type="module">
     import tablatal from '/lib/tablatal.js'
-    const linkContent = document.querySelector('pre')
+    const linkContent = document.querySelector('pre#links')
     const data = tablatal(linkContent.textContent)
     const output = document.createElement('ul')
     output.id = "news"
