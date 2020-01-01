@@ -4,7 +4,7 @@
   <meta charset="utf-8">
   <title>Aaron's News</title>
   <meta name="description" content="Aaron's news - mostly nerdy tech links">
-  <meta name="keywords" content="January, 2020, tech, software, frontend, social, sustainability, vancouver">
+  <meta name="keywords" content="November, 2019, tech, software, frontend, social, sustainability, vancouver">
   <link rel="author" href="https://amorris.ca/">
   <!-- random external stuff -->
   <meta name="twitter:card" content="Software news and updates by Aaron.">
@@ -23,9 +23,7 @@
   <h2><a href="https://amorris.ca/news/">News</a></h2>
   <h3><a href="https://amorris.ca/">Aaron Morris</a></h3>
   <section class="previous-months">
-    <div>2019</div>
-    <h4><a href="https://amorris.ca/news/2019/december.html" style="text-decoration: underline">December</a></h4>
-    <h4><a href="https://amorris.ca/news/2019/november.html" style="text-decoration: underline">November</a></h4>
+    <div>Earlier: </div>
     <h4><a href="https://amorris.ca/news/2019/october.html" style="text-decoration: underline">October</a></h4>
     <h4><a href="https://amorris.ca/news/2019/september.html" style="text-decoration: underline">September</a></h4>
     <h4><a href="https://amorris.ca/news/2019/august.html" style="text-decoration: underline">August</a></h4>
@@ -34,7 +32,7 @@
     <h4><a href="https://amorris.ca/news/2019/may.html" style="text-decoration: underline">May</a></h4>
     <h4><a href="https://amorris.ca/news/2019/april.html" style="text-decoration: underline">April</a></h4>
   </section>
-  <h4>December</h4>
+  <h4>November</h4>
   <h5>Todos</h5>
   <pre id="todos" content-type="indental" style="display: none"></pre>
 <script type="module">
@@ -42,20 +40,46 @@
   console.log(indental(todos.textContent))
 </script>
   <pre id="links" content-type="tablatal" style="display: none;">title                  summary                                       tags           url                                                                                                                     
-Fit for space?         Radiation challenges to humans in space       space science  https://www.wired.com/story/are-humans-fit-for-space-a-herculean-study-says-maybe-not/
+DeepSpeech             Mozilla's open sourced speech recognizer      tech ai        https://hacks.mozilla.org/2019/12/deepspeech-0-6-mozillas-speech-to-text-engine/
+Protein Design         Scientists are synthesizing protein patterns  science tech   https://phys.org/news/2019-11-scientists-redesign-protein-based-pattern-formation.html
+iOS data sharing       Different ways to share data between devices  tech ios       https://medium.com/@dinesh.kachhot/different-ways-to-share-data-between-apps-de75a0a46d4a
+cyberstyle.css         Cybertruck css theme                          tech           https://mhasbini.com/blog/introducing-cyberstyle.css.html
+Instagram AI           AI recommendations for the explore page       tech ai        https://instagram-engineering.com/powered-by-ai-instagrams-explore-recommender-system-7ca901d2a882
+Coscreen               Common screen surface sharing                 tech teams     http://coscreen.co/
+DIY Language Server    Build your own language server for IDEs       tech           https://nickmqb.github.io/2019/11/24/building-a-language-server-for-muon.html
+Startup Handbook       Guide to making your own startup from experts tech teams     https://versionone.vc/startup-handbook/
+On Software Quality    What choices have the most impact on quality? tech teams     https://increment.com/teams/the-epistemology-of-software-quality/
+Titanoboa              Open source web hook integrations             tech           https://www.titanoboa.io/using-titanoboa-for-cloud-integration.html
+Mitogen                Remote bootstrap and IO multiplexer           tech           https://mitogen.networkgenomics.com/
+Mail Server Guide      I'd like to spin up my own mail server...     tech           https://www.c0ffee.net/blog/mail-server-guide/
+Disney Plus            10 million subscribers in the first month!    vfx news       https://www.theverge.com/2019/11/13/20963172/disney-plus-subscribers-10-million-star-wars-marvel-pixar-launch
+Deepfake phone scam    Scammers pretended to be a bossy CEO          tech news      https://nakedsecurity.sophos.com/2019/09/05/scammers-deepfake-ceos-voice-to-talk-underling-into-243000-transfer/
+Build your own stuff   Lots of DIY projects to learn coding          tech           https://github.com/danistefanovic/build-your-own-x
+Leadershipbits         A leadership podcast                          podcasts       https://leadershipbits.transistor.fm/
+Plant UML              UML text format for nice graph diagrams       tech           http://plantuml.com/
+Lnav                   Log navigation tool with low dependencies     tech           https://lnav.org/
 </pre>
   <h5>All Tags</h5>
   <button onclick="document.querySelectorAll('li.link-item').forEach(tag => tag.hidden = false); document.location.hash = ''">
     Clear Filters
   </button>
-  <ul class="all-tags" id="allTags"></ul>
+  <ul class="all-tags" id="allTags">
+  
+    <li class="tag-item">
+      <a href="#science" class="shared tag" itemprop="articleSection">#science</a>
+    </li>
+  
+    <li class="tag-item">
+      <a href="#tech" class="shared tag" itemprop="articleSection">#tech</a>
+    </li>
+  </ul>
   <template id="item">
     <li class="link-item">
       <article itemscope="" itemtype="https://schema.org/SocialMediaPosting">
         <h3><a class="shared" href="https://amorris.ca/news/url" itemprop="headline">title</a></h3>
         <q class="shared" itemprop="articleBody">summary</q>
         <ul class="tags"></ul>
-        <span itemprop="dateCreated" hidden="">2020-12-30</span>
+        <span itemprop="dateCreated" hidden="">2019-11-05</span>
         <a itemprop="image" href="https://amorris.ca/avatar.png" style="display: none">image</a>
         <span itemprop="author" itemscope="" itemtype="https://schema.org/Person" hidden="">
           <span itemprop="name">Aaron Morris</span>
@@ -72,7 +96,45 @@ Fit for space?         Radiation challenges to humans in space       space scien
   </template>
   <h5>Links</h5>
 
-  <ul id="news"></ul>
+  <ul id="news">
+    <li class="link-item">
+      <article itemscope="" itemtype="https://schema.org/SocialMediaPosting">
+        <h3><a class="shared" href="http://plantuml.com/" itemprop="headline">Plant UML</a></h3>
+        <q class="shared" itemprop="articleBody">UML text format for nice graph diagrams</q>
+        <ul class="tags">
+    <li class="tag-item">
+      <a href="#tech" class="shared tag" itemprop="articleSection">#tech</a>
+    </li>
+  </ul>
+        <span itemprop="dateCreated" hidden="">2019-11-05</span>
+        <a itemprop="image" href="https://amorris.ca/avatar.png" style="display: none">image</a>
+        <span itemprop="author" itemscope="" itemtype="https://schema.org/Person" hidden="">
+          <span itemprop="name">Aaron Morris</span>
+          <a itemprop="url" href="https://amorris.ca/">https://amorris.ca/</a>
+        </span>
+        <span class="shared" hidden="">---</span>
+      </article>
+    </li>
+  
+    <li class="link-item">
+      <article itemscope="" itemtype="https://schema.org/SocialMediaPosting">
+        <h3><a class="shared" href="https://lnav.org/" itemprop="headline">Lnav</a></h3>
+        <q class="shared" itemprop="articleBody">Log navigation tool with low dependencies</q>
+        <ul class="tags">
+    <li class="tag-item">
+      <a href="#tech" class="shared tag" itemprop="articleSection">#tech</a>
+    </li>
+  </ul>
+        <span itemprop="dateCreated" hidden="">2019-11-05</span>
+        <a itemprop="image" href="https://amorris.ca/avatar.png" style="display: none">image</a>
+        <span itemprop="author" itemscope="" itemtype="https://schema.org/Person" hidden="">
+          <span itemprop="name">Aaron Morris</span>
+          <a itemprop="url" href="https://amorris.ca/">https://amorris.ca/</a>
+        </span>
+        <span class="shared" hidden="">---</span>
+      </article>
+    </li>
+  </ul>
   <script type="module">
     import tablatal from '/lib/tablatal.js'
     const linkContent = document.querySelector('pre#links')
