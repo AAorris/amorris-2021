@@ -23,7 +23,7 @@
   <h2><a href="https://amorris.ca/news/">News</a></h2>
   <h3><a href="https://amorris.ca/">Aaron Morris</a></h3>
   <section class="previous-months">
-    <div>2019</div>
+    <div><a href="2019/" style="text-decoration: underline">2019</a></div>
     <h4><a href="https://amorris.ca/news/2019/december.html" style="text-decoration: underline">December</a></h4>
     <h4><a href="https://amorris.ca/news/2019/november.html" style="text-decoration: underline">November</a></h4>
     <h4><a href="https://amorris.ca/news/2019/october.html" style="text-decoration: underline">October</a></h4>
@@ -34,21 +34,29 @@
     <h4><a href="https://amorris.ca/news/2019/may.html" style="text-decoration: underline">May</a></h4>
     <h4><a href="https://amorris.ca/news/2019/april.html" style="text-decoration: underline">April</a></h4>
   </section>
-  <h4>December</h4>
+  <h4>January 2020</h4>
   <h5>Todos</h5>
   <pre id="todos" content-type="indental" style="display: none"></pre>
 <script type="module">
   import indental from '/lib/indental.js'
   console.log(indental(todos.textContent))
 </script>
-  <pre id="links" content-type="tablatal" style="display: none;">title                  summary                                       tags           url                                                                                                                     
-Fit for space?         Radiation challenges to humans in space       space science  https://www.wired.com/story/are-humans-fit-for-space-a-herculean-study-says-maybe-not/
+  <pre id="links" content-type="tablatal" style="display: none;">title                  summary                                       tags            month     url                                                                                                                     
+ScreenTopGG            Table top games in the browser                web game        January   https://screentop.gg/
+Surf                   Small C web browser                           web tech        January   https://surf.suckless.org/
+ServoSM                Metalanguage for native c++ state machines    c tech          January   https://github.com/strstr/ServoSM
+Broot                  A better tree tool (collapses stuff)          tech tools      January   https://dystroy.org/broot/
+Gauge Invariant ML     Higher dimensional convolutional model        ml tech         January   https://www.quantamagazine.org/an-idea-from-physics-helps-ai-see-in-higher-dimensions-20200109/
+Worker in the Loop     Retrospective on hybrid machine learning      ml tech         January   https://akilian.com/2019/12/30/worker-in-the-loop-retrospective
+JQL                    Lispy json query language                     lisp tech       January   https://github.com/cube2222/jql
+Deep learning intro    A deep dive into machine learning             home ml         January   https://d2l.ai/
+VCRack                 Digital synth tech                            home sound      January   https://vcvrack.com/
 </pre>
   <h5>All Tags</h5>
   <button onclick="document.querySelectorAll('li.link-item').forEach(tag => tag.hidden = false); document.location.hash = ''">
     Clear Filters
   </button>
-  <ul class="all-tags" id="allTags"></ul>
+  <ul class="all-tags" id="allTags"></ul> 
   <template id="item">
     <li class="link-item">
       <article itemscope="" itemtype="https://schema.org/SocialMediaPosting">
