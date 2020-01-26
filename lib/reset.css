@@ -10,10 +10,14 @@ body {
 h1, h2, h3, h4, h5 {
   line-height: 1em;
   margin: 1rem 0;
-  letter-spacing: 3px;
+  letter-spacing: -0.4px;
   font-weight: 300;
 }
 
 .underline {
   text-decoration: underline;
 }
+
+a { color: black; }
+
+nav > * { padding: 0 16px; color:white; }
