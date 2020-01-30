@@ -3,7 +3,5 @@ c99/
 *.swp
 .access_token
 create-token.sh
-news/news.json
-tags/tags.json
 *.swp
 db.sqlite3
