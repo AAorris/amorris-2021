@@ -1,137 +1,128 @@
 <!DOCTYPE html>
-<html dir="ltr" lang="en"><head>
-  <meta http-equiv="content-type" content="text/html; charset=UTF-8">
+<html lang="en" dir="ltr">
+
+<head>
   <meta charset="utf-8">
-  <title>Aaron's News</title>
-  <meta name="description" content="Aaron's news - mostly nerdy tech links">
-  <meta name="keywords" content="January, 2020, tech, software, frontend, social, sustainability, vancouver">
-  <link rel="author" href="https://amorris.ca/">
-  <!-- random external stuff -->
-  <meta name="twitter:card" content="Software news and updates by Aaron.">
-  <meta name="twitter:site" content="@aaorris">
+  <title>Aaron Morris | Vancouver Software Engineer</title>
   <meta name="og:title" content="Aaron Morris">
-  <meta name="og:description" content="Software news and updates by Aaron.  ">
+  <meta name="og:description" content="Software Engineer">
   <meta name="og:url" content="https://amorris.ca/">
   <meta name="og:image" content="https://amorris.ca/portrait.jpg">
-  <!-- -->
-  <link rel="stylesheet" href="index_files/reset.css">
-  <link rel="stylesheet" href="index_files/theme.css">
-  <!-- base href="https://amorris.ca/" -->
+  <meta name="google-site-verification" content="fkirvSljItXe5zerAIyJ7YgmPZ1sCS6sn3hM7g_3nb0" />
+  <link rel="stylesheet" href="/lib/reset.css">
+<style>h3,p{margin-block-end:4px}p{margin-block-start:4px;font-size:100%;color:#444}body>div{padding:1em}</style>
 </head>
 
-<body class="news">
-  <h2><a href="https://amorris.ca/news/">News</a></h2>
-  <h3><a href="https://amorris.ca/">Aaron Morris</a></h3>
-  <section class="previous-months">
-    <div><a href="2019/" style="text-decoration: underline">2019</a></div>
-    <h4><a href="https://amorris.ca/news/2019/december.html" style="text-decoration: underline">December</a></h4>
-    <h4><a href="https://amorris.ca/news/2019/november.html" style="text-decoration: underline">November</a></h4>
-    <h4><a href="https://amorris.ca/news/2019/october.html" style="text-decoration: underline">October</a></h4>
-    <h4><a href="https://amorris.ca/news/2019/september.html" style="text-decoration: underline">September</a></h4>
-    <h4><a href="https://amorris.ca/news/2019/august.html" style="text-decoration: underline">August</a></h4>
-    <h4><a href="https://amorris.ca/news/2019/july.html" style="text-decoration: underline">July</a></h4>
-    <h4><a href="https://amorris.ca/news/2019/june.html" style="text-decoration: underline">June</a></h4>
-    <h4><a href="https://amorris.ca/news/2019/may.html" style="text-decoration: underline">May</a></h4>
-    <h4><a href="https://amorris.ca/news/2019/april.html" style="text-decoration: underline">April</a></h4>
-  </section>
-  <h4>January 2020</h4>
-  <h5>Todos</h5>
-  <pre id="todos" content-type="indental" style="display: none"></pre>
-<script type="module">
-  import indental from '/lib/indental.js'
-  console.log(indental(todos.textContent))
-</script>
-  <pre id="links" content-type="tablatal" style="display: none;">title                  summary                                       tags            month     url                                                                                                                     
-Perceptually Uniform   Color spaces made for human perception        home color      January   https://programmingdesignsystems.com/color/perceptually-uniform-color-spaces/index.html
-Aeriform - TAPE        Beautiful indie project management software   home tech       January   https://aeriform.itch.io/tape
-Resilient Web Design   A web book about making a more resilient web  web book        January   https://resilientwebdesign.com/
-ScreenTopGG            Table top games in the browser                web game        January   https://screentop.gg/
-Surf                   Small C web browser                           web tech        January   https://surf.suckless.org/
-ServoSM                Metalanguage for native c++ state machines    c tech          January   https://github.com/strstr/ServoSM
-Broot                  A better tree tool (collapses stuff)          tech tools      January   https://dystroy.org/broot/
-Gauge Invariant ML     Higher dimensional convolutional model        ml tech         January   https://www.quantamagazine.org/an-idea-from-physics-helps-ai-see-in-higher-dimensions-20200109/
-Worker in the Loop     Retrospective on hybrid machine learning      ml tech         January   https://akilian.com/2019/12/30/worker-in-the-loop-retrospective
-JQL                    Lispy json query language                     lisp tech       January   https://github.com/cube2222/jql
-Deep learning intro    A deep dive into machine learning             home ml         January   https://d2l.ai/
-VCRack                 Digital synth tech                            home media      January   https://vcvrack.com/
-Vidgear                Multithreaded audio video processing tools    home media      January   https://github.com/abhiTronix/vidgear
-</pre>
-  <h5>All Tags</h5>
-  <button onclick="document.querySelectorAll('li.link-item').forEach(tag => tag.hidden = false); document.location.hash = ''">
-    Clear Filters
-  </button>
-  <ul class="all-tags" id="allTags"></ul> 
-  <template id="item">
-    <li class="link-item">
-      <article itemscope="" itemtype="https://schema.org/SocialMediaPosting">
-        <h3><a class="shared" href="https://amorris.ca/news/url" itemprop="headline">title</a></h3>
-        <q class="shared" itemprop="articleBody">summary</q>
-        <ul class="tags"></ul>
-        <span itemprop="dateCreated" hidden="">2020-12-30</span>
-        <a itemprop="image" href="https://amorris.ca/avatar.png" style="display: none">image</a>
-        <span itemprop="author" itemscope="" itemtype="https://schema.org/Person" hidden="">
-          <span itemprop="name">Aaron Morris</span>
-          <a itemprop="url" href="https://amorris.ca/">https://amorris.ca/</a>
-        </span>
-        <span class="shared" hidden="">---</span>
-      </article>
-    </li>
-  </template>
-  <template id="tagTemplate">
-    <li class="tag-item">
-      <a href="#tag" class="shared tag" itemprop="articleSection">#tag</a>
-    </li>
-  </template>
-  <h5>Links</h5>
-
-  <ul id="news"></ul>
-  <script type="module">
-    import tablatal from '/lib/tablatal.js'
-    const linkContent = document.querySelector('pre#links')
-    const data = tablatal(linkContent.textContent)
-    const output = document.createElement('ul')
-    output.id = "news"
-    const elements = data.forEach(({ title, summary, tags, url }) => {
-      // note: item is #item and importNode is instancing the template
-      const element = document.importNode(item.content, true)
-      const a = element.querySelector('a')
-      a.href = url
-      a.textContent = title
-      const q = element.querySelector('q')
-      q.textContent = summary
-      const tagContainer = element.querySelector('.tags')
-      const tagStrings = tags.split(/ /)
-      tagStrings.forEach(tag => {
-        const tagElement = document.importNode(tagTemplate.content, true)
-        const a = tagElement.querySelector('a')
-        a.textContent = a.href = `#${tag}`
-        const tagCopy = tagElement.cloneNode(true)
-        tagContainer.appendChild(tagElement)
-        if (allTags.querySelector(`[href="#${tag}"]`)) return
-        allTags.appendChild(tagCopy)
-      })
-      console.log(window.location.hash.replace('#', ''))
-      if (window.location.hash && !tagStrings.includes(window.location.hash.replace('#', ''))) {
-        element.querySelector('li').hidden = true
-      }
-      output.appendChild(element)
-    })
-    news.replaceWith(output)
-    linkContent.style.display = 'none'
-
-    document.addEventListener('click', e => {
-      if (!e.target.classList.contains('tag')) return console.log(e.target.classList)
-      if (!e.target.tagName === 'A') return console.log('not a link')
-      const tagText = e.target.href
-      document.querySelectorAll('.link-item').forEach(item => {
-        console.log(item)
-        const tagLinks = item.querySelectorAll('.tag-item > a')
-        let match = false
-        tagLinks.forEach(item => {
-          if (item.href === tagText) match = true
-        })
-        item.hidden = !match
-      })
-    })
-  </script>
+<body style="max-width:600px;margin:auto;font-size:150%;padding:0.25in;font-family:sans-serif;font-weight:300">
+		<nav style="position:sticky">
+		<h2>Links </h2>
+		<h2><a href="/">Aaron Morris</a></h2>
+		<q style="opacity:0.53">Sharing links is a personal experiment - an expression of my information sources.</q>
+		</nav>
+		<br/><hr />
+		<div>
+				<a href="/tags/news">[by tag]</a> 
+				<a href="as.json">[as json]</a> 
+				<a href="as.tbtl">[as tablatal]</a> 
+		</div>
+		<div><h3>Fit for space?</h3><p>Radiation challenges to humans in space</p><a href="https://www.wired.com/story/are-humans-fit-for-space-a-herculean-study-says-maybe-not/">https://www.wired.com/story/are-humans-fit-for-space-a-herculean-study-says-maybe-not/</a></div>
+<div><h3>Non Commute Culture</h3><p>A call to commute less as a culture</p><a href="https://www.irishtimes.com/business/innovation/chris-horn-we-need-to-adopt-a-no-commute-culture-1.4110977">https://www.irishtimes.com/business/innovation/chris-horn-we-need-to-adopt-a-no-commute-culture-1.4110977</a></div>
+<div><h3>Self driving truck</h3><p>Delivered butter from Cali to Pennsylvania</p><a href="https://www.santacruzsentinel.com/2019/12/10/a-self-driving-truck-delivered-butter-from-california-to-pennsylvania-in-th">https://www.santacruzsentinel.com/2019/12/10/a-self-driving-truck-delivered-butter-from-california-to-pennsylvania-in-th</a></div>
+<div><h3>Illegal to build</h3><p>Things you can't build in america any more</p><a href="https://twitter.com/CascadianSolo/status/1204306278173958145">https://twitter.com/CascadianSolo/status/1204306278173958145</a></div>
+<div><h3>Introducing Pencilkit</h3><p>WWDC on github</p><a href="https://github.com/Blackjacx/WWDC#introducing-pencilkit">https://github.com/Blackjacx/WWDC#introducing-pencilkit</a></div>
+<div><h3>Max</h3><p>Creative media node graph environment</p><a href="https://cycling74.com/products/max/">https://cycling74.com/products/max/</a></div>
+<div><h3>DeepSpeech</h3><p>Mozilla's open sourced speech recognizer</p><a href="https://hacks.mozilla.org/2019/12/deepspeech-0-6-mozillas-speech-to-text-engine/">https://hacks.mozilla.org/2019/12/deepspeech-0-6-mozillas-speech-to-text-engine/</a></div>
+<div><h3>Protein Design</h3><p>Scientists are synthesizing protein patterns</p><a href="https://phys.org/news/2019-11-scientists-redesign-protein-based-pattern-formation.html">https://phys.org/news/2019-11-scientists-redesign-protein-based-pattern-formation.html</a></div>
+<div><h3>Mitogen</h3><p>Remote bootstrap and IO multiplexer</p><a href="https://mitogen.networkgenomics.com/">https://mitogen.networkgenomics.com/</a></div>
+<div><h3>Mail Server Guide</h3><p>I'd like to spin up my own mail server...</p><a href="https://www.c0ffee.net/blog/mail-server-guide/">https://www.c0ffee.net/blog/mail-server-guide/</a></div>
+<div><h3>Disney Plus</h3><p>10 million subscribers in the first month</p><a href="https://www.theverge.com/2019/11/13/20963172/disney-plus-subscribers-10-million-star-wars-marvel-pixar-launch">https://www.theverge.com/2019/11/13/20963172/disney-plus-subscribers-10-million-star-wars-marvel-pixar-launch</a></div>
+<div><h3>Deepfake phone scam</h3><p>Scammers fake CEO voice, get money transfers</p><a href="https://nakedsecurity.sophos.com/2019/09/05/scammers-deepfake-ceos-voice-to-talk-underling-into-243000-transfer/">https://nakedsecurity.sophos.com/2019/09/05/scammers-deepfake-ceos-voice-to-talk-underling-into-243000-transfer/</a></div>
+<div><h3>Build your own stuff</h3><p>Lots of DIY projects to learn coding</p><a href="https://github.com/danistefanovic/build-your-own-x">https://github.com/danistefanovic/build-your-own-x</a></div>
+<div><h3>Plant UML</h3><p>UML text format for nice graph diagrams</p><a href="http://plantuml.com/">http://plantuml.com/</a></div>
+<div><h3>Lnav</h3><p>Log navigation tool with low dependencies</p><a href="https://lnav.org/">https://lnav.org/</a></div>
+<div><h3>Hot and Cold Media</h3><p>Video has more information than text</p><a href="https://alexdanco.com/2019/10/17/the-audio-revolution/">https://alexdanco.com/2019/10/17/the-audio-revolution/</a></div>
+<div><h3>Stripe - Color Systems</h3><p>Accessible color systems post from stripe</p><a href="https://stripe.com/en-ca/blog/accessible-color-systems">https://stripe.com/en-ca/blog/accessible-color-systems</a></div>
+<div><h3>HN: Math like Feynman?</h3><p>Q: Any books for math like feynman lectures?</p><a href="https://news.ycombinator.com/item?id=21346272">https://news.ycombinator.com/item?id=21346272</a></div>
+<div><h3>Working Asynchronously</h3><p>Why you should work asynchronously</p><a href="https://blog.remote.com/why-you-should-be-doing-async-work/">https://blog.remote.com/why-you-should-be-doing-async-work/</a></div>
+<div><h3>Geometry Algebra</h3><p>Geometry, Algebra, Intuition; an exploration</p><a href="https://www.shapeoperator.com/2017/02/28/geometry-algebra-intuition/">https://www.shapeoperator.com/2017/02/28/geometry-algebra-intuition/</a></div>
+<div><h3>Build a spectroscope</h3><p>DIY science - you might need a box and a cd</p><a href="http://scitoys.com/spectroscope.html">http://scitoys.com/spectroscope.html</a></div>
+<div><h3>Microproteins</h3><p>We're finding smaller proteins than expected</p><a href="https://www.sciencemag.org/news/2019/10/new-universe-miniproteins-upending-cell-biology-and-genetics">https://www.sciencemag.org/news/2019/10/new-universe-miniproteins-upending-cell-biology-and-genetics</a></div>
+<div><h3>Take Notes</h3><p>How to take notes on everything</p><a href="https://dev.to/maxwell_dev/how-to-take-notes-on-everything-32fc">https://dev.to/maxwell_dev/how-to-take-notes-on-everything-32fc</a></div>
+<div><h3>Vulcain</h3><p>REST compliant HTTP/2 spec similar to graphql</p><a href="https://github.com/dunglas/vulcain">https://github.com/dunglas/vulcain</a></div>
+<div><h3>Resilience Engineering</h3><p>Managing failures in complex systems</p><a href="https://github.com/lorin/resilience-engineering#resilience-engineering-papers">https://github.com/lorin/resilience-engineering#resilience-engineering-papers</a></div>
+<div><h3>Obvious Design</h3><p>The obvious UI is often the best one</p><a href="https://medium.com/google-design/the-obvious-ui-is-often-the-best-ui-7a25597d79fd">https://medium.com/google-design/the-obvious-ui-is-often-the-best-ui-7a25597d79fd</a></div>
+<div><h3>WebWide</h3><p>New online community for web developers</p><a href="https://hello.webwide.io">https://hello.webwide.io</a></div>
+<div><h3>Category Theory</h3><p>The math perspective translated for science</p><a href="https://arxiv.org/pdf/1302.6946v1.pdf">https://arxiv.org/pdf/1302.6946v1.pdf</a></div>
+<div><h3>Open Structures</h3><p>Design system measurements PDF</p><a href="https://openstructures.family/sites/default/files/2019-08/os_manual_4.3.pdf">https://openstructures.family/sites/default/files/2019-08/os_manual_4.3.pdf</a></div>
+<div><h3>Mapeo</h3><p>Open source mapping tools - DIY maps</p><a href="https://www.digital-democracy.org/mapeo/">https://www.digital-democracy.org/mapeo/</a></div>
+<div><h3>Executives?</h3><p>What does an executive do anyway?</p><a href="https://apenwarr.ca/log/20190926">https://apenwarr.ca/log/20190926</a></div>
+<div><h3>Bullet Charts</h3><p>Effective visualization that's easy to build</p><a href="https://www.atyantik.com/bullet-charts-what-is-it-and-how-to-use-it/">https://www.atyantik.com/bullet-charts-what-is-it-and-how-to-use-it/</a></div>
+<div><h3>The Ebbing Language</h3><p>Poetic reflection on language</p><a href="https://www.poetryfoundation.org/poetrymagazine/articles/150735/the-ebbing-language">https://www.poetryfoundation.org/poetrymagazine/articles/150735/the-ebbing-language</a></div>
+<div><h3>Code Search Dataset</h3><p>Code search ML Dataset</p><a href="https://github.com/github/CodeSearchNet#downloading-data-from-s3">https://github.com/github/CodeSearchNet#downloading-data-from-s3</a></div>
+<div><h3>Silicon Fabric</h3><p>Connect chiplets through silicon fabric</p><a href="https://spectrum.ieee.org/computing/hardware/goodbye-motherboard-hello-siliconinterconnect-fabric">https://spectrum.ieee.org/computing/hardware/goodbye-motherboard-hello-siliconinterconnect-fabric</a></div>
+<div><h3>Image Net, Racism</h3><p>0.5m removed items after racial bias exposed</p><a href="https://hyperallergic.com/518822/600000-images-removed-from-ai-database-after-art-project-exposes-racist-bias/">https://hyperallergic.com/518822/600000-images-removed-from-ai-database-after-art-project-exposes-racist-bias/</a></div>
+<div><h3>Tmux Tutorial</h3><p>Intro to tmux</p><a href="https://leimao.github.io/blog/Tmux-Tutorial/">https://leimao.github.io/blog/Tmux-Tutorial/</a></div>
+<div><h3>Load Balancing</h3><p>An intro to load balancing and proxies</p><a href="https://blog.envoyproxy.io/introduction-to-modern-network-load-balancing-and-proxying-a57f6ff80236">https://blog.envoyproxy.io/introduction-to-modern-network-load-balancing-and-proxying-a57f6ff80236</a></div>
+<div><h3>Solar Sailboats</h3><p>Shipping with autonomous sail boats</p><a href="https://octodon.social/@cathal/102722404991051185">https://octodon.social/@cathal/102722404991051185</a></div>
+<div><h3>HAV</h3><p>Unix tool for getting HTML data</p><a href="https://hav.amorris.ca/">https://hav.amorris.ca/</a></div>
+<div><h3>Power Keyboard</h3><p>OSX rule based keyboard automation</p><a href="https://medium.com/@caulfieldOwen/turn-your-keyboard-into-a-text-editing-rocket-1514d8474d2d">https://medium.com/@caulfieldOwen/turn-your-keyboard-into-a-text-editing-rocket-1514d8474d2d</a></div>
+<div><h3>Imba Language</h3><p>Very fun and concise syntax for web apps</p><a href="https://imba.io/">https://imba.io/</a></div>
+<div><h3>Make a Lisp</h3><p>Lisp implementation and docs in 77 languages</p><a href="https://github.com/kanaka/mal">https://github.com/kanaka/mal</a></div>
+<div><h3>Write a Text Editor</h3><p>Build your own Text Editor in C</p><a href="https://viewsourcecode.org/snaptoken/kilo/index.html">https://viewsourcecode.org/snaptoken/kilo/index.html</a></div>
+<div><h3>Seaboard Keyboard</h3><p>Midi polyphonic expression keyboard</p><a href="https://roli.com/products/seaboard">https://roli.com/products/seaboard</a></div>
+<div><h3>Eve - Visual History</h3><p>Rethinking literate programming</p><a href="https://futureofcoding.org/essays/eve/">https://futureofcoding.org/essays/eve/</a></div>
+<div><h3>Flix</h3><p>Opinionated functional programming language</p><a href="https://flix.dev/">https://flix.dev/</a></div>
+<div><h3>Gerbil Scheme</h3><p>Opinionated Lisp dialect built on Gambit</p><a href="https://cons.io/guide/intro.html#standard-library">https://cons.io/guide/intro.html#standard-library</a></div>
+<div><h3>Zeit Now</h3><p>Now with zero configuration deployments</p><a href="https://zeit.co/guides/upgrade-to-zero-configuration/">https://zeit.co/guides/upgrade-to-zero-configuration/</a></div>
+<div><h3>How to water start</h3><p>Windsurfing tutorial. Short and clear.</p><a href="https://youtu.be/QmWnEZ-G-HE">https://youtu.be/QmWnEZ-G-HE</a></div>
+<div><h3>Compositing Guide</h3><p>A guide to alpha compositing</p><a href="https://ciechanow.ski/alpha-compositing/">https://ciechanow.ski/alpha-compositing/</a></div>
+<div><h3>Algebraic Effects</h3><p>They're like exceptions on steroids but not</p><a href="https://overreacted.io/algebraic-effects-for-the-rest-of-us/">https://overreacted.io/algebraic-effects-for-the-rest-of-us/</a></div>
+<div><h3>MDN: Selection</h3><p>Javascript input selection API</p><a href="https://developer.mozilla.org/en-US/docs/Web/API/Selection">https://developer.mozilla.org/en-US/docs/Web/API/Selection</a></div>
+<div><h3>Daybreaker</h3><p>Wake up and dance with your community</p><a href="https://www.daybreaker.com/">https://www.daybreaker.com/</a></div>
+<div><h3>Dad is Cool</h3><p>Book recommended to me about fatherhood</p><a href="https://www.amazon.com/Dad-cool-Marcos-Piangers-ebook/dp/B0191QL9DU">https://www.amazon.com/Dad-cool-Marcos-Piangers-ebook/dp/B0191QL9DU</a></div>
+<div><h3>bootOS</h3><p>An operating system in 512 bytes</p><a href="https://github.com/nanochess/bootOS">https://github.com/nanochess/bootOS</a></div>
+<div><h3>Algebra</h3><p>Rings, groups, monads, oh my!</p><a href="https://argumatronic.com/posts/2019-06-21-algebra-cheatsheet.html">https://argumatronic.com/posts/2019-06-21-algebra-cheatsheet.html</a></div>
+<div><h3>Kite Surfing</h3><p>YouTube video of kite surfing</p><a href="https://www.youtube.com/watch?v=yl8hiSHuhiI">https://www.youtube.com/watch?v=yl8hiSHuhiI</a></div>
+<div><h3>Hundred Rabbits</h3><p>Digital Nomads making software on a boat</p><a href="https://100r.co/">https://100r.co/</a></div>
+<div><h3>Ronin</h3><p>An experimental graphics terminal</p><a href="https://wiki.xxiivv.com/#ronin">https://wiki.xxiivv.com/#ronin</a></div>
+<div><h3>A web quine</h3><p>HTML page that can edit and publish itself</p><a href="https://github.com/AAorris/quine">https://github.com/AAorris/quine</a></div>
+<div><h3>Mandelbrot</h3><p>Javascript mandelbrot explorer</p><a href="http://tilde.club/~david/m/">http://tilde.club/~david/m/</a></div>
+<div><h3>Flow GUI Pins</h3><p>Pinterest page on node based guis</p><a href="https://www.pinterest.ie/crozyx/flow-gui/">https://www.pinterest.ie/crozyx/flow-gui/</a></div>
+<div><h3>Nodes.io</h3><p>Upcoming node editor using nodejs</p><a href="http://nodes.io/story/">http://nodes.io/story/</a></div>
+<div><h3>Dark Lang</h3><p>Deploy code to production in 50ms</p><a href="https://medium.com/darklang/how-dark-deploys-code-in-50ms-771c6dd60671">https://medium.com/darklang/how-dark-deploys-code-in-50ms-771c6dd60671</a></div>
+<div><h3>Neuralink</h3><p>Neuralink did a live stream</p><a href="https://youtu.be/r-vbh3t7WVI">https://youtu.be/r-vbh3t7WVI</a></div>
+<div><h3>Meta RL</h3><p>Reinforcement learning, learned loss function</p><a href="https://lilianweng.github.io/lil-log/2019/06/23/meta-reinforcement-learning.html#meta-learning-the-loss-function">https://lilianweng.github.io/lil-log/2019/06/23/meta-reinforcement-learning.html#meta-learning-the-loss-function</a></div>
+<div><h3>Godel's System T</h3><p>A guaranteed-to-terminate sublanguage</p><a href="https://deniskyashif.com/gödels-system-t-in-typescript/">https://deniskyashif.com/gödels-system-t-in-typescript/</a></div>
+<div><h3>Google BERT</h3><p>Tunable machine learning model</p><a href="https://github.com/google-research/bert#what-has-been-released-in-this-repository">https://github.com/google-research/bert#what-has-been-released-in-this-repository</a></div>
+<div><h3>Luna</h3><p>Hybrid visual programming language</p><a href="https://www.luna-lang.org/">https://www.luna-lang.org/</a></div>
+<div><h3>Design Patterns...</h3><p>to Category Theory - a C# Dev's take</p><a href="https://blog.ploeh.dk/2017/10/04/from-design-patterns-to-category-theory/">https://blog.ploeh.dk/2017/10/04/from-design-patterns-to-category-theory/</a></div>
+<div><h3>Dynamic Land</h3><p>a new computational medium for society</p><a href="https://dynamicland.org/">https://dynamicland.org/</a></div>
+<div><h3>ALU Chips</h3><p>Look into a vintage ALU</p><a href="http://www.righto.com/2017/03/inside-vintage-74181-alu-chip-how-it.html">http://www.righto.com/2017/03/inside-vintage-74181-alu-chip-how-it.html</a></div>
+<div><h3>OSS Seeds</h3><p>Open source seed directory</p><a href="https://osseeds.org/">https://osseeds.org/</a></div>
+<div><h3>How to draw a horse</h3><p>A comedic little illustrated story</p><a href="https://www.newyorker.com/humor/daily-shouts/how-to-draw-a-horse">https://www.newyorker.com/humor/daily-shouts/how-to-draw-a-horse</a></div>
+<div><h3>Data Processing Jobs</h3><p>Scale.ai and its outsourced workers</p><a href="https://scale.ai/blog/positive-externalities">https://scale.ai/blog/positive-externalities</a></div>
+<div><h3>Kids Category</h3><p>Apple guidelines for kids</p><a href="https://developer.apple.com/app-store/review/guidelines/#kids-category">https://developer.apple.com/app-store/review/guidelines/#kids-category</a></div>
+<div><h3>Web of Knowledge...</h3><p>And of surveilance.</p><a href="https://dave.autonoma.ca/blog/2019/06/06/web-of-knowledge/">https://dave.autonoma.ca/blog/2019/06/06/web-of-knowledge/</a></div>
+<div><h3>Mercury OS</h3><p>An operating system with no apps, distraction</p><a href="https://medium.com/@jasonyuan/introducing-mercury-os-f4de45a04289">https://medium.com/@jasonyuan/introducing-mercury-os-f4de45a04289</a></div>
+<div><h3>CSS Grid Generator</h3><p>Useful little grid generator with css export</p><a href="https://cssgrid-generator.netlify.com/">https://cssgrid-generator.netlify.com/</a></div>
+<div><h3>Atlassian Design</h3><p>Design guidelines by atlassian</p><a href="https://atlassian.design/guidelines/product/overview">https://atlassian.design/guidelines/product/overview</a></div>
+<div><h3>ZDog</h3><p>Round-flat design API</p><a href="https://zzz.dog/">https://zzz.dog/</a></div>
+<div><h3>Tensorflow Graphics</h3><p>Computer graphics meets deep learning</p><a href="https://medium.com/tensorflow/introducing-tensorflow-graphics-computer-graphics-meets-deep-learning-c8e3877b7668">https://medium.com/tensorflow/introducing-tensorflow-graphics-computer-graphics-meets-deep-learning-c8e3877b7668</a></div>
+<div><h3>EdgeDB</h3><p>We can do better than SQL</p><a href="https://edgedb.com/blog/we-can-do-better-than-sql/">https://edgedb.com/blog/we-can-do-better-than-sql/</a></div>
+<div><h3>Scopes</h3><p>Language with literate data syntax</p><a href="https://scopes.readthedocs.io/en/latest/tutorial.html">https://scopes.readthedocs.io/en/latest/tutorial.html</a></div>
+<div><h3>ThreeJS Fundamentals</h3><p>Get started with 3d in the browser</p><a href="https://threejsfundamentals.org/threejs/lessons/threejs-fundamentals.html">https://threejsfundamentals.org/threejs/lessons/threejs-fundamentals.html</a></div>
+<div><h3>Advent of code...</h3><p>in under a second. Optimizing solutions in go</p><a href="https://www.forrestthewoods.com/blog/solving-advent-of-code-in-under-a-second/">https://www.forrestthewoods.com/blog/solving-advent-of-code-in-under-a-second/</a></div>
+<div><h3>Mathematicians Lament</h3><p>Modern schooling is failing to teach us math</p><a href="http://worrydream.com/refs/Lockhart-MathematiciansLament.pdf?fbclid=IwAR0jO-Vatk1Cl8LOs-7pZF9fc4oTrUZvCr1xy7ny0rlgGl9Dm6">http://worrydream.com/refs/Lockhart-MathematiciansLament.pdf?fbclid=IwAR0jO-Vatk1Cl8LOs-7pZF9fc4oTrUZvCr1xy7ny0rlgGl9Dm6</a></div>
+<div><h3>Hubble's Greatest Hits</h3><p>A gallery of space images</p><a href="https://www.nationalgeographic.co.uk/photography/2018/08/hubbles-greatest-hits?image=hubble-48-mice-colliding-galaxies-1">https://www.nationalgeographic.co.uk/photography/2018/08/hubbles-greatest-hits?image=hubble-48-mice-colliding-galaxies-1</a></div>
+<div><h3>Marc Levoy Lectures</h3><p>Digital photography lectures</p><a href="https://sites.google.com/site/marclevoylectures/">https://sites.google.com/site/marclevoylectures/</a></div>
+<div><h3>Matchmoving, Lenses</h3><p>A document on the matchmoving process</p><a href="https://medium.com/pftrack-blog/what-every-matchmove-artist-needs-to-know-about-lenses-d81f123e2613">https://medium.com/pftrack-blog/what-every-matchmove-artist-needs-to-know-about-lenses-d81f123e2613</a></div>
+<div><h3>Gremlin</h3><p>Functional graph traversal language</p><a href="https://tinkerpop.apache.org/gremlin.html">https://tinkerpop.apache.org/gremlin.html</a></div>
+<div><h3>Cell Lang</h3><p>A data model definition language</p><a href="http://cell-lang.net/example.html">http://cell-lang.net/example.html</a></div>
+<div><h3>Pynini</h3><p>Python grammar builder</p><a href="https://github.com/kylebgorman/pynini">https://github.com/kylebgorman/pynini</a></div>
+<div><h3>Haskell Syntax Guide</h3><p>A quick deep dive</p><a href="https://prajitr.github.io/quick-haskell-syntax/">https://prajitr.github.io/quick-haskell-syntax/</a></div>
+<div><h3>Finding Joy</h3><p>Some tips to be positive and find joy</p><a href="https://www.success.com/11-simple-ways-to-find-joy-in-your-everyday-life/">https://www.success.com/11-simple-ways-to-find-joy-in-your-everyday-life/</a></div>
+<div><h3>Web Components</h3><p>Make your own html tags</p><a href="https://css-tricks.com/an-introduction-to-web-components/">https://css-tricks.com/an-introduction-to-web-components/</a></div>
+<div><h3>Haunted</h3><p>React Hooks style for web components</p><a href="https://github.com/matthewp/haunted">https://github.com/matthewp/haunted</a></div>
+<div><h3>React Fiber in Depth</h3><p>How react fiber works</p><a href="https://medium.com/react-in-depth/inside-fiber-in-depth-overview-of-the-new-reconciliation-algorithm-in-react-e1c04700ef">https://medium.com/react-in-depth/inside-fiber-in-depth-overview-of-the-new-reconciliation-algorithm-in-react-e1c04700ef</a></div>
+<div><h3>Htm</h3><p>Simple native javascript markup like react</p><a href="https://github.com/developit/htm#--htm-hyperscript-tagged-markup--">https://github.com/developit/htm#--htm-hyperscript-tagged-markup--</a></div>
 </body></html>
