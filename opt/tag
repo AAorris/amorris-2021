@@ -1,0 +1,14 @@
+#!/usr/bin/env python3
+import argparse
+
+parser = argparse.ArgumentParser()
+add = parser.add_argument
+
+add('name')
+add('tags', nargs='*')
+
+if __name__ == '__main__':
+    parsed = parser.parse_args()
+    name = parsed.name
+    for tag in parsed.tags:
+        print(f"{tag:12}{name}")
