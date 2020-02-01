@@ -1,4 +1,40 @@
 title                  summary                                        month     year url                                                                                                                     
+wav2letter             Embeddable speech recognition software         January   2020 https://ai.facebook.com/blog/online-speech-recognition-with-wav2letteranywhere
+huggingface tokenizers Todays most used tokenizers for nlp work       January   2020 https://github.com/huggingface/tokenizers
+par.sr                 Transform pdf, documents, images into data     January   2020 https://github.com/axa-group/Parsr
+Colors: designs.ai     Use AI to generate and match colors            January   2020 https://designs.ai/colors/
+Organic Cell Design    Paper on designing living cells with functions January   2020 https://www.pnas.org/content/117/4/1853
+Interpretable RL       Interpret and verify machine learning models   January   2020 https://blog.acolyer.org/2020/01/15/programmatically-interpretable-reinforcement-learning/
+x86 System Calls       Implementing system calls                      January   2020 https://x86.lol/generic/2019/07/04/kernel-entry.html
+Notion                 All in one workspace                           January   2020 https://www.notion.so/product
+GMUNK                  Designer, Director                             January   2020 https://gmunk.com
+SU Relational Data     Stanford course notes on relational data       January   2020 http://infolab.stanford.edu/~ullman/focs/ch08.pdf
+Gradiant Ascent        Visualize CNNs with gradient ascent            January   2020 https://keras.io/examples/conv_filter_visualization/
+2020 US Water Laws     Trump erodes water protection                  January   2020 https://www.politico.com/news/2020/01/23/trump-epa-curbs-water-protections-102779
+Nata Xlat              Photographs old computers - beautiful          January   2020 https://www.flickr.com/photos/xlat8086/albums
+Botium                 Friendly speech processing API                 January   2020 https://github.com/codeforequity-at/botium-speech-processing
+Recutils               Human editable plain text databases            January   2020 https://www.gnu.org/software/recutils/
+ML: Cause and Effect   Concepts for truly intelligent machines        January   2020 https://www.quantamagazine.org/to-build-truly-intelligent-machines-teach-them-cause-and-effect-20180515
+ShellHub               A SSH server for remote linux access           January   2020 https://shellhub-io.github.io
+Personal Search        Building your own personal search workflow     January   2020 https://beepb00p.xyz/pkm-search.html
+Thinc.ai               Functional API for machine learning            January   2020 https://thinc.ai
+Kinto                  Minimalist JSON storage by mozilla             January   2020 https://docs.kinto-storage.org/en/latest/overview.html
+Hacking Clang          Implementing fat arrow funcs and lambdas       January   2020 https://mort.coffee/home/clang-compiler-hacking/
+Google Meena           AI achieving state of the art 79% SSA score    January   2020 https://ai.googleblog.com/2020/01/towards-conversational-agent-that-can.html
+Encapsulation in C     Proper encapsulation example in C              January   2020 https://alastairs-place.net/blog/2013/06/03/encapsulation-in-c/
+Let's Destroy C        Macro hacks that make C look high level        January   2020 https://gist.github.com/shakna-israel/4fd31ee469274aa49f8f9793c3e71163#lets-destroy-c
+Ishikawa Diagram       Causal diagrams created by Kaoru Ishikawa      January   2020 https://en.wikipedia.org/wiki/Ishikawa_diagram
+redux persist          Persist redux state (ex. to local storage)     January   2020 https://github.com/rt2zz/redux-persist          
+solo dev year 2        Second year as a solo developer retrospective  January   2020 https://mtlynch.io/solo-developer-year-2/
+Announcing MessageDB   Message based database system                  December  2019 https://blog.eventide-project.org/articles/announcing-message-db/
+PyAV                   Python library for ffmpeg work                 December  2019 https://github.com/mikeboers/PyAV
+No-Commute Imperative  We need to adopt a non-commute culture         December  2019 https://www.irishtimes.com/business/innovation/chris-horn-we-need-to-adopt-a-no-commute-culture-1.4110977
+Music for Programming  Compilation of music to listen to while coding December  2019 http://musicforprogramming.net/
+Wart Layers            Actually about organizing your C code          December  2019 http://akkartik.name/post/wart-layers
+Truck Delivers Butter  Self driving truck delivers butter in the US   December  2019 https://www.santacruzsentinel.com/2019/12/10/a-self-driving-truck-delivered-butter-from-california-to-pennsylvania-in-three-days/
+Write an Alsa Driver   On writing your own ALSA drivers               December  2019 https://www.kernel.org/doc/html/v4.17/sound/kernel-api/writing-an-alsa-driver.html
+asciinema              Record your terminal to JSON and render it out December  2019 https://asciinema.org/
+songho: gl pbo         GL Pixel Buffer Objects                        December  2019 http://www.songho.ca/opengl/gl_pbo.html
 Fit for space          Radiation challenges to humans in space        December  2019 https://www.wired.com/story/are-humans-fit-for-space-a-herculean-study-says-maybe-not/
 Non Commute Culture    A call to commute less as a culture            December  2019 https://www.irishtimes.com/business/innovation/chris-horn-we-need-to-adopt-a-no-commute-culture-1.4110977
 Self driving truck     Delivered butter from Cali to Pennsylvania     December  2019 https://www.santacruzsentinel.com/2019/12/10/a-self-driving-truck-delivered-butter-from-california-to-pennsylvania-in-three-days/

@@ -2,34 +2,63 @@ tag         name
 audio       Seaboard Keyboard
 books       Dad is Cool
 books       The Ebbing Language
+c           Encapsulation in C
+c           Hacking Clang
+c           Let's destroy C
+c           Wart Layers
+c           Write an Alsa Driver
+c           songho: gl pbo
 color       Compositing Guide
 community   Daybreaker
 community   Dynamic Land
 community   OSS Seeds
+db          Announcing MessageDB
+db          Notion
+db          Recutils
+db          SU Relational Data
 design      Atlassian Design
 design      Bullet Charts
+design      GMUNK
 design      Hot and Cold Media
+design      Ishikawa Diagram
 design      Marc Levoy Lectures
 design      Obvious Design
 design      Stripe - Color Systems
 design      ZDog
 ethics      Image Net, Racism
 gear        Seaboard Keyboard
+gl          songho: gl pbo
 groups      WebWide
+hacks       Hacking Clang
+hacks       Let's destroy C
 home        Atlassian Design
 home        Build a spectroscope
 home        Code Search Dataset
+home        Colors: designs.ai
 home        Finding Joy
 home        Haskell Syntax Guide
 home        Make a Lisp
 home        Mapeo
 home        Marc Levoy Lectures
 home        Matchmoving, Lenses
+home        Music for Programming
+home        Notion
 home        Open Structures
 home        Pynini
 home        ThreeJS Fundamentals
 home        Tmux Tutorial
+home        Wart Layers
 home        Write a Text Editor
+home        Write an Alsa Driver
+home        asciinema
+home        huggingface tokenizers
+home        par.sr
+home        songho: gl pbo
+home        wav2letter
+images      GMUNK
+images      Gradient Ascent
+images      Nata Xlat
+images      asciinema
 lang        Cell Lang
 lang        EdgeDB
 lang        Eve - Visual History
@@ -37,6 +66,7 @@ lang        Flix
 lang        Haskell Syntax Guide
 lang        Luna
 lang        Scopes
+laws        2020 US Water Laws
 life        Dad is Cool
 life        Daybreaker
 life        Finding Joy
@@ -58,21 +88,38 @@ math        Geometry Algebra
 math        HN: Math like Feynman?
 math        Mathematicians Lament
 ml          Code Search Dataset
+ml          Colors: designs.ai
 ml          DeepSpeech
 ml          Google BERT
+ml          Google Meena
+ml          Gradient Ascent
+ml          Interpretable RL
 ml          Meta RL
 ml          Tensorflow Graphics
+ml          Thinc.ai
+ml          wav2letter
+music       Music for Programming
+news        2020 US Water Laws
 news        Deepfake phone scam
 news        Disney Plus
 news        Microproteins
 news        Silicon Fabric
+news        Truck Delivers Butter
+nlp         huggingface tokenizers
+nlp         wav2letter
+offline     redux persist
+politics    2020 US Water Laws
+python      PyAV
 science     Build a spectroscope
 science     Category Theory
 science     Fit for space
 science     HN: Math like Feynman?
 science     Hubble's Greatest Hits
+science     Interpretable RL
+science     Ishikawa Diagram
 science     Microproteins
 science     Open Structures
+science     Organic Cell Design
 science     Protein Design
 science     Self driving truck
 science     Silicon Fabric
@@ -85,10 +132,12 @@ tech        ALU Chips
 tech        Advent of code...
 tech        Algebra
 tech        Algebraic Effects
+tech        Announcing MessageDB
 tech        Build your own stuff
 tech        Bullet Charts
 tech        CSS Grid Generator
 tech        Cell Lang
+tech        Colors: designs.ai
 tech        Dark Lang
 tech        Data Processing Jobs
 tech        DeepSpeech
@@ -96,24 +145,32 @@ tech        Deepfake phone scam
 tech        Design Patterns...
 tech        Dynamic Land
 tech        EdgeDB
+tech        Encapsulation in C
 tech        Eve - Visual History
 tech        Flix
 tech        Flow GUI Pins
+tech        GMUNK
 tech        Geometry Algebra
 tech        Gerbil Scheme
 tech        Godel's System T
 tech        Google BERT
+tech        Google Meena
+tech        Gradient Ascent
 tech        Gremlin
 tech        HAV
 tech        HTM
+tech        Hacking Clang
 tech        Haskell Syntax Guide
 tech        Haunted
 tech        Hot and Cold Media
 tech        Hundred Rabbits
 tech        Image Net, Racism
 tech        Imba Language
+tech        Interpretable RL
 tech        Introducing Pencilkit
 tech        Kids Category
+tech        Kinto
+tech        Let's destroy C
 tech        Lnav
 tech        Load Balancing
 tech        Luna
@@ -127,26 +184,36 @@ tech        Max
 tech        Mercury OS
 tech        Meta RL
 tech        Mitogen
+tech        Nata Xlat
 tech        Neuralink
 tech        Nodes.io
+tech        Notion
 tech        OSS Seeds
 tech        Obvious Design
+tech        Organic Cell Design
 tech        Plant UML
 tech        Power Keyboard
 tech        Protein Design
+tech        PyAV
 tech        Pynini
 tech        React Fiber in Depth
+tech        Recutils
 tech        Resilience Engineering
 tech        Ronin
+tech        SU Relational Data
 tech        Scopes
 tech        Self driving truck
+tech        ShellHub
 tech        Solar Sailboats
 tech        Stripe - Color Systems
 tech        Take Notes
 tech        Tensorflow Graphics
+tech        Thinc.ai
 tech        ThreeJS Fundamentals
 tech        Tmux Tutorial
+tech        Truck Delivers Butter
 tech        Vulcain
+tech        Wart Layers
 tech        Web Components
 tech        Web of Knowledge...
 tech        WebWide
@@ -155,18 +222,27 @@ tech        Write a Text Editor
 tech        ZDog
 tech        Zeit Now
 tech        bootOS
+tech        huggingface tokenizers
+tech        par.sr
+tech        redux persist
+tech        wav2letter
+tech        x86 System Calls
 tool        CSS Grid Generator
+unix        Recutils
+unix        ShellHub
 web         Atlassian Design
 web         CSS Grid Generator
 web         HAV
 web         HTM
 web         Haunted
 web         Imba Language
+web         Kinto
 web         Load Balancing
 web         MDN: Selection
 web         React Fiber in Depth
 web         ThreeJS Fundamentals
 web         Web Components
 web         ZDog
+web         redux persist
 work        Executives?
 work        Working Asynchronously
