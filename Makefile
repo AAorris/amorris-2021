@@ -18,6 +18,9 @@ db: tools
 media:
 	bin/compress.sh
 
+copymedia:
+	cp aaron-10.jpg public
+
 homepage:
 	cp index.html public
 
@@ -30,4 +33,4 @@ newspage:
 
 content: db homepage tagpage newspage
 
-all: content media
+all: content copymedia
