@@ -7,11 +7,11 @@ db: clean
 	sqlite3 -bail db.sqlite3 <<< `cd news && tbl2sql news.tbtl`
 	cd news && tbl2json news.tbtl > news.json
 
-tags:
+tagpage:
 	# sqlite3 db.sqlite3 'select distinct tag from tags'
 	opt/create-tags.sh
 
-news:
+newspage:
 	opt/create-news.sh
 
-all: db tags news
+all: db tagpage newspage
