@@ -10,7 +10,7 @@ cat <<EOF
   <meta name="og:url" content="https://amorris.ca/">
   <meta name="og:image" content="https://amorris.ca/portrait.jpg">
   <meta name="google-site-verification" content="fkirvSljItXe5zerAIyJ7YgmPZ1sCS6sn3hM7g_3nb0" />
-  <link rel="stylesheet" href="/lib/reset.css">
+  <link rel="stylesheet" href="/reset.css">
 <style>h3,p{margin-block-end:4px}p{margin-block-start:4px;font-size:100%;color:#444}body>div{padding:1em 0}</style>
 </head>
 

@@ -6,15 +6,37 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Aaron Morris | Résumé</title>
-    <link rel="stylesheet" href="/lib/reset.css">
-    <link rel="stylesheet" href="/lib/theme.css">
-    <link rel="stylesheet" href="/lib/timegrid.css">
+    <link rel="stylesheet" href="/reset.css">
+    <link rel="stylesheet" href="/theme.css">
     <meta name="og:title" content="Aaron Morris | Résumé">
     <meta name="og:description" content="Media Lead, Production Engineer at Industrial Light & Magic in Vancouver">
     <meta name="og:url" content="https://amorris.ca/">
     <meta name="og:image" content="https://amorris.ca/portrait.jpg">
     <style>
-        body {
+		@media (prefers-color-scheme: dark), (light-level: dim) {
+				:root {
+				  --bg: #fcfbfa;
+				  --bg1: rgba(248, 248, 248, 1);
+				  --bg2: #fdfdfd;
+
+				  --o100: 0.7;
+				  --o200: 0.83;
+				  --o300: 0.9;
+				  --o050: 0.34;
+				  --o030: 0.10;
+				  --o010: 0.06;
+
+				  --txt: 128;
+
+				  --link: rgba(var(--txt), var(--txt), var(--txt), var(--o100));
+				  --body: rgba(var(--txt), var(--txt), var(--txt), var(--o100));
+				  --h3: rgba(var(--txt), var(--txt), var(--txt), var(--o300));
+				  --li: rgba(var(--txt), var(--txt), var(--txt), var(--o050));  /* actually just its border */
+				  --li-link: rgba(var(--txt), var(--txt), var(--txt), var(--o200));
+				  --p: rgba(var(--txt), var(--txt), var(--txt), var(--o100));
+			   }
+		}
+       body {
             padding: 0;
             width: 80%;
             margin: auto;
@@ -96,7 +118,7 @@
 
         #github {
             display: inline-block;
-            background-image: url(/lib/github.svg);
+            background-image: url(/github.svg);
             width: 26px;
             height: 26px;
             margin: 8px;

@@ -1,6 +1,6 @@
 clean:
 	rm -f db.sqlite3
-	rm -rf public
+	rm -rf public/*
 	mkdir -p public/tags/news/
 	mkdir -p public/news/
 
@@ -32,5 +32,9 @@ newspage:
 	bin/create-news.sh
 
 content: db homepage tagpage newspage
+	cp *.css public
+	cp *.svg public
+	cp -r launch/ public/launch/
+	cp -r resume/ public/resume/
 
 all: content copymedia
