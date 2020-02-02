@@ -1,17 +1,30 @@
 clean:
-	rm db.sqlite3
+	rm -f db.sqlite3
+	rm -rf public
+	mkdir -p public/tags/news/
+	mkdir -p public/news/
 
 db: clean
-	sqlite3 -bail db.sqlite3 <<< `cd tags && tbl2sql tags.tbtl`
-	cd tags && tbl2json tags.tbtl > tags.json
-	sqlite3 -bail db.sqlite3 <<< `cd news && tbl2sql news.tbtl`
-	cd news && tbl2json news.tbtl > news.json
+	cp news.tbtl public
+	cp tags.tbtl public
+	sqlite3 -bail db.sqlite3 <<< `tbl2sql tags.tbtl`
+	tbl2json tags.tbtl > public/tags.json
+	sqlite3 -bail db.sqlite3 <<< `tbl2sql news.tbtl`
+	tbl2json news.tbtl > public/news.json
+
+media:
+	bin/compress.sh
+
+homepage:
+	cp index.html public
 
 tagpage:
 	# sqlite3 db.sqlite3 'select distinct tag from tags'
-	opt/create-tags.sh
+	bin/create-tags.sh
 
 newspage:
-	opt/create-news.sh
+	bin/create-news.sh
 
-all: db tagpage newspage
+content: db homepage tagpage newspage
+
+all: content media

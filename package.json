@@ -1,0 +1,22 @@
+{
+  "name": "amorris",
+  "version": "0.0.0",
+  "description": "personal web site",
+  "main": "public",
+  "directories": {
+    "lib": "lib"
+  },
+  "scripts": {
+		"build": "make all"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/AAorris/amorris.git"
+  },
+  "author": "",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/AAorris/amorris/issues"
+  },
+  "homepage": "https://github.com/AAorris/amorris#readme"
+}
