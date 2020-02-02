@@ -4,6 +4,9 @@ clean:
 	mkdir -p public/tags/news/
 	mkdir -p public/news/
 
+bin:
+	$(MAKE) -C bin/
+
 db: bin
 	cp news.tbtl public
 	cp tags.tbtl public
