@@ -11,9 +11,9 @@ db: tools
 	cp news.tbtl public
 	cp tags.tbtl public
 	sqlite3 -bail db.sqlite3 <<< `bin/tbl2sql tags.tbtl`
-	tbl2json tags.tbtl > public/tags.json
+	bin/tbl2json tags.tbtl > public/tags.json
 	sqlite3 -bail db.sqlite3 <<< `bin/tbl2sql news.tbtl`
-	tbl2json news.tbtl > public/news.json
+	bin/tbl2json news.tbtl > public/news.json
 
 media:
 	bin/compress.sh
