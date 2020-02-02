@@ -1,1 +1,3 @@
 *.dSYM/
+tbl2json
+tbl2sql

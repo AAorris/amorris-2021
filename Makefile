@@ -4,10 +4,10 @@ clean:
 	mkdir -p public/tags/news/
 	mkdir -p public/news/
 
-bin:
-	$(MAKE) -C bin/
+tools:
+	$(MAKE) -C bin/ all
 
-db: bin
+db: tools
 	cp news.tbtl public
 	cp tags.tbtl public
 	sqlite3 -bail db.sqlite3 <<< `bin/tbl2sql tags.tbtl`
