@@ -7,7 +7,7 @@
     "lib": "lib"
   },
   "scripts": {
-		"build": "make all"
+		"build": "make clean all"
   },
   "repository": {
     "type": "git",
