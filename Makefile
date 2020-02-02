@@ -4,12 +4,12 @@ clean:
 	mkdir -p public/tags/news/
 	mkdir -p public/news/
 
-db: clean
+db: bin
 	cp news.tbtl public
 	cp tags.tbtl public
-	sqlite3 -bail db.sqlite3 <<< `tbl2sql tags.tbtl`
+	sqlite3 -bail db.sqlite3 <<< `bin/tbl2sql tags.tbtl`
 	tbl2json tags.tbtl > public/tags.json
-	sqlite3 -bail db.sqlite3 <<< `tbl2sql news.tbtl`
+	sqlite3 -bail db.sqlite3 <<< `bin/tbl2sql news.tbtl`
 	tbl2json news.tbtl > public/news.json
 
 media:
