@@ -7,8 +7,8 @@ TITLE="News" SUMMARY="Sharing links is an ongoing personal experiment around inf
 
 echo "<div><a href=\"/tags/news\">[by tag]</a></div>" >> $DEST
 
-sqlite3 db.sqlite3 'select title, title, summary, url, url from news' \
-	| bin/printt "printf '<div><h3 name=\"title\"><a id=\"%s\">%s</a></h3><div name=\"summary\"><p>%s</p></div><div name=\"url\"><a href=\"%s\">%s</a></div></div>\n'" >> $DEST
+sqlite3 db.sqlite3 'select title, summary, url, url from news' \
+	| bin/printt "printf '<p><strong>%s</strong> - %s<br/><a href=\"%s\">%s</a>'" >> $DEST
 
 
 cat bin/footer.html >> $DEST

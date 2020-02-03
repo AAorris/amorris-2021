@@ -16,11 +16,11 @@ cat <<EOF
 
 <body>
 		<nav style="position:sticky">
-		<h3><a href="/">amorris.ca</a></h3>
-		<h2>${TITLE}</h2>
+		<p><a href="/">amorris.ca</a></p>
+		<p>${TITLE}</p>
 		<section>
-         <a href="/news/" style="padding-right: 16px" title="I actively collect links.">News</a>
-         <a href="/tags/news/" style="padding-right: 16px" title="">Tags</a>
+         <a href="/news/" style="margin-right: 16px" title="I actively collect links.">News</a>
+         <a href="/tags/news/" style="margin-right: 16px" title="">Tags</a>
          <a href="//webring.xxiivv.com" title="Surf the web like its 1999.">Web Ring</a>
 		</section>
 		</nav>
