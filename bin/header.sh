@@ -8,17 +8,21 @@ cat <<EOF
   <meta name="og:title" content="Aaron Morris">
   <meta name="og:description" content="Software Engineer">
   <meta name="og:url" content="https://amorris.ca/">
-  <meta name="og:image" content="https://amorris.ca/portrait.jpg">
+  <meta name="og:image" content="https://amorris.ca/aaron-10.jpg">
   <meta name="google-site-verification" content="fkirvSljItXe5zerAIyJ7YgmPZ1sCS6sn3hM7g_3nb0" />
   <link rel="stylesheet" href="/reset.css">
-<style>h3,p{margin-block-end:4px}p{margin-block-start:4px;font-size:100%;color:#444}body>div{padding:1em 0}</style>
+  <link rel="stylesheet" href="/theme.css">
 </head>
 
-<body style="max-width:600px;margin:auto;font-size:150%;padding:0.25in;font-family:sans-serif;font-weight:300">
+<body>
 		<nav style="position:sticky">
+		<h3><a href="/">amorris.ca</a></h3>
 		<h2>${TITLE}</h2>
-		<h2><a href="/">Aaron Morris</a></h2>
-		<q style="opacity:0.53">${SUMMARY}</q>
+		<section>
+         <a href="/news/" style="padding-right: 16px" title="I actively collect links.">News</a>
+         <a href="/tags/news/" style="padding-right: 16px" title="">Tags</a>
+         <a href="//webring.xxiivv.com" title="Surf the web like its 1999.">Web Ring</a>
+		</section>
 		</nav>
-		<br/><hr />
+		<main>
 EOF

@@ -1,8 +1,15 @@
-clean:
+cleandb:
 	rm -f db.sqlite3
+
+cleanpublic:
 	rm -rf public/*
 	mkdir -p public/tags/news/
 	mkdir -p public/news/
+
+cleancss:
+	rm -f public/*.css
+
+clean: cleandb cleanpublic
 
 tools:
 	$(MAKE) -C bin/ all
@@ -20,6 +27,7 @@ media:
 
 copymedia:
 	cp aaron-10.jpg public
+	cp -r img public
 
 homepage:
 	cp index.html public
@@ -31,10 +39,10 @@ tagpage:
 newspage:
 	bin/create-news.sh
 
-content: db homepage tagpage newspage
+content: cleancss homepage tagpage newspage
 	cp *.css public
 	cp *.svg public
 	cp -r launch/ public/launch/
 	cp -r resume/ public/resume/
 
-all: content copymedia
+all: db content copymedia
