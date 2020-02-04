@@ -30,7 +30,7 @@ copymedia:
 	cp -r img public
 
 homepage:
-	cp index.html public
+	ln -f index.html public/index.html
 
 tagpage:
 	# sqlite3 db.sqlite3 'select distinct tag from tags'
@@ -40,7 +40,8 @@ newspage:
 	bin/create-news.sh
 
 content: cleancss homepage tagpage newspage
-	cp *.css public
+	ln -f theme.css public/theme.css
+	ln -f reset.css public/reset.css
 	cp *.svg public
 	cp -r launch/ public/launch/
 	cp -r resume/ public/resume/

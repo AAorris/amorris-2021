@@ -1,19 +1,25 @@
 tag         name                                       
+audio       Music for Programming
 audio       Seaboard Keyboard
 books       Dad is Cool
 books       The Ebbing Language
 c           Encapsulation in C
 c           Hacking Clang
-c           Let's destroy C
+c           Let's Destroy C
 c           Wart Layers
 c           Write an Alsa Driver
 c           songho: gl pbo
 color       Compositing Guide
+color       Stripe - Color Systems
 community   Daybreaker
 community   Dynamic Land
+community   No-Commute Imperative
+community   Non Commute Culture
 community   OSS Seeds
+community   solo dev year 2
 db          Announcing MessageDB
 db          Notion
+db          Oscean
 db          Recutils
 db          SU Relational Data
 design      Atlassian Design
@@ -26,11 +32,12 @@ design      Obvious Design
 design      Stripe - Color Systems
 design      ZDog
 ethics      Image Net, Racism
-gear        Seaboard Keyboard
-gl          songho: gl pbo
-groups      WebWide
+graphics    GMUNK
+graphics    Gradient Ascent
+graphics    Nata Xlat
+graphics    asciinema
 hacks       Hacking Clang
-hacks       Let's destroy C
+hacks       Let's Destroy C
 home        Atlassian Design
 home        Build a spectroscope
 home        Code Search Dataset
@@ -55,10 +62,6 @@ home        huggingface tokenizers
 home        par.sr
 home        songho: gl pbo
 home        wav2letter
-images      GMUNK
-images      Gradient Ascent
-images      Nata Xlat
-images      asciinema
 lang        Cell Lang
 lang        EdgeDB
 lang        Eve - Visual History
@@ -75,6 +78,7 @@ life        Illegal to build
 life        Kids Category
 life        Mathematicians Lament
 life        Mercury OS
+life        No-Commute Imperative
 life        Non Commute Culture
 life        Take Notes
 life        Web of Knowledge...
@@ -94,22 +98,25 @@ ml          Google BERT
 ml          Google Meena
 ml          Gradient Ascent
 ml          Interpretable RL
+ml          ML: Cause and Effect
 ml          Meta RL
 ml          Tensorflow Graphics
 ml          Thinc.ai
 ml          wav2letter
-music       Music for Programming
 news        2020 US Water Laws
 news        Deepfake phone scam
 news        Disney Plus
 news        Microproteins
 news        Silicon Fabric
 news        Truck Delivers Butter
+news        rauchg.com 2019 review
+nlp         Botium
 nlp         huggingface tokenizers
 nlp         wav2letter
 offline     redux persist
 politics    2020 US Water Laws
 python      PyAV
+react       swr
 science     Build a spectroscope
 science     Category Theory
 science     Fit for space
@@ -133,6 +140,7 @@ tech        Advent of code...
 tech        Algebra
 tech        Algebraic Effects
 tech        Announcing MessageDB
+tech        Botium
 tech        Build your own stuff
 tech        Bullet Charts
 tech        CSS Grid Generator
@@ -170,11 +178,12 @@ tech        Interpretable RL
 tech        Introducing Pencilkit
 tech        Kids Category
 tech        Kinto
-tech        Let's destroy C
+tech        Let's Destroy C
 tech        Lnav
 tech        Load Balancing
 tech        Luna
 tech        MDN: Selection
+tech        ML: Cause and Effect
 tech        Mail Server Guide
 tech        Make a Lisp
 tech        Mandelbrot
@@ -191,6 +200,8 @@ tech        Notion
 tech        OSS Seeds
 tech        Obvious Design
 tech        Organic Cell Design
+tech        Oscean
+tech        Personal Search
 tech        Plant UML
 tech        Power Keyboard
 tech        Protein Design
@@ -224,7 +235,10 @@ tech        Zeit Now
 tech        bootOS
 tech        huggingface tokenizers
 tech        par.sr
+tech        rauchg.com 2019 review
 tech        redux persist
+tech        solo dev year 2
+tech        swr
 tech        wav2letter
 tech        x86 System Calls
 tool        CSS Grid Generator
@@ -244,10 +258,6 @@ web         ThreeJS Fundamentals
 web         Web Components
 web         ZDog
 web         redux persist
+web         swr
 work        Executives?
 work        Working Asynchronously
-react       swr
-web         swr
-tech        swr
-tech        rauchg.com 2019 review
-news        rauchg.com 2019 review
