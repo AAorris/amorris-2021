@@ -1,0 +1,4 @@
+name                note                                                       
+sqlite printf       works like printf but in sql queries
+sqlite group_concat where count(1,2,3)=3, group_concat(1,2,3)="1,2,3"
+sqlite amalgamation sqlite ships a single header and c file for compiling
