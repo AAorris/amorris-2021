@@ -13,6 +13,6 @@ sqlite3 db.sqlite3 <<EOF >> $DEST
 		url,
 		url,
 		(select group_concat(tag, ", ") from tags where tags.name = news.title)
-	) from news
+	) from news;
 EOF
 cat bin/footer.html >> $DEST
