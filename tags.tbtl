@@ -62,6 +62,7 @@ home        huggingface tokenizers
 home        par.sr
 home        songho: gl pbo
 home        wav2letter
+home        Zeit Now
 lang        Cell Lang
 lang        EdgeDB
 lang        Eve - Visual History
@@ -259,5 +260,6 @@ web         Web Components
 web         ZDog
 web         redux persist
 web         swr
+web         Zeit Now
 work        Executives?
 work        Working Asynchronously
