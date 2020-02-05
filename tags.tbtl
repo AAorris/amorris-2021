@@ -1,4 +1,5 @@
 tag         name                                       
+assembly    6502 homebuilt
 audio       Music for Programming
 audio       Seaboard Keyboard
 books       Dad is Cool
@@ -8,6 +9,8 @@ c           Hacking Clang
 c           Let's Destroy C
 c           Wart Layers
 c           Write an Alsa Driver
+c           cppreference
+c           glibc
 c           songho: gl pbo
 color       Compositing Guide
 color       Stripe - Color Systems
@@ -38,6 +41,7 @@ graphics    Nata Xlat
 graphics    asciinema
 hacks       Hacking Clang
 hacks       Let's Destroy C
+home        6502 homebuilt
 home        Atlassian Design
 home        Build a spectroscope
 home        Code Search Dataset
@@ -57,12 +61,12 @@ home        Tmux Tutorial
 home        Wart Layers
 home        Write a Text Editor
 home        Write an Alsa Driver
+home        Zeit Now
 home        asciinema
 home        huggingface tokenizers
 home        par.sr
 home        songho: gl pbo
 home        wav2letter
-home        Zeit Now
 lang        Cell Lang
 lang        EdgeDB
 lang        Eve - Visual History
@@ -114,6 +118,8 @@ news        rauchg.com 2019 review
 nlp         Botium
 nlp         huggingface tokenizers
 nlp         wav2letter
+offline     cppreference
+offline     glibc
 offline     redux persist
 politics    2020 US Water Laws
 python      PyAV
@@ -135,6 +141,7 @@ solarpunk   Solar Sailboats
 space       Fit for space
 sport       How to water start
 sport       Kite Surfing
+tech        6502 homebuilt
 tech        A web quine
 tech        ALU Chips
 tech        Advent of code...
@@ -234,6 +241,8 @@ tech        Write a Text Editor
 tech        ZDog
 tech        Zeit Now
 tech        bootOS
+tech        cppreference
+tech        glibc
 tech        huggingface tokenizers
 tech        par.sr
 tech        rauchg.com 2019 review
@@ -258,11 +267,8 @@ web         React Fiber in Depth
 web         ThreeJS Fundamentals
 web         Web Components
 web         ZDog
+web         Zeit Now
 web         redux persist
 web         swr
-web         Zeit Now
 work        Executives?
 work        Working Asynchronously
-home        6502 homebuilt
-tech        6502 homebuilt
-assembly    6502 homebuilt
