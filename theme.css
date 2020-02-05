@@ -16,7 +16,6 @@ body {
 }
 img {
 	display: block;
-	margin: auto;
 }
 nav {
 	display: flex;
@@ -34,7 +33,7 @@ main {
 	min-width: 600px;
 	margin-top: 70px;
 }
-p, a, em {
+p, q, a, em {
 	font-size: 14pt;
 	text-decoration: none;
 	font-weight: normal;
