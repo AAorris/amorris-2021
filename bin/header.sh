@@ -5,13 +5,10 @@ cat <<EOF
 <head>
   <meta charset="utf-8">
   <title>${TITLE:-Aaron Morris - Vancouver Software Engineer}</title>
-  <meta name="og:title" content="Aaron Morris">
-  <meta name="og:description" content="Software Engineer">
-  <meta name="og:url" content="https://amorris.ca/">
-  <meta name="og:image" content="https://amorris.ca/aaron-10.jpg">
-  <meta name="google-site-verification" content="fkirvSljItXe5zerAIyJ7YgmPZ1sCS6sn3hM7g_3nb0" />
-  <link rel="stylesheet" href="/reset.css">
-  <link rel="stylesheet" href="/theme.css">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Technotopian Environmentalist">
+  <meta name="theme-color" content="black">
+  <link rel="preload" as="style" href="/theme.css" onload="this.onload=null;this.rel='stylesheet'">
 </head>
 
 <body>

@@ -41,7 +41,6 @@ newspage:
 
 content: cleancss homepage tagpage newspage
 	ln -f theme.css public/theme.css
-	ln -f reset.css public/reset.css
 	cp *.svg public
 	cp -r launch/ public/launch/
 	cp -r resume/ public/resume/
