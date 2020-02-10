@@ -9,6 +9,7 @@ sqlite:
 	curl https://www.sqlite.org/2020/sqlite-amalgamation-3310100.zip > sqlite.zip
 	unzip -jd sqlite sqlite.zip
 	rm sqlite.zip
+	cp sqlite/sqlite3.{c,h} .
 
 db.sqlite3: tbl2sql tags.tbtl news.tbtl
 	rm -f db.sqlige3
@@ -19,7 +20,7 @@ tbl2json: tbl.c tbl2json.c
 
 tbl2sql: tbl.c tbl2sql.c
 
-news: tbl.c sqlite/sqlite3.c news.c
+news: tbl.c sqlite3.c news.c
 
 news.html: news db.sqlite3
 	rm -f news.html
@@ -27,7 +28,7 @@ news.html: news db.sqlite3
 	./news db.sqlite3 >> $(PUBLICDIR)/news.html
 	cat footer.src.html >> $(PUBLICDIR)/news.html
 
-tags: tbl.c sqlite/sqlite3.c tags.c
+tags: tbl.c sqlite3.c tags.c
 
 tags.html: tags db.sqlite3
 	rm -f tags.html
