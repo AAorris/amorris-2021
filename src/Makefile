@@ -41,7 +41,7 @@ index.html: index.src.html
 	cat index.src.html >> $(PUBLICDIR)/index.html
 	cat footer.src.html >> $(PUBLICDIR)/index.html
 
-all: index.html news.html tags.html
+all: sqlite index.html news.html tags.html
 
 clean:
 	rm -f index.html news.html tags.html
