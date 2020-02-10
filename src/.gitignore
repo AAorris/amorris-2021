@@ -1,3 +1,5 @@
-*.dSYM/
+sqlite
+news
+tags
 tbl2json
 tbl2sql

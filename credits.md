@@ -1,5 +1,5 @@
 ---
-Lietal, Tablatal, Indental, components of https://github.com/XXIIVV/Oscean
+Tablatal is credited to https://github.com/XXIIVV/Oscean
 
 MIT License
 
