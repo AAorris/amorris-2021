@@ -10,6 +10,7 @@ c           Let's Destroy C
 c           Wart Layers
 c           Write an Alsa Driver
 c           cppreference
+c           ctoy
 c           glibc
 c           songho: gl pbo
 color       Compositing Guide
@@ -39,6 +40,7 @@ graphics    GMUNK
 graphics    Gradient Ascent
 graphics    Nata Xlat
 graphics    asciinema
+graphics    flif
 hacks       Hacking Clang
 hacks       Let's Destroy C
 home        6502 homebuilt
@@ -63,8 +65,11 @@ home        Write a Text Editor
 home        Write an Alsa Driver
 home        Zeit Now
 home        asciinema
+home        ctoy
 home        huggingface tokenizers
 home        par.sr
+home        pkms
+home        savedbits
 home        songho: gl pbo
 home        wav2letter
 lang        Cell Lang
@@ -242,11 +247,15 @@ tech        ZDog
 tech        Zeit Now
 tech        bootOS
 tech        cppreference
+tech        ctoy
+tech        flif
 tech        glibc
 tech        huggingface tokenizers
 tech        par.sr
+tech        pkms
 tech        rauchg.com 2019 review
 tech        redux persist
+tech        savedbits
 tech        solo dev year 2
 tech        swr
 tech        wav2letter
@@ -269,6 +278,16 @@ web         Web Components
 web         ZDog
 web         Zeit Now
 web         redux persist
+web         savedbits
 web         swr
 work        Executives?
 work        Working Asynchronously
+home        sqlite
+db          sqlite
+tech        sqlite
+home        makefile cheat sheet
+make        makefile cheat sheet
+tech        makefile cheat sheet
+home        your makefile is wrong
+make        your makefile is wrong
+tech        your makefile is wrong

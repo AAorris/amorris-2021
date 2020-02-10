@@ -1,4 +1,12 @@
 title                  summary                                        month     year url                                                                                                                     
+your makefile is wrong an opinionated take on makefiles               February  2020 https://tech.davis-hansson.com/p/make/
+makefile cheat sheet   devhints makefile cheat sheet                  February  2020 https://devhints.io/makefile
+sqlite c intro         intro to using sqlite in c code                February  2020 http://zetcode.com/db/sqlitec/
+sqlite                 local data storage for individuals             February  2020 https://www.sqlite.org/whentouse.html
+ctoy                   dependency free c99 opengl/openal c playground February  2020 https://github.com/anael-seghezzi/CToy
+savedbits              a guy sharing links                            February  2020 https://savedbits.com/about.php
+pkms                   personal knowledge management system           February  2020 https://beepb00p.xyz/pkm-setup.html
+flif                   open source image format                       February  2020 https://flif.info/
 cppreference           html archive of cppreference.com               February  2020 https://en.cppreference.com/w/File:html_book_20190607.zip
 glibc                  gnu c library docs with offline downloads      February  2020 https://www.gnu.org/software/libc/manual/
 6502 homebuilt         6502 projects built at home by enthusiasts     February  2020 http://www.6502.org/homebuilt
