@@ -12,6 +12,7 @@ c           Write an Alsa Driver
 c           cppreference
 c           ctoy
 c           glibc
+c           linux from scratch
 c           songho: gl pbo
 color       Compositing Guide
 color       Stripe - Color Systems
@@ -26,6 +27,7 @@ db          Notion
 db          Oscean
 db          Recutils
 db          SU Relational Data
+db          sqlite
 design      Atlassian Design
 design      Bullet Charts
 design      GMUNK
@@ -67,11 +69,15 @@ home        Zeit Now
 home        asciinema
 home        ctoy
 home        huggingface tokenizers
+home        linux from scratch
+home        makefile cheat sheet
 home        par.sr
 home        pkms
 home        savedbits
 home        songho: gl pbo
+home        sqlite
 home        wav2letter
+home        your makefile is wrong
 lang        Cell Lang
 lang        EdgeDB
 lang        Eve - Visual History
@@ -92,8 +98,11 @@ life        No-Commute Imperative
 life        Non Commute Culture
 life        Take Notes
 life        Web of Knowledge...
+linux       linux from scratch
 lisp        Gerbil Scheme
 lisp        Make a Lisp
+make        makefile cheat sheet
+make        your makefile is wrong
 math        Algebra
 math        Algebraic Effects
 math        Category Theory
@@ -112,6 +121,7 @@ ml          ML: Cause and Effect
 ml          Meta RL
 ml          Tensorflow Graphics
 ml          Thinc.ai
+ml          openai hide and seek
 ml          wav2letter
 news        2020 US Water Laws
 news        Deepfake phone scam
@@ -251,15 +261,20 @@ tech        ctoy
 tech        flif
 tech        glibc
 tech        huggingface tokenizers
+tech        linux from scratch
+tech        makefile cheat sheet
+tech        openai hide and seek
 tech        par.sr
 tech        pkms
 tech        rauchg.com 2019 review
 tech        redux persist
 tech        savedbits
 tech        solo dev year 2
+tech        sqlite
 tech        swr
 tech        wav2letter
 tech        x86 System Calls
+tech        your makefile is wrong
 tool        CSS Grid Generator
 unix        Recutils
 unix        ShellHub
@@ -282,12 +297,3 @@ web         savedbits
 web         swr
 work        Executives?
 work        Working Asynchronously
-home        sqlite
-db          sqlite
-tech        sqlite
-home        makefile cheat sheet
-make        makefile cheat sheet
-tech        makefile cheat sheet
-home        your makefile is wrong
-make        your makefile is wrong
-tech        your makefile is wrong
