@@ -15,11 +15,15 @@ db.sqlite3: tbl2sql tags.tbtl news.tbtl
 	sqlite3 -bail db.sqlite3 <<< `tbl2sql tags.tbtl`
 	sqlite3 -bail db.sqlite3 <<< `tbl2sql news.tbtl`
 
-tbl2json: tbl.c tbl2json.c
+tbl.o: tbl.c
 
-tbl2sql: tbl.c tbl2sql.c
+sqlite3.o: sqlite3.c
 
-news: tbl.c sqlite3.c news.c
+tbl2json: tbl.o tbl2json.c
+
+tbl2sql: tbl.o tbl2sql.c
+
+news: tbl.o sqlite3.o news.c
 
 news.html: news db.sqlite3 theme.css
 	rm -f $(PUBLICDIR)/news/index.html

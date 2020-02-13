@@ -5,3 +5,4 @@ tbl2json
 tbl2sql
 sqlite3.c
 sqlite3.h
+*.o
