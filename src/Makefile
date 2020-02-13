@@ -9,6 +9,7 @@ sqlite:
 	unzip -jd sqlite sqlite.zip
 	rm sqlite.zip
 	cp sqlite/sqlite3.{c,h} .
+	rm -rf sqlite/
 
 db.sqlite3: tbl2sql tags.tbtl news.tbtl
 	rm -f db.sqlite3
