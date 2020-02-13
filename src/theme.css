@@ -38,10 +38,10 @@ main > * {
 }
 main > h1, main > h2, main > h3, main > h4 {
 	padding: 1em 0;
-	max-width: 60ch;
+	max-width: 64ch;
 }
 p, q, a, em, ul {
-	font-size: 14pt;
+	font-size: 16pt;
 	text-decoration: none;
 	font-weight: normal;
 	max-width: 72ch;
@@ -68,3 +68,12 @@ div > div p {
 	margin-block-end: 4px;
 	opacity: 0.6;
 }
+
+.card {
+	padding: 16px;
+	margin: 16px;
+	border: 6px double #655109;
+	border-radius: 4px;
+	letter-spacing: 2px;
+}
+.card * { margin: 0 }

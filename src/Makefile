@@ -1,9 +1,8 @@
 SHELL := bash
 CFLAGS := -std=c99 -Wall
 .ONESHELL:
-.PHONY: tags.html index.html news.html
 
-PUBLICDIR = ../public/
+PUBLICDIR = ../public
 
 sqlite:
 	curl https://www.sqlite.org/2020/sqlite-amalgamation-3310100.zip > sqlite.zip
@@ -12,7 +11,7 @@ sqlite:
 	cp sqlite/sqlite3.{c,h} .
 
 db.sqlite3: tbl2sql tags.tbtl news.tbtl
-	rm -f db.sqlige3
+	rm -f db.sqlite3
 	sqlite3 -bail db.sqlite3 <<< `tbl2sql tags.tbtl`
 	sqlite3 -bail db.sqlite3 <<< `tbl2sql news.tbtl`
 
@@ -22,23 +21,23 @@ tbl2sql: tbl.c tbl2sql.c
 
 news: tbl.c sqlite3.c news.c
 
-news.html: news db.sqlite3
-	rm -f news.html
-	TITLE=News ./header.sh >> $(PUBLICDIR)/news.html
-	./news db.sqlite3 >> $(PUBLICDIR)/news.html
-	cat footer.src.html >> $(PUBLICDIR)/news.html
+news.html: news db.sqlite3 theme.css
+	rm -f $(PUBLICDIR)/news/index.html
+	TITLE=News ./header.sh >> $(PUBLICDIR)/news/index.html
+	./news db.sqlite3 >> $(PUBLICDIR)/news/index.html
+	cat footer.src.html >> $(PUBLICDIR)/news/index.html
 
 tags: tbl.c sqlite3.c tags.c
 
-tags.html: tags db.sqlite3
-	rm -f tags.html
-	TITLE=Tags ./header.sh >> $(PUBLICDIR)/tags.html
-	./tags db.sqlite3 >> $(PUBLICDIR)/tags.html
-	cat footer.src.html >> $(PUBLICDIR)/tags.html
+tags.html: tags db.sqlite3 theme.css
+	rm -f $(PUBLICDIR)/tags/index.html
+	TITLE=Tags ./header.sh >> $(PUBLICDIR)/tags/index.html
+	./tags db.sqlite3 >> $(PUBLICDIR)/tags/index.html
+	cat footer.src.html >> $(PUBLICDIR)/tags/index.html
 
-index.html: index.src.html
-	rm -f index.html
-	TITLE="Aaron Morris" ./header.sh >> $(PUBLICDIR)/index.html
+index.html: index.src.html theme.css
+	rm -f $(PUBLICDIR)/index.html
+	./header.sh >> $(PUBLICDIR)/index.html
 	cat index.src.html >> $(PUBLICDIR)/index.html
 	cat footer.src.html >> $(PUBLICDIR)/index.html
 
