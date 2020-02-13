@@ -14,6 +14,7 @@ c           ctoy
 c           glibc
 c           linux from scratch
 c           songho: gl pbo
+c           sqlite c intro
 color       Compositing Guide
 color       Stripe - Color Systems
 community   Daybreaker
@@ -37,6 +38,7 @@ design      Marc Levoy Lectures
 design      Obvious Design
 design      Stripe - Color Systems
 design      ZDog
+engineering gears
 ethics      Image Net, Racism
 graphics    GMUNK
 graphics    Gradient Ascent
@@ -76,8 +78,10 @@ home        pkms
 home        savedbits
 home        songho: gl pbo
 home        sqlite
+home        sqlite c intro
 home        wav2letter
 home        your makefile is wrong
+interactive gears
 lang        Cell Lang
 lang        EdgeDB
 lang        Eve - Visual History
@@ -259,6 +263,7 @@ tech        bootOS
 tech        cppreference
 tech        ctoy
 tech        flif
+tech        gears
 tech        glibc
 tech        huggingface tokenizers
 tech        linux from scratch
@@ -271,6 +276,7 @@ tech        redux persist
 tech        savedbits
 tech        solo dev year 2
 tech        sqlite
+tech        sqlite c intro
 tech        swr
 tech        wav2letter
 tech        x86 System Calls
