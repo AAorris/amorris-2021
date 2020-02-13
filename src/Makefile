@@ -23,7 +23,7 @@ tbl2json: tbl.o tbl2json.c
 
 tbl2sql: tbl.o tbl2sql.c
 
-news: tbl.o sqlite3.o news.c
+news: sqlite tbl.o sqlite3.o news.c
 
 news.html: news db.sqlite3 theme.css
 	rm -f $(PUBLICDIR)/news/index.html
@@ -31,7 +31,7 @@ news.html: news db.sqlite3 theme.css
 	./news db.sqlite3 >> $(PUBLICDIR)/news/index.html
 	cat footer.src.html >> $(PUBLICDIR)/news/index.html
 
-tags: tbl.c sqlite3.c tags.c
+tags: sqlite tbl.c sqlite3.c tags.c
 
 tags.html: tags db.sqlite3 theme.css
 	rm -f $(PUBLICDIR)/tags/index.html
