@@ -1,5 +1,5 @@
 SHELL := bash
-CFLAGS := -std=c99 -Wall
+CFLAGS := -std=c99 -Wall -DSQLITE_THREADSAFE=0 -DSQLITE_OMIT_LOAD_EXTENSION
 .ONESHELL:
 
 PUBLICDIR = ../public
@@ -32,7 +32,7 @@ news.html: news db.sqlite3 theme.css
 	./news db.sqlite3 >> $(PUBLICDIR)/news/index.html
 	cat footer.src.html >> $(PUBLICDIR)/news/index.html
 
-tags: sqlite tbl.c sqlite3.c tags.c
+tags: tbl.c sqlite3.c tags.c
 
 tags.html: tags db.sqlite3 theme.css
 	rm -f $(PUBLICDIR)/tags/index.html
