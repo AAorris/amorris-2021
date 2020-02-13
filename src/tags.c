@@ -1,8 +1,8 @@
 #include <stdio.h>
 #include <string.h>
-#include <sqlite3.h>
 #include <locale.h>
 #include <wchar.h>
+#include "sqlite3.h"
 
 int main(int argc, char **argv) {
 	sqlite3 *db;
