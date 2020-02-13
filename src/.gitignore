@@ -6,3 +6,4 @@ tbl2sql
 sqlite3.c
 sqlite3.h
 *.o
+sqlite.zip
