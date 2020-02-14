@@ -69,11 +69,22 @@ div > div p {
 	opacity: 0.6;
 }
 
-.card {
-	padding: 16px;
-	margin: 16px;
-	border: 6px double #655109;
-	border-radius: 4px;
-	letter-spacing: 2px;
+@media (min-width: 1100px) {
+	.card {
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+		margin: 16px;
+		border-radius: 4px;
+		letter-spacing: 2px;
+	}
+}
+.card :last-child {
+	text-align: right;
+	flex-grow: 1;
+	opacity: 0.3;
+}
+.card :first-child {
+	padding-right: 16px;
 }
 .card * { margin: 0 }
