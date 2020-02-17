@@ -15,6 +15,7 @@ c           glibc
 c           linux from scratch
 c           songho: gl pbo
 c           sqlite c intro
+c           tiny c games
 color       Compositing Guide
 color       Stripe - Color Systems
 community   Daybreaker
@@ -83,6 +84,9 @@ home        sqlite c intro
 home        wav2letter
 home        your makefile is wrong
 interactive gears
+nodes       kinopio
+nodes       luna
+nodes       Eve - Visual History
 lang        Cell Lang
 lang        EdgeDB
 lang        Eve - Visual History
@@ -94,6 +98,8 @@ laws        2020 US Water Laws
 life        Dad is Cool
 life        Daybreaker
 life        Finding Joy
+fun         How to draw a horse
+graphics    How to draw a horse
 life        How to draw a horse
 life        Illegal to build
 life        Kids Category
