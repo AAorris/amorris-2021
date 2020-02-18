@@ -18,11 +18,14 @@ img {
 .tj {
 	text-align: justify;
 }
+@media(min-width: 600px) {
 nav {
 	display: flex;
 	align-items:center;
 	justify-content:space-between;
 }
+}
+nav > p { margin: 0 }
 h2, h3 {
 	font-weight: 300;
 	font-size: 160%;
