@@ -10,3 +10,4 @@ vim use tags            :set tags+=tags (uses ./tags)
 vim search tags         :tag text; :tag /pattern
 vim jump to definition  C-]
 vim jump back           C-T
+coder body exercises    work squats, upper back; stretch hip flexors, chest
