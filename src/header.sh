@@ -16,7 +16,7 @@ cat <<EOF
 		<p><a href="/">amorris.ca</a></p>
 		<p>${TITLE}</p>
 		<section>
-         <a href="/news/" style="margin-right: 16px" title="I actively collect links.">News</a>
+         <a href="/links/" style="margin-right: 16px" title="I actively collect links.">Links</a>
          <a href="/tags/" style="margin-right: 16px" title="">Tags</a>
          <a href="//webring.xxiivv.com" title="Surf the web like its 1999.">Web Ring</a>
 		</section>

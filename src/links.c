@@ -20,7 +20,7 @@ int main(int argc, char **argv) {
 	if (sqlite3_open(argv[1], &db)) {
 		fprintf(stderr, "Can't open db: %s\n", sqlite3_errmsg(db));
 	}
-	char* arg = "SELECT title, url, summary, (SELECT group_concat(tag, \" #\") FROM tags WHERE tags.name = news.title) FROM news";
+	char* arg = "SELECT uri, url, txt, (SELECT group_concat(tag, \" #\") FROM tags WHERE tags.name = links.uri) FROM links";
 	if (sqlite3_exec(db, arg, callback, 0, &zErrMsg) != SQLITE_OK) {
 		fprintf(stderr, "SQL error: %s\n", zErrMsg);
 		sqlite3_free(zErrMsg);

@@ -6,7 +6,7 @@ cleandb:
 cleanpublic:
 	rm -rf public/*
 	mkdir -p public/tags/
-	mkdir -p public/news/
+	mkdir -p public/links/
 
 cleancss:
 	rm -f public/*.css
@@ -14,7 +14,7 @@ cleancss:
 clean: cleandb cleanpublic
 
 src:
-	mkdir -p public/{tags,news}
+	mkdir -p public/{tags,links}
 	$(MAKE) -C src/ all
 
 media:

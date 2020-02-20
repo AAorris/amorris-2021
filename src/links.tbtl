@@ -1,0 +1,181 @@
+y m uri                    txt                                            url                                                                                                                     
+0 1 convos                 self hosted irc                                https://convos.by/
+0 1 trends in remote work  remote work is growing                         https://www.yac.chat/blog/the-shifting-state-of-remote-work
+0 1 explorables            interactive explanations                       https://explorabl.es
+0 1 c4                     c in 4 functions - minimalist compiler         https://github.com/rswier/c4
+0 1 applied bioinformatics learn by doing and building projects           http://rosalind.info/problems/locations/
+0 1 open flight data       HN discussion (cool global data collection)    https://news.ycombinator.com/item?id=22360940
+0 1 js demo walkthrough    improve conversion rate with interactive demos https://github.com/tagspace/trevor-demo
+0 1 C python bindings      HN discussion (see: ctypes)                    https://news.ycombinator.com/item?id=22365166
+0 1 daniel grey            he shares links, designs book covers           http://danielgray.com/links
+0 1 frank chimero          brief thoughts on design, writing, music...    https://frankchimero.com/blog/
+0 1 a perfect pull request recommendations for a great pr experience      https://github.blog/2015-01-21-how-to-write-the-perfect-pull-request/
+0 1 build a compiler       by jack crenshaw                               https://compilers.iecc.com/crenshaw/
+0 1 insights bi            open source business intelligence              https://github.com/mariusandra/insights
+0 1 raytracing essentials  weekly info on ray tracing                     https://news.developer.nvidia.com/ray-tracing-essentials-part-1-basics-of-ray-tracing/
+0 1 b1fipl                 single file programming languages              https://github.com/marcpaq/b1fipl
+0 1 fits in ram            your data fits in ram                          https://yourdatafitsinram.net/
+0 1 sql antipatterns       database programming with Bill Karwin          https://pragprog.com/book/bksqla/sql-antipatterns
+0 1 ai morphogenesis       entities that are resistant to perturbation    https://distill.pub/2020/growing-ca/?/
+0 1 awk systems            somewhere between c and the shell              http://www.skeeve.com/awk-sys-prog.html
+0 1 important women in cs  some of many women notable in computer science https://www.hillelwayne.com/post/important-women-in-cs/
+0 1 amark: gun             fast peer to peer state syncing lib            https://github.com/amark/gun
+0 1 tweet sized concepts   tweets for concepts to understand the world    https://threadreaderapp.com/thread/1225561131122597896.html
+0 1 flow fields            a tool for producing interesting curves        https://tylerxhobbs.com/essays/2020/flow-fields
+0 1 alfredapp              productivity app for mac os                    https://www.alfredapp.com
+0 1 tiny c games           tiny ready to compile c games                  https://github.com/superjer/tinyc.games
+0 1 kinopio                cute node graph ui in the web                  https://kinopio.club
+0 1 solar kitchen          Solar kitchen in Tamera's solar test field     https://www.tamera.org/solar-kitchen/
+0 1 gears                  Bartosz Ciechanowski is fascinated by gears    https://ciechanow.ski/gears/
+0 1 openai hide and seek   cooperative ai experiments                     https://www.youtube.com/watch?v=Lu56xVlZ40M
+0 1 linux from scratch     learn how linux works by building stuff        http://linuxfromscratch.org/lfs/downloads/stable/LFS-BOOK-9.0-NOCHUNKS.html
+0 1 your makefile is wrong an opinionated take on makefiles               https://tech.davis-hansson.com/p/make/
+0 1 makefile cheat sheet   devhints makefile cheat sheet                  https://devhints.io/makefile
+0 1 sqlite c intro         intro to using sqlite in c code                http://zetcode.com/db/sqlitec/
+0 1 sqlite                 local data storage for individuals             https://www.sqlite.org/whentouse.html
+0 1 ctoy                   dependency free c99 opengl/openal c playground https://github.com/anael-seghezzi/CToy
+0 1 savedbits              a guy sharing links                            https://savedbits.com/about.php
+0 1 pkms                   personal knowledge management system           https://beepb00p.xyz/pkm-setup.html
+0 1 flif                   open source image format                       https://flif.info/
+0 1 cppreference           html archive of cppreference.com               https://en.cppreference.com/w/File:html_book_20190607.zip
+0 1 glibc                  gnu c library docs with offline downloads      https://www.gnu.org/software/libc/manual/
+0 1 6502 homebuilt         6502 projects built at home by enthusiasts     http://www.6502.org/homebuilt
+0 1 Oscean                 Oscean is a flat file wiki engine.             https://wiki.xxiivv.com/site/oscean.html
+0 1 rauchg.com 2019 review 2019 in review for Guillermo Rauch and zeit.co https://rauchg.com/2020/2019-in-review
+0 1 swr                    React Hooks + Data Fetching, caching tool      https://swr.now.sh/#basic-data-loading
+0 0 wav2letter             Embeddable speech recognition software         https://ai.facebook.com/blog/online-speech-recognition-with-wav2letteranywhere
+0 0 huggingface tokenizers Todays most used tokenizers for nlp work       https://github.com/huggingface/tokenizers
+0 0 par.sr                 Transform pdf, documents, images into data     https://github.com/axa-group/Parsr
+0 0 Colors: designs.ai     Use AI to generate and match colors            https://designs.ai/colors/
+0 0 Organic Cell Design    Paper on designing living cells with functions https://www.pnas.org/content/117/4/1853
+0 0 Interpretable RL       Interpret and verify machine learning models   https://blog.acolyer.org/2020/01/15/programmatically-interpretable-reinforcement-learning/
+0 0 x86 System Calls       Implementing system calls                      https://x86.lol/generic/2019/07/04/kernel-entry.html
+0 0 Notion                 All in one workspace                           https://www.notion.so/product
+0 0 GMUNK                  Designer, Director                             https://gmunk.com
+0 0 SU Relational Data     Stanford course notes on relational data       http://infolab.stanford.edu/~ullman/focs/ch08.pdf
+0 0 Gradient Ascent        Visualize CNNs with gradient ascent            https://keras.io/examples/conv_filter_visualization/
+0 0 2020 US Water Laws     Trump erodes water protection                  https://www.politico.com/news/2020/01/23/trump-epa-curbs-water-protections-102779
+0 0 Nata Xlat              Photographs old computers - beautiful          https://www.flickr.com/photos/xlat8086/albums
+0 0 Botium                 Friendly speech processing API                 https://github.com/codeforequity-at/botium-speech-processing
+0 0 Recutils               Human editable plain text databases            https://www.gnu.org/software/recutils/
+0 0 ML: Cause and Effect   Concepts for truly intelligent machines        https://www.quantamagazine.org/to-build-truly-intelligent-machines-teach-them-cause-and-effect-20180515
+0 0 ShellHub               A SSH server for remote linux access           https://shellhub-io.github.io
+0 0 Personal Search        Building your own personal search workflow     https://beepb00p.xyz/pkm-search.html
+0 0 Thinc.ai               Functional API for machine learning            https://thinc.ai
+0 0 Kinto                  Minimalist JSON storage by mozilla             https://docs.kinto-storage.org/en/latest/overview.html
+0 0 Hacking Clang          Implementing fat arrow funcs and lambdas       https://mort.coffee/home/clang-compiler-hacking/
+0 0 Google Meena           AI achieving state of the art 79% SSA score    https://ai.googleblog.com/2020/01/towards-conversational-agent-that-can.html
+0 0 Encapsulation in C     Proper encapsulation example in C              https://alastairs-place.net/blog/2013/06/03/encapsulation-in-c/
+0 0 Let's Destroy C        Macro hacks that make C look high level        https://gist.github.com/shakna-israel/4fd31ee469274aa49f8f9793c3e71163#lets-destroy-c
+0 0 Ishikawa Diagram       Causal diagrams created by Kaoru Ishikawa      https://en.wikipedia.org/wiki/Ishikawa_diagram
+0 0 redux persist          Persist redux state (ex. to local storage)     https://github.com/rt2zz/redux-persist          
+0 0 solo dev year 2        Second year as a solo developer retrospective  https://mtlynch.io/solo-developer-year-2/
+9 b Announcing MessageDB   Message based database system                  https://blog.eventide-project.org/articles/announcing-message-db/
+9 b PyAV                   Python library for ffmpeg work                 https://github.com/mikeboers/PyAV
+9 b No-Commute Imperative  We need to adopt a non-commute culture         https://www.irishtimes.com/business/innovation/chris-horn-we-need-to-adopt-a-no-commute-culture-1.4110977
+9 b Music for Programming  Compilation of music to listen to while coding http://musicforprogramming.net/
+9 b Wart Layers            Actually about organizing your C code          http://akkartik.name/post/wart-layers
+9 b Truck Delivers Butter  Self driving truck delivers butter in the US   https://www.santacruzsentinel.com/2019/12/10/a-self-driving-truck-delivered-butter-from-california-to-pennsylvania-in-three-days/
+9 b Write an Alsa Driver   On writing your own ALSA drivers               https://www.kernel.org/doc/html/v4.17/sound/kernel-api/writing-an-alsa-driver.html
+9 b asciinema              Record your terminal to JSON and render it out https://asciinema.org/
+9 b songho: gl pbo         GL Pixel Buffer Objects                        http://www.songho.ca/opengl/gl_pbo.html
+9 b Fit for space          Radiation challenges to humans in space        https://www.wired.com/story/are-humans-fit-for-space-a-herculean-study-says-maybe-not/
+9 b Non Commute Culture    A call to commute less as a culture            https://www.irishtimes.com/business/innovation/chris-horn-we-need-to-adopt-a-no-commute-culture-1.4110977
+9 b Self driving truck     Delivered butter from Cali to Pennsylvania     https://www.santacruzsentinel.com/2019/12/10/a-self-driving-truck-delivered-butter-from-california-to-pennsylvania-in-three-days/
+9 b Illegal to build       Things you can't build in america any more     https://twitter.com/CascadianSolo/status/1204306278173958145
+9 b Introducing Pencilkit  WWDC on github                                 https://github.com/Blackjacx/WWDC#introducing-pencilkit
+9 b Max                    Creative media node graph environment          https://cycling74.com/products/max/
+9 a DeepSpeech             Mozilla's open sourced speech recognizer       https://hacks.mozilla.org/2019/12/deepspeech-0-6-mozillas-speech-to-text-engine/
+9 a Protein Design         Scientists are synthesizing protein patterns   https://phys.org/news/2019-11-scientists-redesign-protein-based-pattern-formation.html
+9 a Mitogen                Remote bootstrap and IO multiplexer            https://mitogen.networkgenomics.com/
+9 a Mail Server Guide      I'd like to spin up my own mail server...      https://www.c0ffee.net/blog/mail-server-guide/
+9 a Disney Plus            10 million subscribers in the first month      https://www.theverge.com/2019/11/13/20963172/disney-plus-subscribers-10-million-star-wars-marvel-pixar-launch
+9 a Deepfake phone scam    Scammers fake CEO voice, get money transfers   https://nakedsecurity.sophos.com/2019/09/05/scammers-deepfake-ceos-voice-to-talk-underling-into-243000-transfer/
+9 a Build your own stuff   Lots of DIY projects to learn coding           https://github.com/danistefanovic/build-your-own-x
+9 a Plant UML              UML text format for nice graph diagrams        http://plantuml.com/
+9 a Lnav                   Log navigation tool with low dependencies      https://lnav.org/
+9 9 Hot and Cold Media     Video has more information than text           https://alexdanco.com/2019/10/17/the-audio-revolution/
+9 9 Stripe - Color Systems Accessible color systems post from stripe      https://stripe.com/en-ca/blog/accessible-color-systems
+9 9 HN: Math like Feynman? Q: Any books for math like feynman lectures?   https://news.ycombinator.com/item?id=21346272
+9 9 Working Asynchronously Why you should work asynchronously             https://blog.remote.com/why-you-should-be-doing-async-work/
+9 9 Geometry Algebra       Geometry, Algebra, Intuition; an exploration   https://www.shapeoperator.com/2017/02/28/geometry-algebra-intuition/
+9 9 Build a spectroscope   DIY science - you might need a box and a cd    http://scitoys.com/spectroscope.html
+9 9 Microproteins          We're finding smaller proteins than expected   https://www.sciencemag.org/news/2019/10/new-universe-miniproteins-upending-cell-biology-and-genetics
+9 9 Take Notes             How to take notes on everything                https://dev.to/maxwell_dev/how-to-take-notes-on-everything-32fc
+9 9 Vulcain                REST compliant HTTP/2 spec similar to graphql  https://github.com/dunglas/vulcain
+9 9 Resilience Engineering Managing failures in complex systems           https://github.com/lorin/resilience-engineering#resilience-engineering-papers
+9 9 Obvious Design         The obvious UI is often the best one           https://medium.com/google-design/the-obvious-ui-is-often-the-best-ui-7a25597d79fd
+9 9 WebWide                New online community for web developers        https://hello.webwide.io
+9 9 Category Theory        The math perspective translated for science    https://arxiv.org/pdf/1302.6946v1.pdf
+9 8 Open Structures        Design system measurements PDF                 https://openstructures.family/sites/default/files/2019-08/os_manual_4.3.pdf
+9 8 Mapeo                  Open source mapping tools - DIY maps           https://www.digital-democracy.org/mapeo/
+9 8 Executives?            What does an executive do anyway?              https://apenwarr.ca/log/20190926
+9 8 Bullet Charts          Effective visualization that's easy to build   https://www.atyantik.com/bullet-charts-what-is-it-and-how-to-use-it/
+9 8 The Ebbing Language    Poetic reflection on language                  https://www.poetryfoundation.org/poetrymagazine/articles/150735/the-ebbing-language
+9 8 Code Search Dataset    Code search ML Dataset                         https://github.com/github/CodeSearchNet#downloading-data-from-s3
+9 8 Silicon Fabric         Connect chiplets through silicon fabric        https://spectrum.ieee.org/computing/hardware/goodbye-motherboard-hello-siliconinterconnect-fabric
+9 8 Image Net, Racism      0.5m removed items after racial bias exposed   https://hyperallergic.com/518822/600000-images-removed-from-ai-database-after-art-project-exposes-racist-bias/
+9 8 Tmux Tutorial          Intro to tmux                                  https://leimao.github.io/blog/Tmux-Tutorial/
+9 8 Load Balancing         An intro to load balancing and proxies         https://blog.envoyproxy.io/introduction-to-modern-network-load-balancing-and-proxying-a57f6ff80236
+9 8 Solar Sailboats        Shipping with autonomous sail boats            https://octodon.social/@cathal/102722404991051185
+9 7 HAV                    Unix tool for getting HTML data                https://hav.amorris.ca/
+9 7 Power Keyboard         OSX rule based keyboard automation             https://medium.com/@caulfieldOwen/turn-your-keyboard-into-a-text-editing-rocket-1514d8474d2d
+9 7 Imba Language          Very fun and concise syntax for web apps       https://imba.io/
+9 7 Make a Lisp            Lisp implementation and docs in 77 languages   https://github.com/kanaka/mal
+9 7 Write a Text Editor    Build your own Text Editor in C                https://viewsourcecode.org/snaptoken/kilo/index.html
+9 7 Seaboard Keyboard      Midi polyphonic expression keyboard            https://roli.com/products/seaboard
+9 7 Eve - Visual History   Rethinking literate programming                https://futureofcoding.org/essays/eve/
+9 7 Flix                   Opinionated functional programming language    https://flix.dev/
+9 7 Gerbil Scheme          Opinionated Lisp dialect built on Gambit       https://cons.io/guide/intro.html#standard-library
+9 7 Zeit Now               Now with zero configuration deployments        https://zeit.co/guides/upgrade-to-zero-configuration/
+9 7 How to water start     Windsurfing tutorial. Short and clear.         https://youtu.be/QmWnEZ-G-HE
+9 7 Compositing Guide      A guide to alpha compositing                   https://ciechanow.ski/alpha-compositing/
+9 7 Algebraic Effects      They're like exceptions on steroids but not    https://overreacted.io/algebraic-effects-for-the-rest-of-us/
+9 7 MDN: Selection         Javascript input selection API                 https://developer.mozilla.org/en-US/docs/Web/API/Selection
+9 7 Daybreaker             Wake up and dance with your community          https://www.daybreaker.com/
+9 7 Dad is Cool            Book recommended to me about fatherhood        https://www.amazon.com/Dad-cool-Marcos-Piangers-ebook/dp/B0191QL9DU
+9 6 bootOS                 An operating system in 512 bytes               https://github.com/nanochess/bootOS
+9 6 Algebra                Rings, groups, monads, oh my!                  https://argumatronic.com/posts/2019-06-21-algebra-cheatsheet.html
+9 6 Kite Surfing           YouTube video of kite surfing                  https://www.youtube.com/watch?v=yl8hiSHuhiI
+9 6 Hundred Rabbits        Digital Nomads making software on a boat       https://100r.co/
+9 6 Ronin                  An experimental graphics terminal              https://wiki.xxiivv.com/#ronin
+9 6 A web quine            HTML page that can edit and publish itself     https://github.com/AAorris/quine
+9 6 Mandelbrot             Javascript mandelbrot explorer                 http://tilde.club/~david/m/
+9 6 Flow GUI Pins          Pinterest page on node based guis              https://www.pinterest.ie/crozyx/flow-gui/
+9 6 Nodes.io               Upcoming node editor using nodejs              http://nodes.io/story/
+9 6 Dark Lang              Deploy code to production in 50ms              https://medium.com/darklang/how-dark-deploys-code-in-50ms-771c6dd60671
+9 6 Neuralink              Neuralink did a live stream                    https://youtu.be/r-vbh3t7WVI
+9 5 Meta RL                Reinforcement learning, learned loss function  https://lilianweng.github.io/lil-log/2019/06/23/meta-reinforcement-learning.html#meta-learning-the-loss-function
+9 5 Godel's System T       A guaranteed-to-terminate sublanguage          https://deniskyashif.com/gödels-system-t-in-typescript/
+9 5 Google BERT            Tunable machine learning model                 https://github.com/google-research/bert#what-has-been-released-in-this-repository
+9 5 Luna                   Hybrid visual programming language             https://www.luna-lang.org/
+9 5 Design Patterns...     to Category Theory - a C# Dev's take           https://blog.ploeh.dk/2017/10/04/from-design-patterns-to-category-theory/
+9 5 Dynamic Land           a new computational medium for society         https://dynamicland.org/
+9 5 ALU Chips              Look into a vintage ALU                        http://www.righto.com/2017/03/inside-vintage-74181-alu-chip-how-it.html
+9 5 OSS Seeds              Open source seed directory                     https://osseeds.org/
+9 5 How to draw a horse    A comedic little illustrated story             https://www.newyorker.com/humor/daily-shouts/how-to-draw-a-horse
+9 5 Data Processing Jobs   Scale.ai and its outsourced workers            https://scale.ai/blog/positive-externalities
+9 5 Kids Category          Apple guidelines for kids                      https://developer.apple.com/app-store/review/guidelines/#kids-category
+9 5 Web of Knowledge...    And of surveilance.                            https://dave.autonoma.ca/blog/2019/06/06/web-of-knowledge/
+9 5 Mercury OS             An operating system with no apps, distraction  https://medium.com/@jasonyuan/introducing-mercury-os-f4de45a04289
+9 4 CSS Grid Generator     Useful little grid generator with css export   https://cssgrid-generator.netlify.com/
+9 4 Atlassian Design       Design guidelines by atlassian                 https://atlassian.design/guidelines/product/overview
+9 4 ZDog                   Round-flat design API                          https://zzz.dog/
+9 4 Tensorflow Graphics    Computer graphics meets deep learning          https://medium.com/tensorflow/introducing-tensorflow-graphics-computer-graphics-meets-deep-learning-c8e3877b7668
+9 4 EdgeDB                 We can do better than SQL                      https://edgedb.com/blog/we-can-do-better-than-sql/
+9 4 Scopes                 Language with literate data syntax             https://scopes.readthedocs.io/en/latest/tutorial.html
+9 4 ThreeJS Fundamentals   Get started with 3d in the browser             https://threejsfundamentals.org/threejs/lessons/threejs-fundamentals.html
+9 4 Advent of code...      in under a second. Optimizing solutions in go  https://www.forrestthewoods.com/blog/solving-advent-of-code-in-under-a-second/
+9 4 Mathematicians Lament  Modern schooling is failing to teach us math   http://worrydream.com/refs/Lockhart-MathematiciansLament.pdf?fbclid=IwAR0jO-Vatk1Cl8LOs-7pZF9fc4oTrUZvCr1xy7ny0rlgGl9Dm6BnAcdd8zg
+9 3 Hubble's Greatest Hits A gallery of space images                      https://www.nationalgeographic.co.uk/photography/2018/08/hubbles-greatest-hits?image=hubble-48-mice-colliding-galaxies-1920_0
+9 3 Marc Levoy Lectures    Digital photography lectures                   https://sites.google.com/site/marclevoylectures/
+9 3 Matchmoving, Lenses    A document on the matchmoving process          https://medium.com/pftrack-blog/what-every-matchmove-artist-needs-to-know-about-lenses-d81f123e2613
+9 3 Gremlin                Functional graph traversal language            https://tinkerpop.apache.org/gremlin.html
+9 3 Cell Lang              A data model definition language               http://cell-lang.net/example.html
+9 3 Pynini                 Python grammar builder                         https://github.com/kylebgorman/pynini
+9 3 Haskell Syntax Guide   A quick deep dive                              https://prajitr.github.io/quick-haskell-syntax/
+9 3 Finding Joy            Some tips to be positive and find joy          https://www.success.com/11-simple-ways-to-find-joy-in-your-everyday-life/
+9 3 Web Components         Make your own html tags                        https://css-tricks.com/an-introduction-to-web-components/
+9 3 Haunted                React Hooks style for web components           https://github.com/matthewp/haunted
+9 3 React Fiber in Depth   How react fiber works                          https://medium.com/react-in-depth/inside-fiber-in-depth-overview-of-the-new-reconciliation-algorithm-in-react-e1c04700ef6e
+9 3 HTM                    Simple native javascript markup like react     https://github.com/developit/htm#--htm-hyperscript-tagged-markup--

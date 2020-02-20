@@ -13,18 +13,18 @@ sqlite.zip:
 tbl2sql: tbl.c tbl2sql.c
 tbl2json: tbl.c tbl2json.c
 
-db.sqlite3: sqlite.zip tbl2sql tags.tbtl news.tbtl
+db.sqlite3: sqlite.zip tbl2sql tags.tbtl links.tbtl
 	rm -f db.sqlite3
 	sqlite3 -bail db.sqlite3 <<< `./tbl2sql tags.tbtl`
-	sqlite3 -bail db.sqlite3 <<< `./tbl2sql news.tbtl`
+	sqlite3 -bail db.sqlite3 <<< `./tbl2sql links.tbtl`
 
 
-news: tbl.c sqlite3.c news.c
-news.html: news db.sqlite3 theme.css
-	rm -f $(PUBLICDIR)/news/index.html
-	TITLE=News ./header.sh >> $(PUBLICDIR)/news/index.html
-	./news db.sqlite3 >> $(PUBLICDIR)/news/index.html
-	cat footer.src.html >> $(PUBLICDIR)/news/index.html
+links: tbl.c sqlite3.c links.c
+links.html: links db.sqlite3 theme.css
+	rm -f $(PUBLICDIR)/links/index.html
+	TITLE=News ./header.sh >> $(PUBLICDIR)/links/index.html
+	./links db.sqlite3 >> $(PUBLICDIR)/links/index.html
+	cat footer.src.html >> $(PUBLICDIR)/links/index.html
 
 tags: tbl.c sqlite3.c tags.c
 tags.html: tags db.sqlite3 theme.css
@@ -39,9 +39,9 @@ index.html: index.src.html theme.css
 	cat index.src.html >> $(PUBLICDIR)/index.html
 	cat footer.src.html >> $(PUBLICDIR)/index.html
 
-pages: index.html news.html tags.html
+pages: index.html links.html tags.html
 
 all: db.sqlite3 pages
 
 clean:
-	rm -rf index.html news.html tags.html tbl2sql sqlite/ db.sqlite3
+	rm -rf index.html links.html tags.html tbl2sql sqlite/ db.sqlite3

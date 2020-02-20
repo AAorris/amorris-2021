@@ -2,6 +2,8 @@ tag         name
 assembly    6502 homebuilt
 audio       Music for Programming
 audio       Seaboard Keyboard
+blog        daniel grey
+blog        frank chimero
 books       Dad is Cool
 books       The Ebbing Language
 c           Encapsulation in C
@@ -9,6 +11,8 @@ c           Hacking Clang
 c           Let's Destroy C
 c           Wart Layers
 c           Write an Alsa Driver
+c           c python bindings
+c           c4
 c           cppreference
 c           ctoy
 c           glibc
@@ -24,6 +28,8 @@ community   No-Commute Imperative
 community   Non Commute Culture
 community   OSS Seeds
 community   solo dev year 2
+community   trends in remote work
+data        open flight data
 db          Announcing MessageDB
 db          Notion
 db          Oscean
@@ -49,6 +55,7 @@ graphics    How to draw a horse
 graphics    Nata Xlat
 graphics    asciinema
 graphics    flif
+graphics    flow fields
 hacks       Hacking Clang
 hacks       Let's Destroy C
 home        6502 homebuilt
@@ -74,8 +81,14 @@ home        Write an Alsa Driver
 home        Zeit Now
 home        alfredapp
 home        asciinema
+home        build a compiler
+home        c4
+home        convos
 home        ctoy
+home        explorables
+home        flow fields
 home        huggingface tokenizers
+home        insights bi
 home        linux from scratch
 home        makefile cheat sheet
 home        par.sr
@@ -84,9 +97,11 @@ home        savedbits
 home        songho: gl pbo
 home        sqlite
 home        sqlite c intro
+home        trends in remote work
 home        wav2letter
 home        your makefile is wrong
 interactive gears
+js          js demo walkthrough
 lang        Cell Lang
 lang        EdgeDB
 lang        Eve - Visual History
@@ -94,6 +109,9 @@ lang        Flix
 lang        Haskell Syntax Guide
 lang        Luna
 lang        Scopes
+lang        b1fipl
+lang        build a compiler
+lang        c4
 laws        2020 US Water Laws
 life        Dad is Cool
 life        Daybreaker
@@ -108,6 +126,8 @@ life        Non Commute Culture
 life        Take Notes
 life        Web of Knowledge...
 life        solar kitchen
+life        trends in remote work
+life        tweet sized concepts
 linux       linux from scratch
 lisp        Gerbil Scheme
 lisp        Make a Lisp
@@ -120,6 +140,7 @@ math        Compositing Guide
 math        Geometry Algebra
 math        HN: Math like Feynman?
 math        Mathematicians Lament
+math        raytracing essentials
 ml          Code Search Dataset
 ml          Colors: designs.ai
 ml          DeepSpeech
@@ -131,6 +152,7 @@ ml          ML: Cause and Effect
 ml          Meta RL
 ml          Tensorflow Graphics
 ml          Thinc.ai
+ml          ai morphogenesis
 ml          openai hide and seek
 ml          wav2letter
 news        2020 US Water Laws
@@ -154,6 +176,7 @@ offline     redux persist
 politics    2020 US Water Laws
 poweruser   alfredapp
 python      PyAV
+python      c python bindings
 react       swr
 science     Build a spectroscope
 science     Category Theory
@@ -173,6 +196,7 @@ solarpunk   solar kitchen
 space       Fit for space
 sport       How to water start
 sport       Kite Surfing
+sql         sql antipatterns
 tech        6502 homebuilt
 tech        A web quine
 tech        ALU Chips
@@ -272,26 +296,48 @@ tech        Working Asynchronously
 tech        Write a Text Editor
 tech        ZDog
 tech        Zeit Now
+tech        a perfect pull request
+tech        ai morphogenesis
 tech        alfredapp
+tech        amark: gun
+tech        applied bioinformatics
+tech        awk systems
+tech        b1fipl
 tech        bootOS
+tech        build a compiler
+tech        c python bindings
+tech        c4
+tech        convos
 tech        cppreference
 tech        ctoy
+tech        daniel grey
+tech        explorables
+tech        fits in ram
 tech        flif
+tech        flow fields
+tech        frank chimero
 tech        gears
 tech        glibc
 tech        huggingface tokenizers
+tech        important women in cs
+tech        insights bi
+tech        js demo walkthrough
 tech        linux from scratch
 tech        makefile cheat sheet
+tech        open flight data
 tech        openai hide and seek
 tech        par.sr
 tech        pkms
 tech        rauchg.com 2019 review
+tech        raytracing essentials
 tech        redux persist
 tech        savedbits
 tech        solo dev year 2
+tech        sql antipatterns
 tech        sqlite
 tech        sqlite c intro
 tech        swr
+tech        trends in remote work
 tech        wav2letter
 tech        x86 System Calls
 tech        your makefile is wrong
@@ -315,5 +361,6 @@ web         Zeit Now
 web         redux persist
 web         savedbits
 web         swr
+women       important women in cs
 work        Executives?
 work        Working Asynchronously
