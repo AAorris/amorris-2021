@@ -100,6 +100,7 @@ home        sqlite c intro
 home        trends in remote work
 home        wav2letter
 home        your makefile is wrong
+home        zapier for alfred
 interactive gears
 js          js demo walkthrough
 lang        Cell Lang
@@ -343,6 +344,7 @@ tech        trends in remote work
 tech        wav2letter
 tech        x86 System Calls
 tech        your makefile is wrong
+tech        zapier for alfred
 tool        CSS Grid Generator
 unix        Recutils
 unix        ShellHub
