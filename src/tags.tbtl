@@ -20,6 +20,7 @@ c           linux from scratch
 c           songho: gl pbo
 c           sqlite c intro
 c           tiny c games
+cloud       cloud native landscape
 color       Compositing Guide
 color       Stripe - Color Systems
 community   Daybreaker
@@ -304,12 +305,14 @@ tech        ai morphogenesis
 tech        alfredapp
 tech        amark: gun
 tech        applied bioinformatics
+tech        aswf landscape
 tech        awk systems
 tech        b1fipl
 tech        bootOS
 tech        build a compiler
 tech        c python bindings
 tech        c4
+tech        cloud native landscape
 tech        convos
 tech        cppreference
 tech        ctoy
