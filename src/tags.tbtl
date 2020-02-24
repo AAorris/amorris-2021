@@ -99,6 +99,8 @@ home        songho: gl pbo
 home        sqlite
 home        sqlite c intro
 home        trends in remote work
+home        voloboev alfred
+home        voloboev karabiner
 home        wav2letter
 home        your makefile is wrong
 home        zapier for alfred
@@ -177,6 +179,8 @@ offline     glibc
 offline     redux persist
 politics    2020 US Water Laws
 poweruser   alfredapp
+poweruser   voloboev alfred
+poweruser   voloboev karabiner
 python      PyAV
 python      c python bindings
 react       swr
@@ -344,6 +348,8 @@ tech        sqlite
 tech        sqlite c intro
 tech        swr
 tech        trends in remote work
+tech        voloboev alfred
+tech        voloboev karabiner
 tech        wav2letter
 tech        x86 System Calls
 tech        your makefile is wrong
