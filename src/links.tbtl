@@ -1,10 +1,15 @@
 y m uri                    txt                                            url                                                                                                                     
+0 1 pragmatic programmer   highly recommended book on programming         https://www.amazon.ca/Pragmatic-Programmer-journey-mastery-Anniversary/dp/0135957052/
+0 1 25 programming books   25 most recommended books scraped online       https://www.daolf.com/posts/best-programming-books/
+0 1 voloboev parenting     links regarding being a first time parent      https://wiki.nikitavoloboev.xyz/life/parenting
+0 1 voloboev mind map      topics and relations as a mind map             https://my.mindnode.com/fFxApNMuV2GmAzkBYxcD5quSFBM5wevdSMcRTz7H
+0 1 fellow coffee          fellow coffee products look great              https://fellowproducts.com
 0 1 good judgement         the elements of good judgement for leaders     https://hbr.org/2020/01/the-elements-of-good-judgment
 0 1 enterprisetech30       promising private companies in enterprise tech https://www.enterprisetech30.com
 0 1 rearchitecting         case studies                                   https://increment.com/software-architecture/case-studies-in-rearchitecting/
 0 1 pxltrm                 pixel art editor inside the terminal           https://github.com/dylanaraps/pxltrm
 0 1 overtone               collaborative programmable music               https://overtone.github.io/
-0 1 face                   font editing tool in the web                   https://face.constraint.systems/
+0 1 font face tool         font editing tool in the web                   https://face.constraint.systems/
 0 1 newscatcher            news parser in python                          https://github.com/kotartemiy/newscatcher
 0 1 open peeps             illustrated people library                     https://www.openpeeps.com/
 0 1 overview of typography visual overview of typographic terms           http://thinkingwithtype.com/letter/
@@ -177,7 +182,7 @@ y m uri                    txt                                            url
 9 5 Godel's System T       A guaranteed-to-terminate sublanguage          https://deniskyashif.com/gödels-system-t-in-typescript/
 9 5 Google BERT            Tunable machine learning model                 https://github.com/google-research/bert#what-has-been-released-in-this-repository
 9 5 Luna                   Hybrid visual programming language             https://www.luna-lang.org/
-9 5 Design Patterns...     to Category Theory - a C# Dev's take           https://blog.ploeh.dk/2017/10/04/from-design-patterns-to-category-theory/
+9 5 Design Patterns        to Category Theory - a C# Dev's take           https://blog.ploeh.dk/2017/10/04/from-design-patterns-to-category-theory/
 9 5 Dynamic Land           a new computational medium for society         https://dynamicland.org/
 9 5 ALU Chips              Look into a vintage ALU                        http://www.righto.com/2017/03/inside-vintage-74181-alu-chip-how-it.html
 9 5 OSS Seeds              Open source seed directory                     https://osseeds.org/
