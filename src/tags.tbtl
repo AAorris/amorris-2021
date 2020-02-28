@@ -42,6 +42,8 @@ community   OSS Seeds
 community   solo dev year 2
 community   trends in remote work
 data        open flight data
+data        open peeps
+data        smithsonian images
 db          Announcing MessageDB
 db          EdgeDB
 db          Notion
@@ -84,8 +86,9 @@ graphics    flif
 graphics    flow fields
 graphics    font face tool
 graphics    open peeps
-graphics    overvie of typography
+graphics    overview of typography
 graphics    pxltrm
+graphics    raytracing essentials
 graphics    smithsonian images
 hacks       Hacking Clang
 hacks       Let's Destroy C
@@ -173,13 +176,17 @@ life        dominic system
 life        fellow coffee
 life        good judgement
 life        major system
+life        on being offline
 life        solar kitchen
 life        trends in remote work
 life        tweet sized concepts
 life        voloboev mind map
 life        voloboev parenting
+linux       Lnav
 linux       Mail Server Guide
 linux       linux from scratch
+linux       linux from scratch
+linux       pxltrm
 lisp        Gerbil Scheme
 lisp        Make a Lisp
 lisp        modern functional lisp
@@ -473,5 +480,10 @@ web         redux persist
 web         savedbits
 web         swr
 women       important women in cs
+women       maryam mirzakhani
 work        Executives?
+work        No-Commute Imperative
+work        Non Commute Culture
 work        Working Asynchronously
+work        on being offline
+work        trends in remote work
