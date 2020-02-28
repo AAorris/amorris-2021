@@ -1,4 +1,23 @@
-y m uri                    txt                                            url                                                                                                                     
+y m uri                    txt                                            url                                                                                                                               
+0 1 nhost                  serverless backend with hasura                 https://nhost.io/
+0 1 goodreads etl pipeline goodreads content into a data warehouse        https://github.com/san089/goodreads_etl_pipeline
+0 1 ecosim                 an ecosystem and evolution simulator           https://github.com/connor-brooks/ecosim
+0 1 mapping coronavirus    a guide to responsible mapping practices       https://www.esri.com/arcgis-blog/products/product/mapping/mapping-coronavirus-responsibly/
+0 1 kolmogorov complexity  length of the smallest possible code solution  http://theorangeduck.com/page/machine-learning-kolmogorov-complexity-squishy-bunnies
+0 1 major system           a base 10 phonetic memory system               https://en.m.wikipedia.org/wiki/Mnemonic_major_system
+0 1 dominic system         a person-action memory system                  https://artofmemory.com/wiki/Dominic_System
+0 1 selfie                 tiny c compiler, emulator, hypervisor          http://selfie.cs.uni-salzburg.at/
+0 1 prefer hard startups   hard startups are better than easy ones        https://blog.samaltman.com/hard-startups
+0 1 nestdrop               audio visualization in real time via milkdrop  http://nestimmersion.ca/nestdrop.html
+0 1 mit linear algebra     mit linear algebra content (2010)              https://ocw.mit.edu/courses/mathematics/18-06-linear-algebra-spring-2010/video-lectures/
+0 1 smithsonian images     millions of images released to public domain   https://www.smithsonianmag.com/smithsonian-institution/smithsonian-releases-28-million-images-public-domain-180974263/
+0 1 math for self learners hn: on learning math on your own time          https://news.ycombinator.com/item?id=22400375
+0 1 resque                 2009: redis backed asynchronous task queue     https://github.blog/2009-11-03-introducing-resque/
+0 1 copyrighted melodies   two artists copyrighted all melodies           https://www.vice.com/en_us/article/wxepzw/musicians-algorithmically-generate-every-possible-melody-release-them-to-public-domain
+0 1 some linear algebra    an introduction to linear algebra              https://betterexplained.com/articles/linear-algebra-guide/
+0 1 go after the metagame  to get good, go after the metagame             https://commoncog.com/blog/to-get-good-go-after-the-metagame/
+0 1 modern functional lisp states lack of popularity due to myths         https://ambrevar.xyz/modern-common-lisp/index.html
+0 1 euro track modules     modular audio generators                       https://github.com/pichenettes/eurorack
 0 1 pragmatic programmer   highly recommended book on programming         https://www.amazon.ca/Pragmatic-Programmer-journey-mastery-Anniversary/dp/0135957052/
 0 1 25 programming books   25 most recommended books scraped online       https://www.daolf.com/posts/best-programming-books/
 0 1 voloboev parenting     links regarding being a first time parent      https://wiki.nikitavoloboev.xyz/life/parenting
