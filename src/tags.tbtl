@@ -14,6 +14,8 @@ blog        solo dev year 2
 books       25 programming books
 books       Dad is Cool
 books       The Ebbing Language
+books       godel escher bach
+books       how to create a mind
 books       pragmatic programmer
 books       sql antipatterns
 c           Encapsulation in C
@@ -77,6 +79,9 @@ enterprise  rearchitecting
 ethics      Image Net, Racism
 fun         How to draw a horse
 fun         How to draw a horse
+gear        diy detachable usb kit
+gear        fellow coffee
+gear        yohann macbook stand
 graphics    GMUNK
 graphics    Gradient Ascent
 graphics    How to draw a horse
@@ -92,6 +97,7 @@ graphics    raytracing essentials
 graphics    smithsonian images
 hacks       Hacking Clang
 hacks       Let's Destroy C
+home        24 inch shelf brakcets
 home        6502 homebuilt
 home        Atlassian Design
 home        Build a spectroscope
@@ -119,6 +125,7 @@ home        build a compiler
 home        c4
 home        convos
 home        ctoy
+home        diy detachable usb kit
 home        explorables
 home        fellow coffee
 home        flow fields
@@ -141,6 +148,7 @@ home        trends in remote work
 home        voloboev alfred
 home        voloboev karabiner
 home        wav2letter
+home        yohann macbook stand
 home        your makefile is wrong
 home        zapier for alfred
 interactive gears
@@ -173,7 +181,6 @@ life        Non Commute Culture
 life        Take Notes
 life        Web of Knowledge...
 life        dominic system
-life        fellow coffee
 life        good judgement
 life        major system
 life        on being offline
