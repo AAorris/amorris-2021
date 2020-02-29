@@ -39,7 +39,6 @@ color       Stripe - Color Systems
 community   Daybreaker
 community   Dynamic Land
 community   No-Commute Imperative
-community   Non Commute Culture
 community   OSS Seeds
 community   solo dev year 2
 community   trends in remote work
@@ -125,7 +124,10 @@ home        ctoy
 home        diy detachable usb kit
 home        explorables
 home        fellow coffee
+home        fermented honey garlic
 home        flow fields
+home        how to cook burdock
+home        how to make mead
 home        huggingface tokenizers
 home        insights bi
 home        learn anything
@@ -150,6 +152,9 @@ home        your makefile is wrong
 home        zapier for alfred
 interactive gears
 js          js demo walkthrough
+kitchen     fermented honey garlic
+kitchen     how to cook burdock
+kitchen     how to make mead
 lang        Cell Lang
 lang        EdgeDB
 lang        Eve - Visual History
@@ -174,7 +179,6 @@ life        Kids Category
 life        Mathematicians Lament
 life        Mercury OS
 life        No-Commute Imperative
-life        Non Commute Culture
 life        Take Notes
 life        Web of Knowledge...
 life        dominic system
@@ -487,7 +491,6 @@ women       important women in cs
 women       maryam mirzakhani
 work        Executives?
 work        No-Commute Imperative
-work        Non Commute Culture
 work        Working Asynchronously
 work        on being offline
 work        trends in remote work
