@@ -1,4 +1,11 @@
 y m uri                    txt                                            url                                                                                                                               
+0 2 one straw revolution   Masanobu Fukuoka on farming, eating, ecology   https://play.google.com/store/books/details?id=3Uo1tTcpDmkC
+0 2 masanobu fukuoka       Japanese philosopher and natural farmer        https://en.wikipedia.org/wiki/Masanobu_Fukuoka
+0 2 sepp holzer            Alpine permaculture pioneer in Austria         https://en.wikipedia.org/wiki/Sepp_Holzer
+0 2 forestag nursery       Perennial ecosystems featuring tree nuts       https://www.forestag.com/
+0 2 wingspan               Card driven engine building board game         https://stonemaiergames.com/games/wingspan/
+0 2 handmade hero          Hand made game built live from scratch         https://handmadehero.org
+0 1 elinks                 Full featured text www browser                 http://elinks.or.cz/
 0 1 how to make mead       Mead, melomel, cyser - comes from honey, water https://www.growforagecookferment.com/how-to-make-a-gallon-of-mead/
 0 1 fermented honey garlic Raw honey, garlic, ferment in a jar            https://www.growforagecookferment.com/fermented-honey-garlic/
 0 1 how to cook burdock    Burdock is a nutty root vegetable              https://www.growforagecookferment.com/how-to-cook-burdock-root/
@@ -7,30 +14,30 @@ y m uri                    txt                                            url
 0 1 yohann macbook stand   Hand crafted wood macbook stand                https://www.yohann.com/product/macbook-and-macbook-pro-stand/
 0 1 godel escher bach      What do they have in common?                   https://books.google.ca/books?id=grzEQgAACAAJ
 0 1 how to create a mind   Ray Kurzweil's rational view of the mind       https://books.google.ca/books?id=FCcXiBPurdEC
-0 1 nhost                  serverless backend with hasura                 https://nhost.io/
-0 1 goodreads etl pipeline goodreads content into a data warehouse        https://github.com/san089/goodreads_etl_pipeline
-0 1 ecosim                 an ecosystem and evolution simulator           https://github.com/connor-brooks/ecosim
-0 1 mapping coronavirus    a guide to responsible mapping practices       https://www.esri.com/arcgis-blog/products/product/mapping/mapping-coronavirus-responsibly/
-0 1 kolmogorov complexity  length of the smallest possible code solution  http://theorangeduck.com/page/machine-learning-kolmogorov-complexity-squishy-bunnies
-0 1 major system           a base 10 phonetic memory system               https://en.m.wikipedia.org/wiki/Mnemonic_major_system
-0 1 dominic system         a person-action memory system                  https://artofmemory.com/wiki/Dominic_System
-0 1 selfie                 tiny c compiler, emulator, hypervisor          http://selfie.cs.uni-salzburg.at/
-0 1 prefer hard startups   hard startups are better than easy ones        https://blog.samaltman.com/hard-startups
-0 1 nestdrop               audio visualization in real time via milkdrop  http://nestimmersion.ca/nestdrop.html
-0 1 mit linear algebra     mit linear algebra content (2010)              https://ocw.mit.edu/courses/mathematics/18-06-linear-algebra-spring-2010/video-lectures/
-0 1 smithsonian images     millions of images released to public domain   https://www.smithsonianmag.com/smithsonian-institution/smithsonian-releases-28-million-images-public-domain-180974263/
-0 1 math for self learners hn: on learning math on your own time          https://news.ycombinator.com/item?id=22400375
+0 1 nhost                  Serverless backend with hasura                 https://nhost.io/
+0 1 goodreads etl pipeline Goodreads content into a data warehouse        https://github.com/san089/goodreads_etl_pipeline
+0 1 ecosim                 An ecosystem and evolution simulator           https://github.com/connor-brooks/ecosim
+0 1 mapping coronavirus    A guide to responsible mapping practices       https://www.esri.com/arcgis-blog/products/product/mapping/mapping-coronavirus-responsibly/
+0 1 kolmogorov complexity  Length of the smallest possible code solution  http://theorangeduck.com/page/machine-learning-kolmogorov-complexity-squishy-bunnies
+0 1 major system           A base 10 phonetic memory system               https://en.m.wikipedia.org/wiki/Mnemonic_major_system
+0 1 dominic system         A person-action memory system                  https://artofmemory.com/wiki/Dominic_System
+0 1 selfie                 Tiny c compiler, emulator, hypervisor          http://selfie.cs.uni-salzburg.at/
+0 1 prefer hard startups   Hard startups are better than easy ones        https://blog.samaltman.com/hard-startups
+0 1 nestdrop               Audio visualization in real time via milkdrop  http://nestimmersion.ca/nestdrop.html
+0 1 mit linear algebra     Mit linear algebra content (2010)              https://ocw.mit.edu/courses/mathematics/18-06-linear-algebra-spring-2010/video-lectures/
+0 1 smithsonian images     Millions of images released to public domain   https://www.smithsonianmag.com/smithsonian-institution/smithsonian-releases-28-million-images-public-domain-180974263/
+0 1 math for self learners Hn: on learning math on your own time          https://news.ycombinator.com/item?id=22400375
 0 1 resque                 2009: redis backed asynchronous task queue     https://github.blog/2009-11-03-introducing-resque/
-0 1 copyrighted melodies   two artists copyrighted all melodies           https://www.vice.com/en_us/article/wxepzw/musicians-algorithmically-generate-every-possible-melody-release-them-to-public-domain
-0 1 some linear algebra    an introduction to linear algebra              https://betterexplained.com/articles/linear-algebra-guide/
-0 1 go after the metagame  to get good, go after the metagame             https://commoncog.com/blog/to-get-good-go-after-the-metagame/
-0 1 modern functional lisp states lack of popularity due to myths         https://ambrevar.xyz/modern-common-lisp/index.html
-0 1 euro track modules     modular audio generators                       https://github.com/pichenettes/eurorack
-0 1 pragmatic programmer   highly recommended book on programming         https://www.amazon.ca/Pragmatic-Programmer-journey-mastery-Anniversary/dp/0135957052/
+0 1 copyrighted melodies   Two artists copyrighted all melodies           https://www.vice.com/en_us/article/wxepzw/musicians-algorithmically-generate-every-possible-melody-release-them-to-public-domain
+0 1 some linear algebra    An introduction to linear algebra              https://betterexplained.com/articles/linear-algebra-guide/
+0 1 go after the metagame  To get good, go after the metagame             https://commoncog.com/blog/to-get-good-go-after-the-metagame/
+0 1 modern functional lisp States lack of popularity due to myths         https://ambrevar.xyz/modern-common-lisp/index.html
+0 1 euro track modules     Modular audio generators                       https://github.com/pichenettes/eurorack
+0 1 pragmatic programmer   Highly recommended book on programming         https://www.amazon.ca/Pragmatic-Programmer-journey-mastery-Anniversary/dp/0135957052/
 0 1 25 programming books   25 most recommended books scraped online       https://www.daolf.com/posts/best-programming-books/
-0 1 voloboev parenting     links regarding being a first time parent      https://wiki.nikitavoloboev.xyz/life/parenting
-0 1 voloboev mind map      topics and relations as a mind map             https://my.mindnode.com/fFxApNMuV2GmAzkBYxcD5quSFBM5wevdSMcRTz7H
-0 1 fellow coffee          fellow coffee products look great              https://fellowproducts.com
+0 1 voloboev parenting     Links regarding being a first time parent      https://wiki.nikitavoloboev.xyz/life/parenting
+0 1 voloboev mind map      Topics and relations as a mind map             https://my.mindnode.com/fFxApNMuV2GmAzkBYxcD5quSFBM5wevdSMcRTz7H
+0 1 fellow coffee          Fellow coffee products look great              https://fellowproducts.com
 0 1 good judgement         the elements of good judgement for leaders     https://hbr.org/2020/01/the-elements-of-good-judgment
 0 1 enterprisetech30       promising private companies in enterprise tech https://www.enterprisetech30.com
 0 1 rearchitecting         case studies in rearchitecting                 https://increment.com/software-architecture/case-studies-in-rearchitecting/

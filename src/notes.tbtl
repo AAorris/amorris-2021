@@ -1,13 +1,13 @@
 name                    note                                                       
-sqlite printf           works like printf but in sql queries
 sqlite group_concat     where count(1,2,3)=3, group_concat(1,2,3)="1,2,3"
-sqlite amalgamation     sqlite ships a single header and c file for compiling
-programmer brains       highly active cortical sections: IFG, MTG, IPL, SMG, IT
-c calloc                (size_t num, size_t size) -- number, then size.
-c snprintf              (char* s, size_t n, char* format, ...)
+coding cortical areas   highly active cortical sections: IFG, MTG, IPL, SMG, IT
 ctags                   ctags f; ctags -R
 vim use tags            :set tags+=tags (uses ./tags)
 vim search tags         :tag text; :tag /pattern
 vim jump to definition  C-]
 vim jump back           C-T
-coder body exercises    work squats, upper back; stretch hip flexors, chest
+vim switch buffers      C-6 (Mac: C-^-6) [0-9]C-6 to switch to buffer #
+vim reload vimrc        :source ~/.vimrc
+vim go to command mode  esc, C-c, C-[ (I mostly use C-c)
+vim replace mode        ^r; delete will undo only replacements
+tmux swap tabs          C-l (L for last)
