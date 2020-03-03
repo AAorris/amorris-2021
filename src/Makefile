@@ -6,17 +6,20 @@ PUBLICDIR = ../public
 
 sqlite.zip:
 	curl https://www.sqlite.org/2020/sqlite-amalgamation-3310100.zip > sqlite.zip
-	unzip -jd sqlite sqlite.zip
-	cp sqlite/sqlite3.{c,h} .
+	unzip -ujd sqlite sqlite.zip
+	cp sqlite/sqlite3.{c,h} sqlite/shell.c .
 	rm -rf sqlite/
+
+sqlite3: sqlite.zip
+	$(CC) shell.c sqlite3.c -o sqlite3
 
 tbl2sql: tbl.c tbl2sql.c
 tbl2json: tbl.c tbl2json.c
 
-db.sqlite3: sqlite.zip tbl2sql tags.tbtl links.tbtl
+db.sqlite3: sqlite3 tbl2sql tags.tbtl links.tbtl
 	rm -f db.sqlite3
-	sqlite3 -bail db.sqlite3 <<< `./tbl2sql tags.tbtl`
-	sqlite3 -bail db.sqlite3 <<< `./tbl2sql links.tbtl`
+	./sqlite3 -bail db.sqlite3 <<< `./tbl2sql tags.tbtl`
+	./sqlite3 -bail db.sqlite3 <<< `./tbl2sql links.tbtl`
 
 
 links: tbl.c sqlite3.c links.c
