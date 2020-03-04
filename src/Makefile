@@ -10,13 +10,12 @@ sqlite.zip:
 	cp sqlite/sqlite3.{c,h} sqlite/shell.c .
 	rm -rf sqlite/
 
-sqlite3: sqlite.zip
-	$(CC) shell.c sqlite3.c -o sqlite3
-
+sqlite3: shell.c sqlite3.c
+	$(CC) $(CFLAGS) shell.c sqlite3.c -o sqlite3
 tbl2sql: tbl.c tbl2sql.c
 tbl2json: tbl.c tbl2json.c
 
-db.sqlite3: sqlite3 tbl2sql tags.tbtl links.tbtl
+db.sqlite3: sqlite.zip sqlite3 tbl2sql tags.tbtl links.tbtl
 	rm -f db.sqlite3
 	./sqlite3 -bail db.sqlite3 <<< `./tbl2sql tags.tbtl`
 	./sqlite3 -bail db.sqlite3 <<< `./tbl2sql links.tbtl`
