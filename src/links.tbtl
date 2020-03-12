@@ -1,4 +1,16 @@
 y m uri                    txt                                            url                                                                                                                               
+0 2 midi 2.0 vote          midi 2.0 voted in by manufacturers             https://www.engadget.com/2020/01/29/midi-2-0-bidirectional-profiles-property-exchange/
+0 2 knowledge graphs       pdf: comprehensive introduction                https://arxiv.org/pdf/2003.02320.pdf
+0 2 spectro                webgl fft visualizer                           https://github.com/calebj0seph/spectro/blob/master/docs/making-of.md
+0 2 millions of tiny dbs   thinking process behind amazon block storage   https://blog.acolyer.org/2020/03/04/millions-of-tiny-databases/
+0 2 weak learning          closed form solutions for labelling data       http://hazyresearch.stanford.edu/flyingsquid
+0 2 display-p3             p3 gamut colors in css                         https://webkit.org/blog/10042/wide-gamut-color-in-css-with-display-p3/
+0 2 splitting photons      Scientists split photons into 3                https://phys.org/news/2020-02-quantum-photon.html
+0 2 jmap                   JSON meta application protocol (for mail)      https://en.wikipedia.org/wiki/JSON_Meta_Application_Protocol
+0 2 self supervised ml     Ex. learn to detect 90deg rotations in images  https://amitness.com/2020/02/illustrated-self-supervised-learning/
+0 2 vari active seat       Amazon: Standing desk seat                     https://www.amazon.com/gp/product/B07BC6DS42/
+0 2 linkalot               Guy writes local link saving web ui            https://gitlab.com/dmpop/linkalot/-/tree/master
+0 2 bootstrap tree view    A bootstrap tree view in react                 https://news.ycombinator.com/item?id=22441667
 0 2 one straw revolution   Masanobu Fukuoka on farming, eating, ecology   https://play.google.com/store/books/details?id=3Uo1tTcpDmkC
 0 2 masanobu fukuoka       Japanese philosopher and natural farmer        https://en.wikipedia.org/wiki/Masanobu_Fukuoka
 0 2 sepp holzer            Alpine permaculture pioneer in Austria         https://en.wikipedia.org/wiki/Sepp_Holzer
@@ -73,7 +85,7 @@ y m uri                    txt                                            url
 0 1 applied bioinformatics learn by doing and building projects           http://rosalind.info/problems/locations/
 0 1 open flight data       HN discussion (cool global data collection)    https://news.ycombinator.com/item?id=22360940
 0 1 js demo walkthrough    improve conversion rate with interactive demos https://github.com/tagspace/trevor-demo
-0 1 C python bindings      HN discussion (see: ctypes)                    https://news.ycombinator.com/item?id=22365166
+0 1 c python bindings      HN discussion (see: ctypes)                    https://news.ycombinator.com/item?id=22365166
 0 1 daniel grey            he shares links, designs book covers           http://danielgray.com/links
 0 1 frank chimero          brief thoughts on design, writing, music...    https://frankchimero.com/blog/
 0 1 a perfect pull request recommendations for a great pr experience      https://github.blog/2015-01-21-how-to-write-the-perfect-pull-request/

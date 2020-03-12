@@ -12,14 +12,18 @@ cat <<EOF
 </head>
 
 <body>
+		<header>
 		<nav style="position:sticky">
 		<p><a href="/">amorris.ca</a></p>
 		<p>${TITLE}</p>
 		<section>
-         <a href="/links/" style="margin-right: 16px" title="I actively collect links.">Links</a>
-         <a href="/tags/" style="margin-right: 16px" title="">Tags</a>
-         <a href="//webring.xxiivv.com" title="Surf the web like its 1999.">Web Ring</a>
+         <a href="/links/" style="margin-right: 16px" title="Links">🔗</a>
+         <a href="/tags/" style="margin-right: 16px" title="Tags">🏷️</a>
+         <a href="//webring.xxiivv.com" title="Web Ring">
+					<svg xmlns="http://www.w3.org/2000/svg" class="vector" width="33px" height="40px" baseProfile="full" version="1.1" style="fill:none;stroke:white;stroke-width:28px;stroke-linecap:square;"> <g transform="translate(0,18),scale(0.1)"> <g transform="translate(150,150),rotate(120,0,0)"> <path d="M0,-60 a60,60 0 1,0 0,120 l100,0"/>   </g> <g transform="translate(150,150),rotate(240,0,0)"> <path d="M0,-60 a60,60 0 1,0 0,120 l100,0"/>   </g> <g transform="translate(150,150),rotate(0,0,0)"> <path d="M0,-60 a60,60 0 1,0 0,120 l100,0"/>   </g> </g> </svg>
+				 </a>
 		</section>
 		</nav>
+		</header>
 		<main>
 EOF

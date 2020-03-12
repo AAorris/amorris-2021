@@ -24,7 +24,7 @@ db.sqlite3: sqlite.zip sqlite3 tbl2sql tags.tbtl links.tbtl
 links: tbl.c sqlite3.c links.c
 links.html: links db.sqlite3 theme.css
 	rm -f $(PUBLICDIR)/links/index.html
-	TITLE=News ./header.sh >> $(PUBLICDIR)/links/index.html
+	TITLE=Links ./header.sh >> $(PUBLICDIR)/links/index.html
 	./links db.sqlite3 >> $(PUBLICDIR)/links/index.html
 	cat footer.src.html >> $(PUBLICDIR)/links/index.html
 
