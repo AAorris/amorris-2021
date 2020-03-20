@@ -49,6 +49,7 @@ community    trends in remote work
 data         open flight data
 data         open peeps
 data         smithsonian images
+data         tesla patents
 db           Announcing MessageDB
 db           EdgeDB
 db           Notion
@@ -87,6 +88,7 @@ games        wingspan
 gear         build a keyboard
 gear         diy detachable usb kit
 gear         fellow coffee
+gear         soldering products
 gear         vari active seat       
 gear         yohann macbook stand
 graphics     GMUNK
@@ -95,6 +97,7 @@ graphics     How to draw a horse
 graphics     Nata Xlat
 graphics     asciinema
 graphics     display-p3             
+graphics     face modeling
 graphics     flif
 graphics     flow fields
 graphics     font face tool
@@ -133,7 +136,9 @@ home         c4
 home         convos
 home         ctoy
 home         diy detachable usb kit
+home         explorable physics
 home         explorables
+home         face modeling
 home         fellow coffee
 home         fermented honey garlic
 home         flow fields
@@ -152,6 +157,7 @@ home         overtone
 home         par.sr
 home         pkms
 home         savedbits
+home         soldering products
 home         songho: gl pbo
 home         sqlite
 home         sqlite c intro
@@ -307,10 +313,12 @@ science      Protein Design
 science      Self driving truck
 science      Silicon Fabric
 science      ecosim
+science      explorable physics
 science      laser fusion
 science      mapping coronavirus
 science      oberth effect
 science      splitting photons     
+science      tesla patents
 solarpunk    Hundred Rabbits
 solarpunk    Oscean
 solarpunk    Solar Sailboats
@@ -447,6 +455,7 @@ tech         data lakes
 tech         ecosim
 tech         elinks
 tech         enterprisetech30
+tech         explorable physics
 tech         explorables
 tech         fits in ram
 tech         flif
@@ -488,6 +497,7 @@ tech         redux persist
 tech         resque
 tech         savedbits
 tech         selfie
+tech         soldering products
 tech         solo dev year 2
 tech         sql antipatterns
 tech         sqlite
