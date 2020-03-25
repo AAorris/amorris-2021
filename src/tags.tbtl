@@ -48,6 +48,7 @@ community    solo dev year 2
 community    trends in remote work
 data         open flight data
 data         open peeps
+data         open refine
 data         smithsonian images
 data         tesla patents
 db           Announcing MessageDB
@@ -67,6 +68,8 @@ design       Marc Levoy Lectures
 design       Obvious Design
 design       Stripe - Color Systems
 design       ZDog
+design       mvp css
+design       w3c css
 engineering  gears
 engineering  solar kitchen
 enterprise   Load Balancing
@@ -101,6 +104,7 @@ graphics     face modeling
 graphics     flif
 graphics     flow fields
 graphics     font face tool
+graphics     open image libraries
 graphics     open peeps
 graphics     overview of typography
 graphics     pxltrm
@@ -129,6 +133,7 @@ home         Write a Text Editor
 home         Write an Alsa Driver
 home         Zeit Now
 home         alfredapp
+home         andy jones bread
 home         asciinema
 home         build a compiler
 home         build a keyboard
@@ -152,10 +157,12 @@ home         linux from scratch
 home         makefile cheat sheet
 home         on being offline
 home         on voice coding
+home         open image libraries
 home         open peeps
 home         overtone
 home         par.sr
 home         pkms
+home         rope ladder knots
 home         savedbits
 home         soldering products
 home         songho: gl pbo
@@ -170,6 +177,7 @@ home         your makefile is wrong
 home         zapier for alfred
 interactive  gears
 js           js demo walkthrough
+kitchen      andy jones bread
 kitchen      fermented honey garlic
 kitchen      how to cook burdock
 kitchen      how to make mead
@@ -250,6 +258,7 @@ ml           Meta RL
 ml           Tensorflow Graphics
 ml           Thinc.ai
 ml           ai morphogenesis
+ml           attention agent
 ml           openai hide and seek
 ml           self supervised ml  
 ml           t5 transformer
@@ -484,6 +493,7 @@ tech         ocaml space invaders
 tech         on being offline
 tech         on voice coding
 tech         open flight data
+tech         open refine
 tech         openai hide and seek
 tech         overtone
 tech         par.sr
@@ -528,9 +538,11 @@ web          ThreeJS Fundamentals
 web          Web Components
 web          ZDog
 web          Zeit Now
+web          mvp css
 web          redux persist
 web          savedbits
 web          swr
+web          w3c css
 women        important women in cs
 women        maryam mirzakhani
 work         Executives?
