@@ -59,6 +59,7 @@ db           Recutils
 db           SU Relational Data
 db           blur hash
 db           sqlite
+design       606
 design       Atlassian Design
 design       Bullet Charts
 design       GMUNK
@@ -70,6 +71,7 @@ design       Stripe - Color Systems
 design       ZDog
 design       mvp css
 design       w3c css
+engineering  606
 engineering  gears
 engineering  solar kitchen
 enterprise   Load Balancing
@@ -88,6 +90,7 @@ ethics       Image Net, Racism
 fun          How to draw a horse
 games        handmade hero
 games        wingspan
+gear         606
 gear         build a keyboard
 gear         diy detachable usb kit
 gear         fellow coffee
@@ -155,6 +158,7 @@ home         learn anything
 home         linkalot               
 home         linux from scratch
 home         makefile cheat sheet
+home         notes on notes
 home         on being offline
 home         on voice coding
 home         open image libraries
@@ -340,6 +344,7 @@ sport        Kite Surfing
 sql          sql antipatterns
 strategies   go after the metagame
 tech         25 programming books
+tech         606
 tech         6502 homebuilt
 tech         A web quine
 tech         ALU Chips
