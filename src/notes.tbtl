@@ -10,4 +10,6 @@ vim switch buffers      C-6 (Mac: C-^-6) [0-9]C-6 to switch to buffer #
 vim reload vimrc        :source ~/.vimrc
 vim go to command mode  esc, C-c, C-[ (I mostly use C-c)
 vim replace mode        ^r; delete will undo only replacements
+vim complete file       C-x C-f
+vim complete token      C-n
 tmux swap tabs          C-l (L for last)

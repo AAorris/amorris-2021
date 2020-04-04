@@ -1,8 +1,4 @@
 tag          name                                       
-accessible   Stripe - Color Systems
-accessible   on voice coding
-assembly     6502 homebuilt
-audio        Music for Programming
 audio        Seaboard Keyboard
 audio        copyrighted melodies
 audio        euro track modules
@@ -19,6 +15,7 @@ books        Dad is Cool
 books        The Ebbing Language
 books        godel escher bach
 books        how to create a mind
+books        moonwalking w einstein
 books        one straw revolution
 books        pragmatic programmer
 books        sql antipatterns
@@ -46,9 +43,11 @@ community    No-Commute Imperative
 community    OSS Seeds
 community    solo dev year 2
 community    trends in remote work
+craft        suncoast lumber
 data         open flight data
 data         open peeps
 data         open refine
+data         public domain data
 data         smithsonian images
 data         tesla patents
 db           Announcing MessageDB
@@ -165,13 +164,16 @@ home         open image libraries
 home         open peeps
 home         overtone
 home         par.sr
+home         physics travel guide
 home         pkms
+home         public domain data
 home         rope ladder knots
 home         savedbits
 home         soldering products
 home         songho: gl pbo
 home         sqlite
 home         sqlite c intro
+home         suncoast lumber
 home         trends in remote work
 home         voloboev alfred
 home         voloboev karabiner
@@ -263,6 +265,7 @@ ml           Tensorflow Graphics
 ml           Thinc.ai
 ml           ai morphogenesis
 ml           attention agent
+ml           google dreamer
 ml           openai hide and seek
 ml           self supervised ml  
 ml           t5 transformer
@@ -330,6 +333,7 @@ science      explorable physics
 science      laser fusion
 science      mapping coronavirus
 science      oberth effect
+science      physics travel guide
 science      splitting photons     
 science      tesla patents
 solarpunk    Hundred Rabbits
@@ -479,7 +483,9 @@ tech         frank chimero
 tech         gears
 tech         glibc
 tech         goodreads etl pipeline
+tech         google dreamer
 tech         handmade hero
+tech         htmldom.dev
 tech         huggingface tokenizers
 tech         important women in cs
 tech         insights bi
@@ -543,6 +549,7 @@ web          ThreeJS Fundamentals
 web          Web Components
 web          ZDog
 web          Zeit Now
+web          htmldom.dev
 web          mvp css
 web          redux persist
 web          savedbits
