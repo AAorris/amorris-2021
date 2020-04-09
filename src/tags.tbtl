@@ -25,6 +25,7 @@ c            Let's Destroy C
 c            Wart Layers
 c            Write an Alsa Driver
 c            c python bindings
+c            c++20 text formatting
 c            c4
 c            cppreference
 c            ctoy
@@ -334,6 +335,7 @@ science      laser fusion
 science      mapping coronavirus
 science      oberth effect
 science      physics travel guide
+science      quinone battery
 science      splitting photons     
 science      tesla patents
 solarpunk    Hundred Rabbits
@@ -463,6 +465,7 @@ tech         bootstrap tree view
 tech         build a compiler
 tech         build a keyboard
 tech         c python bindings
+tech         c++20 text formatting
 tech         c4
 tech         cloud native landscape
 tech         convos
@@ -511,6 +514,7 @@ tech         par.sr
 tech         pkms
 tech         public digi-infra
 tech         pxltrm
+tech         quinone battery
 tech         rauchg.com 2019 review
 tech         raytracing essentials
 tech         rearchitecting
