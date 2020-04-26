@@ -94,6 +94,7 @@ gear         606
 gear         build a keyboard
 gear         diy detachable usb kit
 gear         fellow coffee
+gear         portamill
 gear         soldering products
 gear         vari active seat       
 gear         yohann macbook stand
@@ -167,6 +168,7 @@ home         overtone
 home         par.sr
 home         physics travel guide
 home         pkms
+home         portamill
 home         public domain data
 home         rope ladder knots
 home         savedbits
@@ -252,7 +254,6 @@ math         raytracing essentials
 math         some linear algebra
 metrics      kolmogorov complexity
 mind         voloboev mind map
-mine         HAV
 ml           Code Search Dataset
 ml           Colors: designs.ai
 ml           DeepSpeech
@@ -489,6 +490,7 @@ tech         goodreads etl pipeline
 tech         google dreamer
 tech         handmade hero
 tech         htmldom.dev
+tech         htss
 tech         huggingface tokenizers
 tech         important women in cs
 tech         insights bi
@@ -561,6 +563,7 @@ web          swr
 web          w3c css
 women        important women in cs
 women        maryam mirzakhani
+woodworking  portamill
 work         Executives?
 work         No-Commute Imperative
 work         Working Asynchronously

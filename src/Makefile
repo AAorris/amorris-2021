@@ -14,6 +14,8 @@ sqlite3: shell.c sqlite3.c
 	$(CC) $(CFLAGS) shell.c sqlite3.c -o sqlite3
 tbl2sql: tbl.c tbl2sql.c
 tbl2json: tbl.c tbl2json.c
+tbl2c: sqlite3.c tbl.c tbl2c.c
+main: main.c
 
 db.sqlite3: sqlite.zip sqlite3 tbl2sql tags.tbtl links.tbtl
 	rm -f db.sqlite3
