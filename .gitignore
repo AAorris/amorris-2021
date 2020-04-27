@@ -7,3 +7,6 @@ create-token.sh
 db.sqlite3
 public/
 lib/
+.now/
+.next/
+node_modules/
