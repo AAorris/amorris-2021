@@ -10,3 +10,4 @@ lib/
 .now/
 .next/
 node_modules/
+.env
