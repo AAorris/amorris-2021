@@ -5,7 +5,6 @@ c99/
 create-token.sh
 *.swp
 db.sqlite3
-public/
 lib/
 .now/
 .next/
