@@ -36,24 +36,25 @@ export async function getStaticProps() {
     const tagLookup = {}
     const items = [];
     // collect tags into a mapping
-    await base('Tags').select({}).eachPage((records, next) => {
-         records.forEach(value => tagLookup[value.id] = value.get('name'))
-        next()
-    })
-    return await base('Links').select({
-    }).eachPage((records, next) => {
-         const x = records.forEach(async (value) => {
-            items.push({
-                uid: value.get('uri'),
-                url: value.get('url'),
-                quicklookurl: value.get('url'),
-                subtitle: value.get('subtitle'),
-                title: value.get('uri'),
-                tags: (value.get('tags')||[]).map(id => tagLookup[id]),
-            });
+    await base('Tags').select({})
+        .eachPage((records, next) => {
+            records.forEach(value => tagLookup[value.id] = value.get('name'))
+            next()
         })
-        next()
-    }).then(x => ({ props: { items }}))
+    return await base('Links').select({view: 'Web'})
+        .eachPage((records, next) => {
+            const x = records.forEach(async (value) => {
+                items.push({
+                    uid: value.get('uri'),
+                    url: value.get('url'),
+                    quicklookurl: value.get('url'),
+                    subtitle: value.get('subtitle'),
+                    title: value.get('uri'),
+                    tags: (value.get('tags')||[]).map(id => tagLookup[id]),
+                });
+            })
+            next()
+        }).then(x => ({ props: { items }}))
 }
 
 export default Links
