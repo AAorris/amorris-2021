@@ -20,7 +20,7 @@ function Links({ items }) {
         <ul style={{listStyle: 'none', padding: 0}}>
             {items.map(post => (
                 <li key={post.uid}>
-                    🔗 <a href={post.url}>
+                    🔗 <a href={post.arg}>
                         <b> {post.title} </b>
                         <sub className={"block-when-small"}>{post.subtitle}</sub>
                     </a>
@@ -46,7 +46,7 @@ export async function getStaticProps() {
             const x = records.forEach(async (value) => {
                 items.push({
                     uid: value.get('uri'),
-                    url: value.get('url'),
+                    arg: value.get('url'),
                     quicklookurl: value.get('url'),
                     subtitle: value.get('subtitle'),
                     title: value.get('uri'),
