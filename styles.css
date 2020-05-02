@@ -2,15 +2,61 @@ html, body {
     margin: 0;
 }
 
+header {
+    position: sticky;
+    /* float: left; */
+    top: 0;
+    width: 100vw;
+    background: rgba(0, 0, 0, 0.5);
+    backdrop-filter: saturate(180%) blur(5px);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.brand {
+    font-weight: bold;
+    letter-spacing: -2px;
+    padding: 35px 0;
+    margin-left: 2em;
+}
+
+.social {
+    margin-right: 35px;
+}
+
+.social > a {
+    /* background: #fff; */
+    border-radius: 10px;
+    padding: 5px 10px;
+    margin-right: 10px;
+}
+
+.tag {
+    padding-right: 10px;
+}
+
 body {
     font-size: 18pt;
-    font-family: -apple-system,BlinkMacSystemFont,sans-serif;
+    font-family: "Open Sans",-apple-system,BlinkMacSystemFont,sans-serif;
     -webkit-font-smoothing: antialiased;
     background: black;
     color: white;
-    line-height: 2em;
-    letter-spacing: 1.5px;
+    line-height: 20px;
+    /* letter-spacing: 1.2px; */
     margin: auto;
+}
+
+.float-right {
+    /* align-self: flex-end; */
+    justify-self: right;
+    margin-left: auto;
+}
+
+h1 {
+    font-size: 72pt;
+    font-weight: 600;
+    color: black;
 }
 
 h1, h2, h3 {
@@ -21,11 +67,7 @@ p, q, a, em, ul, ol {
 	font-size: 16pt;
 	text-decoration: none;
 	font-weight: normal;
-	max-width: 72ch;
-}
-
-header {
-    padding: 2em;
+	/* max-width: 72ch; */
 }
 
 p, a {
@@ -45,14 +87,20 @@ h4, h5 {
 a[href] { color: white; text-decoration: none; }
 
 sub {
-    opacity: 0.63;
+    /* opacity: 0.63; */
+    color: #888;
     vertical-align: baseline;
 }
 
 sub.block {
     display: block;
     margin-top: -20px;
-    opacity: 0.3;
+    color: #444;
+    padding: 20px 0;
+}
+
+sub.header {
+    font-size: 32pt;
 }
 
 @media(max-width: 768px) {
