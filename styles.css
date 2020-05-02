@@ -53,14 +53,30 @@ body {
     margin-left: auto;
 }
 
+.item-container {
+    padding-bottom: 10px;
+    display: block;
+    flex-direction: 'row';
+}
+
+@media(min-width: 900px) {
+    .item-container {
+        display: flex;
+        flex-direction: 'row';
+        align-items: 'center';
+    }
+}
+
 h1 {
     font-size: 72pt;
     font-weight: 600;
     color: black;
+    line-height: 0.85em;
 }
 
 h1, h2, h3 {
-    letter-spacing: -1.5px;
+    /* letter-spacing: -1.5px; */
+    letter-spacing: -0.07em;
 }
 
 p, q, a, em, ul, ol {
@@ -103,10 +119,10 @@ sub.header {
     font-size: 32pt;
 }
 
-@media(max-width: 768px) {
+@media(max-width: 900px) {
     .block-when-small {
         display: block;
-        margin-top: -0.5em;
-        margin-bottom: 0.5em;
+        /* margin-top: -0.5em; */
+        margin-bottom: 0.25em;
     }
 }

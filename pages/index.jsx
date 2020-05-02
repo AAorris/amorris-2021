@@ -21,13 +21,13 @@ function Links({ items }) {
         </Head>
         <div style={{padding: 80, background: 'white', textAlign: 'center'}}>
             <h1>Aaron Morris</h1>
-            <sub className={"block header"}>My 🧠 at a 🔎</sub>
+            <sub className={"block header"}>Me at a glance</sub>
         </div>
         {/* <img src="/img/p10.008.jpg" style={{width: 400}} />  */}
         <ul style={{listStyle: 'none', padding: '0 2em'}}>
             {items.map(post => (
                 <li key={post.uid}>
-                    <div style={{display: 'flex', flexDirection: 'row', alignItems: 'center'}}>
+                    <div className="item-container">
                     <span>🔗 <a href={post.arg}>
                         <b> {post.title} </b>
                         <sub className={"block-when-small"}>{post.subtitle}</sub>
