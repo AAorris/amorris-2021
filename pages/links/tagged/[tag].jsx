@@ -45,7 +45,7 @@ function Links({ tag, items }) {
     await base('Tags').select({})
     .eachPage((records, next) => {
       records.forEach(value => {
-        paths.push({params: {tag: value.get('name')}})
+        paths.push({params: {tag: value.get('name'), subtitle: value.get('subtitle')}})
       })
       next()
     })
