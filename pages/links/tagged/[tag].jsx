@@ -5,7 +5,7 @@ import { Fragment } from "react";
 function Tags({ children }) {
   if (!children || !children.length) return null
   return <sub className={"block-when-small float-right"}>
-  {children.map(tag => <a className="sub" href={tag}><span key={tag} className="tag">{tag}</span></a>)}
+  {children.map(tag => <a key={tag} className="sub" href={tag}><span className="tag">{tag}</span></a>)}
   </sub>
 }
 
@@ -45,7 +45,7 @@ function Links({ tag, items }) {
     await base('Tags').select({})
     .eachPage((records, next) => {
       records.forEach(value => {
-        paths.push({params: {tag: value.get('name'), subtitle: value.get('subtitle')}})
+        paths.push({params: {tag: value.get('name'), subtitle: value.get('subtitle') || ''}})
       })
       next()
     })
@@ -93,7 +93,7 @@ function Links({ tag, items }) {
         }
       })
       next()
-    }).then(() => ({ props: { tag: {name: tagData.get('name'), subtitle: tagData.get('subtitle')}, items }}))
+    }).then(() => ({ props: { tag: {name: tagData.get('name'), subtitle: tagData.get('subtitle') || ''}, items }}))
   }
   
   export default Links

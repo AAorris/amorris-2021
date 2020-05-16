@@ -73,11 +73,14 @@ h1 {
     font-size: 72pt;
     font-weight: 600;
     /* color: black; */
-    line-height: 1.5em;
+    line-height: 2em;
 }
 
 h1, h2, h3 {
     /* letter-spacing: -1.5px; */
+    line-height: 1em;
+    margin-block-start: 2rem;
+    margin-block-end: 2rem;
     letter-spacing: -0.07em;
 }
 

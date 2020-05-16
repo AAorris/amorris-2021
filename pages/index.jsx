@@ -1,4 +1,5 @@
 // Links
+import { Fragment } from "react";
 import Head from "next/head";
 import Link from "next/link";
 
@@ -65,97 +66,62 @@ function Links({ items }) {
         </Head>
         <div style={{padding: 80, textAlign: 'center'}}>
             <h1>👋 Hey There!</h1>
-            <sub className={"block header"}>Welcome to my web site.</sub>
+            <sub className={"block header"}>I'm Aaron Morris. Welcome!</sub>
         </div>
         <Block>
-            <h2>👀 Why am I here?</h2>
-            <p>I'm building an online space for pursuing health and knowledge.</p>
-            <p>I'm actively organizing and sharing information to get there.</p>
-            <p>I'm also sharing my story along with tips on doing it yourself.</p>
+            <h2>My Goals</h2>
+            <p>I want to follow you and hear about what you think is interesting.</p>
+            <p>
+                <a href="https://twitter.com/intent/tweet?screen_name=aaorris&ref_src=twsrc%5Etfw" class="twitter-mention-button" data-show-count="false">Tweet to @aaorris</a><script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+            </p>
+            <p>I want to organize information to learn more about myself.</p>
+            <p>I want to achieve optimum general performance as a developer and partner.</p>
+            <p>I want to start a family and be a great dad.</p>
         </Block>
         <Block>
-            <h2>💃 What do I want?</h2>
-            <p>I want to...</p>
-            <ul>
-                <li>Appreciate nature 🌱 and technology 👩‍💻</li>
-                <li>Optimize and balance my brain 🧠</li>
-                <li>Maximize my potential and impact ✨</li>
-                <li>Know myself and be known 🧘‍♂️</li>
-                <li>Create a healthy family 👨‍👩‍👧</li>
-            </ul>
-            <p>I want to connect if you're on a similar path and share what I learn.</p>
+            <h2>Say Hello</h2>
+            <div style={{display: 'grid', gridTemplateColumns: 'auto auto auto', alignItems: 'center', gridGap: '2rem'}}>
+                <h3>Twitter</h3>
+                <a href="https://twitter.com/aaorris?ref_src=twsrc%5Etfw" class="twitter-follow-button" data-show-count="false">Follow @aaorris</a><script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+                <p>Twitter is where I post frequent tagged links.</p>
+            </div>
+            <h2>See My Link Collection</h2>
+            <div>{(([js, web, tech, home, life, science, graphics, math, design, enterprise, news]) => (
+                <Fragment>
+                    <p>I share information on social media and collect it here.</p>
+                    <p>Are you a front end developer? Try checking out my {js} {web} {tech} links.</p>
+                    <p>Are you a designer? I share resources like {design} and {graphics}.</p>
+                    <p>Are you thoughtful about life and learning? Try {home} {life} {science} and {math}.</p>
+                    <p>Are you business focused? Check out my {enterprise} {news} links.</p>
+                </Fragment>
+            ))(['js', 'web', 'tech', 'home', 'life', 'science', 'graphics', 'math', 'design', 'enterprise', 'news'].map(tag => (
+               <Link href={"/links/tagged/[tag]"} as={`/links/tagged/${tag}`}>
+                    <a className="underline">{tag}</a>
+                </Link>
+            )))}</div>
         </Block>
         <Block>
-            <h2>✨ Follow me for updates!</h2>
-            <ul>
-                <li>I'll share what I learn.</li>
-                <li>I'll connect you with others in this space.</li>
-                <li>I'll respect your attention by sharing in moderation.</li>
-            </ul>
-            <Form label="home-cta-1" />
-        </Block>
-        <Block>
-            <h2>🏡 My tiny house</h2>
+            <h2>My Tiny House</h2>
             <img style={{display: 'block', margin: 'auto', padding: 20}} src="/img/p10.008.jpg" /> 
             <p>This is Mucha. My fiancé Lily and I live here.</p>
             <p>I work remotely for a tech company called Zapier.</p>
             <p>Lily is a holistic nutritionist and online entrepreneur. She helps burning women in creative industries beat burnout and become resilient.</p>
         </Block>
         <Block>
-            <h2>🤵 Me</h2>
+            <h2>About Me</h2>
             <img style={{display: 'block', margin: 'auto', padding: 20}} src="/img/p10.010.jpg" /> 
-            <p>This is me! I'm 26 years old and I'm spending every day learning, growing, and taking action.
-            I've run a marathon. I work remotely. I have a beautiful garden. I have a healthy body. I'm happily engaged to the love of my life.
-            I love woodworking and windsurfing and sailing. In the picture above, I was about to jump out of an airplane.</p>
+            <p>This is me! I'm 26 years old and I'm spending every day learning, growing, and taking action.</p>
             <p>Most people choose to tackle single-minded goals.
-                My single-minded goal is brain-care. One key to optimum brain health is balanced brain growth.</p>
-            <p>The best part, I believe, is that taking care of your brain makes you happier. More productive. More effective.
-                It's the best investment you can make in yourself. Get connected as I dive deep into my theories, and current science.
+                My single-minded goal is brain-care. My top brain care tip is to grow your left and right brain together.</p>
+            <p>My goal is to become an authority on how you can accelerate your brain's performance,
+                so you can learn and recall faster, remember important moments and information, and solve problems better
+                than you ever thought possible using meta-learning techniques and augmentation with technology.
+            </p>
+            <p>I hope you'll follow me as I journey towards my goals. For now, you can come here to see all the
+                links I think are interesting. I save them so I can look back on them, and I hope you'll enjoy
+                what I'm building.
             </p>
         </Block>
-        <Block>
-            <h2>👇 Forget social media.</h2>
-            <p>There's too much noise on social media. Let's share directly with each other.</p>
-            <Form label="home-cta-1" />
-        </Block>
-        <Block>
-            <h2>🤔 Looking for my archives?</h2>
-            <p>I share links all the time on social media but it's too easy to lose track of posts and bookmarks.
-                My web site is the home for everything I find interesting or save for later.
-                Want to browse around? If you find something interesting.
-            </p>
-            <h3>Tagged Links</h3>
-            <ul>{['tech', 'home', 'web', 'life', 'science', 'graphics', 'math', 'design'].map(tag => (
-                <li key={tag} style={{marginLeft: 32}}>
-                    <Link href={"/links/tagged/[tag]"} as={`/links/tagged/${tag}`}>
-                        <a className="underline">{tag}</a>
-                    </Link>
-                </li>
-            ))}</ul>
-            <p>Feel free to explore. Sign up for email updates where I'll
-                share deep dives and insights.</p>
-        </Block>
-        <script dangerouslySetInnerHTML={{__html: `
-            function handleSubmission() {
-                const params = new URLSearchParams(location.search);
-                if (params.get('source')) {
-                    const name = params.get('name')
-                    const email = params.get('email')
-                    const website = params.get('website')
-                    const source = params.get('source')
-                    const about = params.get('about')
-                    
-                    fetch('https://hooks.zapier.com/hooks/catch/6815891/orex9oe', {
-                        method: 'POST',
-                        headers: {
-                            'Content-Type': 'application/json'
-                        },
-                        body: JSON.stringify({name, email, website, source, about})
-                    }).then(() => location.replace('/'))
-                }
-            }
-            handleSubmission()
-        `}}></script>
     </main>
 }
 

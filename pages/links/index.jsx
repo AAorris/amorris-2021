@@ -19,9 +19,9 @@ function Links({ items }) {
             <title>Links | Aaron Morris </title>
             <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600&display=swap" rel="stylesheet"></link>
         </Head>
-        <div style={{padding: 80, background: 'white', textAlign: 'center'}}>
-            <h1>Aaron Morris</h1>
-            <sub className={"block header"}>Me at a glance</sub>
+        <div style={{padding: 80, textAlign: 'center'}}>
+            <h1>All my Links</h1>
+            <sub className={"block header"}>Click tags to see similar links.</sub>
         </div>
         {/* <img src="/img/p10.008.jpg" style={{width: 400}} />  */}
         <ul style={{listStyle: 'none', padding: '0 2em'}}>
@@ -66,16 +66,4 @@ export async function getStaticProps() {
         }).then(x => ({ props: { items }}))
 }
 
-export default (props) => (
-    <Fragment>
-        <header>
-            <Brand>Aaron Morris</Brand>
-            <div className="social" style={{display: 'flex'}}>
-                <a title="Updates on Twitter" href="https://twitter.com/aaorris">🐦</a>
-                <a title="Code on Github" href="https://github.com/aaorris">🐙</a>
-                <a title="Part of a Web Ring" href="https://webring.xxiivv.com ">💫</a>
-            </div>
-        </header>
-        <Links {...props} />
-    </Fragment>
-)
+export default Links
