@@ -96,8 +96,7 @@ function Links({ items }) {
         <Block>
             <h2>My Tiny House</h2>
             <img style={{display: 'block', margin: 'auto', padding: 20}} src="/img/p10.008.jpg" /> 
-            <p>This is Mucha. My fiancé Lily and I live here.</p>
-            <p>I work remotely for a tech company called Zapier.</p>
+            <p>This is Mucha. My fiancé Lily and I live here and work remotelys.</p>
             <p>Lily is a holistic nutritionist and online entrepreneur. She helps burning women in creative industries beat burnout and become resilient.</p>
         </Block>
         <Block>
