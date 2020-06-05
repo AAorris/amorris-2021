@@ -65,22 +65,16 @@ function Links({ items }) {
             <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600&display=swap" rel="stylesheet"></link>
         </Head>
         <div style={{padding: 80, textAlign: 'center'}}>
-            <h1>👋 Hey There!</h1>
-            <sub className={"block header"}>I'm Aaron Morris. Welcome!</sub>
+            <h1>✊🏽 Black Lives Matter.</h1>
+            <sub className={"block header"}>I'm Aaron Morris. I try to share thoughtful <Link href="/links"><a style={{fontSize: '32pt'}}>Links</a></Link>.</sub>
         </div>
         <Block>
-            <h2>My Goals</h2>
-            <p>I want to subscribe to updates across humanist and technotopian domains.</p>
-            <p>I want to organize information and learn more about myself in the process.</p>
-            <p>I want to achieve optimum brain health.</p>
-            <p>I want to start a family and be a great dad.</p>
-        </Block>
-        <Block>
-            <h2>See My Link Collection</h2>
+            <h2>My Link Tree</h2>
 
             <div>{(([js, web, tech, home, life, science, graphics, math, design, enterprise, news]) => (
                 <Fragment>
-                    <p>I share information on social media and collect it here.</p>
+                    <p>I collect and organize information for purposes including memory and self discovery (How are my information sources biased?)</p>
+                    <p>You might find you relate to some of the tags I'm biased towards right now.</p>
                     <p>Are you a front end developer? Try checking out my {js} {web} {tech} links.</p>
                     <p>Are you a designer? I share resources like {design} and {graphics}.</p>
                     <p>Are you thoughtful about life and learning? Try {home} {life} {science} and {math}.</p>
@@ -96,7 +90,7 @@ function Links({ items }) {
         <Block>
             <h2>My Tiny House</h2>
             <img style={{display: 'block', margin: 'auto', padding: 20}} src="/img/p10.008.jpg" /> 
-            <p>This is Mucha. My fiancé Lily and I live here and work remotelys.</p>
+            <p>This is Mucha. My fiancé Lily and I live here and work remotely.</p>
             <p>Lily is a holistic nutritionist and online entrepreneur. She helps burning women in creative industries beat burnout and become resilient.</p>
         </Block>
         <Block>
@@ -104,7 +98,7 @@ function Links({ items }) {
             <img style={{display: 'block', margin: 'auto', padding: 20}} src="/img/p10.010.jpg" /> 
             <p>I'm a full-stack engineer at Zapier. We're working to democratize automation.</p>
             <p>My personal goal is practicing meta-learning. That means learning about learning itself, and how to do that better.</p>
-            <p>Follow me if you're interested via the website header! See you around.</p>
+            <p>Follow me on <a className="underline" title="Updates on Twitter" href="https://twitter.com/aaorris">Twitter</a>.</p>
         </Block>
     </main>
 }
