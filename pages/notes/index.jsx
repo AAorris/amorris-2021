@@ -6,19 +6,21 @@ function Notes({ notes }) {
     return <main>
         <Head>
             <title>Notes | Aaron Morris </title>
-            <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600&display=swap" rel="stylesheet"></link>
         </Head>
         <ul style={{listStyle: 'none', padding: '0 2em'}}>
             {notes.map(note => (
-                <li key={note.path}>
+                <Link href="/notes/[slug]" as={`/notes/${note.path}`}><a className="plain">
+                <li className="note-container" key={note.path}>
                     <div className="item-container">
-                    <span>📜 <Link href="/notes/[slug]" as={`/notes/${note.path}`}><a>
-                        <b> {note.title} </b>
-                        <sub className="block-when-small">Written {new Date(note.created_at).toLocaleDateString()}</sub>
-                        <sub style={{display: 'block'}}>{note.headline}</sub>
-                    </a></Link></span>
+                        {note.poster && <img className="poster" src={note.poster} />}
+                        <span>
+                                <h3 style={{marginBlockEnd: 0}}> {note.title} </h3>
+                                <sub>Written {new Date(note.created_at).toLocaleDateString()}</sub><br/>
+                                <sub style={{marginBlockStart: 0}}>{note.headline}</sub>
+                        </span> 
                     </div>
                 </li>
+                </a></Link>
             ))} 
         </ul>
     </main>

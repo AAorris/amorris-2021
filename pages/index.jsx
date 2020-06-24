@@ -62,13 +62,12 @@ function Links({ items }) {
     return <main>
         <Head>
             <title>Links | Aaron Morris </title>
-            <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600&display=swap" rel="stylesheet"></link>
         </Head>
         <div style={{padding: 80, textAlign: 'center'}}>
             <h1>👋 Hey! I'm Aaron</h1>
             <sub className={"block header"}>I try to share thoughtful
-                <Link href="/links"><a style={{fontSize: '32pt'}}> Links </a></Link>
-                and <Link href="/notes"><a style={{fontSize: '32pt'}}>Notes</a></Link>.
+                &nbsp;<Link href="/notes"><a style={{fontSize: '32pt'}}>Notes</a></Link>
+                &nbsp;and <Link href="/links"><a style={{fontSize: '32pt'}}>Links</a></Link>.
             </sub>
         </div>
         <Block>
@@ -76,12 +75,10 @@ function Links({ items }) {
 
             <div>{(([js, web, tech, home, life, science, graphics, math, design, enterprise, news]) => (
                 <Fragment>
-                    <p>I collect and organize information for purposes including memory and self discovery (How are my information sources biased?)</p>
-                    <p>You might find you relate to some of the tags I'm biased towards right now.</p>
-                    <p>Are you a front end developer? Try checking out my {js} {web} {tech} links.</p>
-                    <p>Are you a designer? I share resources like {design} and {graphics}.</p>
-                    <p>Are you thoughtful about life and learning? Try {home} {life} {science} and {math}.</p>
-                    <p>Are you business focused? Check out my {enterprise} {news} links.</p>
+                    <p>Front end developer? Try checking out my {js} {web} {tech} links.</p>
+                    <p>designer? I share resources like {design} and {graphics}.</p>
+                    <p>Learner? Try {home} {life} {science} and {math}.</p>
+                    <p>Professional? Check out my {enterprise} links.</p>
                     <p>Or just see everything at <Link href="/links"><a className="underline">Links</a></Link></p>
                 </Fragment>
             ))(['js', 'web', 'tech', 'home', 'life', 'science', 'graphics', 'math', 'design', 'enterprise', 'news'].map(tag => (

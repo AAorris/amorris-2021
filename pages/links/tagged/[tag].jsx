@@ -19,15 +19,11 @@ function Brand(props) {
 	return <div className="brand" {...props} />;
 }
 
-function Links({ tag, items }) {
+function Links({ title, subtitle, items }) {
 	return (
 		<main>
 			<Head>
-				<title>Tagged {tag.name} links | amorris.ca</title>
-				<link
-					href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600&display=swap"
-					rel="stylesheet"
-				></link>
+				<title>Tagged {title} links | amorris.ca</title>
 			</Head>
 			<div
 				style={{
@@ -38,9 +34,9 @@ function Links({ tag, items }) {
 				}}
 			>
 				<h1 style={{ color: "black", textTransform: "capitalize" }}>
-					Links Tagged {tag.name}
+					Links Tagged {title}
 				</h1>
-				<sub className={"block header"}>{tag.subtitle || ""}</sub>
+				<sub className={"block header"}>{subtitle || ""}</sub>
 			</div>
 			<ul style={{ listStyle: "none", padding: "0 2em" }}>
 				{items.map((post) => (
@@ -62,80 +58,12 @@ function Links({ tag, items }) {
 	);
 }
 
-export async function getStaticPaths() {
-	const base = require("airtable").base("appaKRf92yu31M3Nf");
-	const paths = [];
-	await base("Tags")
-		.select({})
-		.eachPage((records, next) => {
-			records.forEach((value) => {
-				paths.push({
-					params: {
-						tag: value.get("name"),
-						subtitle: value.get("subtitle") || "",
-					},
-				});
-			});
-			next();
-		});
-	// console.log(paths)
-	return {
-		paths,
-		fallback: false,
-	};
-}
-
-export async function getStaticProps({ params }) {
-	const base = require("airtable").base("appaKRf92yu31M3Nf");
-	const tagLookup = {};
-	const items = [];
-	let tagData; // we'll collect this below
-
-	// common for all pages that show other tags for a link
-	// collect tags into a mapping
-	await base("Tags")
-		.select({})
-		.eachPage((records, next) => {
-			records.forEach((value) => {
-				tagLookup[value.id] = value.get("name");
-				if (value.get("name") === params.tag) {
-					tagData = value;
-				}
-			});
-			next();
-		});
-	// console.log(`Tag id was ${tagId}`)
-	return await base("Links")
-		.select({ view: "Web" })
-		.eachPage((records, next) => {
-			records.forEach(async (value) => {
-				if (
-					(value.get("tags") || []).some((tag) => {
-						// console.log(tag);
-						return tag === tagData.id;
-					})
-				) {
-					items.push({
-						uid: value.get("uri") || "",
-						arg: value.get("url") || "",
-						quicklookurl: value.get("url") || "",
-						subtitle: value.get("subtitle") || "",
-						title: value.get("uri") || "",
-						tags: (value.get("tags") || []).map((id) => tagLookup[id]),
-					});
-				}
-			});
-			next();
-		})
-		.then(() => ({
-			props: {
-				tag: {
-					name: tagData.get("name"),
-					subtitle: tagData.get("subtitle") || "",
-				},
-				items,
-			},
-		}));
+export async function getServerSideProps(context) {
+  const host = context.req.headers.host
+  const protocol = host.includes('localhost') ? 'http' : 'https'
+  const resp = await fetch(`${protocol}://${host}/api/links/tagged/${context.query.tag}`);
+  const props = await resp.json()
+  return { props }
 }
 
 export default Links;

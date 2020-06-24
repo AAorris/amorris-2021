@@ -1,19 +1,21 @@
 const _base = require('airtable').base('appaKRf92yu31M3Nf');
-const tagLookup = {}
+const tagsById = {}
+const tagsByName = {}
 const links = []
 
 async function buildTags() {
-  if (Object.keys(tagLookup).length > 0) return;
+  if (Object.keys(tagsById).length > 0) return;
   const tags = _base('Tags')
   const selection = tags.select({})
   const iteration = selection.eachPage((records, next) => {
     for (let value of records) {
-      tagLookup[value.id] = value.get('name')
+      tagsById[value.id] = value
+      tagsByName[value.get('name')] = value
     }
     next()
   })
   await iteration
-  tagLookup._built = true
+  tagsById._built = true
 }
 
 async function buildLinks() {
@@ -28,7 +30,7 @@ async function buildLinks() {
         quicklookurl: value.get('url'),
         subtitle: value.get('subtitle'),
         title: value.get('uri'),
-        tags: (value.get('tags')||[]).map(id => tagLookup[id]),
+        tags: (value.get('tags')||[]).map(id => tagsById[id].get('name')),
       })
     }
     next()
@@ -42,8 +44,13 @@ export default class LinkService {
     await buildLinks()
     return links
   }
-  async getLinksforTag(tag) {
+  async getLinksforTag(tagName) {
     const items = await this.getAllLinks()
-    return items.filter(({ tags }) => tags.includes(tag))
+    const tag = tagsByName[tagName]
+    return {
+      title: tag.get('name'),
+      subtitle: tag.get('subtitle'),
+      items: items.filter(({ tags }) => tags.includes(tagName))
+    }
   }
 }

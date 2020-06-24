@@ -7,9 +7,8 @@ function Notes({ note: { body, headline, title} }) {
         <Head>
             <title>{title}</title>
             <meta name="description" value={headline} />
-            <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600&display=swap" rel="stylesheet"></link>
         </Head>
-        <div dangerouslySetInnerHTML={{__html: body }} />
+        <div className="note" dangerouslySetInnerHTML={{__html: body }} />
         <style jsx>{`
           div {
             max-width: 72ch;

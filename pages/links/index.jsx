@@ -1,6 +1,5 @@
-// Links
 import Head from "next/head";
-import { Fragment } from "react";
+import LinkService from "../../services/links";
 
 function Tags({ children }) {
     if (!children || !children.length) return null
@@ -9,23 +8,18 @@ function Tags({ children }) {
     </sub>
 }
 
-function Brand(props) {
-    return <div className="brand" {...props} />
-}
-
-function Links({ items }) {
+function Links({ links }) {
     return <main>
         <Head>
-            <title>Links | Aaron Morris </title>
-            <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600&display=swap" rel="stylesheet"></link>
+            <title>Links | Aaron Morris</title>
         </Head>
         <div style={{padding: 80, textAlign: 'center'}}>
-            <h1>All my Links</h1>
-            <sub className={"block header"}>Click tags to see similar links.</sub>
+            <h1>My saved links</h1>
+            <sub className={"block header"}>I save and tag links. Is that weird?</sub>
         </div>
         {/* <img src="/img/p10.008.jpg" style={{width: 400}} />  */}
         <ul style={{listStyle: 'none', padding: '0 2em'}}>
-            {items.map(post => (
+            {links.map(post => (
                 <li key={post.uid}>
                     <div className="item-container">
                     <span>🔗 <a href={post.arg}>
@@ -40,30 +34,12 @@ function Links({ items }) {
     </main>
 }
 
-export async function getStaticProps() {
-    const base = require('airtable').base('appaKRf92yu31M3Nf');
-    const tagLookup = {}
-    const items = [];
-    // collect tags into a mapping
-    await base('Tags').select({})
-        .eachPage((records, next) => {
-            records.forEach(value => tagLookup[value.id] = value.get('name'))
-            next()
-        })
-    return await base('Links').select({view: 'Web'})
-        .eachPage((records, next) => {
-            const x = records.forEach(async (value) => {
-                items.push({
-                    uid: value.get('uri'),
-                    arg: value.get('url'),
-                    quicklookurl: value.get('url'),
-                    subtitle: value.get('subtitle'),
-                    title: value.get('uri'),
-                    tags: (value.get('tags')||[]).map(id => tagLookup[id]),
-                });
-            })
-            next()
-        }).then(x => ({ props: { items }}))
-}
+export async function getServerSideProps(context) {
+    const host = context.req.headers.host
+    const protocol = host.includes('localhost') ? 'http' : 'https'
+    const resp = await fetch(`${protocol}://${host}/api/links`);
+    const props = await resp.json()
+    return { props }
+  }
 
 export default Links

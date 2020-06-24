@@ -1,6 +1,7 @@
 import '../styles.css'
-import { Fragment } from 'react'
 import Head from 'next/head'
+import Link from 'next/link'
+import { Fragment } from 'react'
 import { AppProps } from 'next/app'
 
 function MyApp({ Component, pageProps }: AppProps) {
@@ -15,15 +16,35 @@ function MyApp({ Component, pageProps }: AppProps) {
       `}} />
     </Head>
     <header>
-    <a href="/"><div className="brand">Aaron Morris</div></a>
+    <a href="/" className="plain"><div className="brand">Aaron Morris</div></a>
         <div className="social" style={{display: 'flex'}}>
-            <a title="Updates on Twitter" href="https://twitter.com/aaorris">🐦</a>
-            <a title="Code on Github" href="https://github.com/aaorris">🐙</a>
-            <a title="Part of a Web Ring" href="https://webring.xxiivv.com ">💫</a>
+            <a className="plain" title="Updates on Twitter" href="https://twitter.com/aaorris">🐦</a>
+            <a className="plain" title="Code on Github" href="https://github.com/aaorris">🐙</a>
+            <a className="plain" title="Part of a Web Ring" href="https://webring.xxiivv.com ">💫</a>
         </div>
     </header>
     <Component {...pageProps} />
-    </Fragment>
+    <footer>
+      <div>
+        <Link href="/notes" as="/notes">
+          <a className="plain">📜 Notes</a>
+        </Link>
+        <Link href="/links" as="/links">
+          <a className="plain">🔗 Links</a>
+        </Link>
+      </div>
+    </footer>
+    <style jsx>{`
+      footer {
+        position: fixed;
+        bottom: 0;
+        width: 100vw;
+        height: 70px;
+        display: flex;
+        justify-content: center;
+      }
+    `}</style>
+  </Fragment>
 }
 
 export default MyApp
