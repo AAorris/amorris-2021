@@ -65,8 +65,11 @@ function Links({ items }) {
             <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600&display=swap" rel="stylesheet"></link>
         </Head>
         <div style={{padding: 80, textAlign: 'center'}}>
-            <h1>✊🏽 Black Lives Matter.</h1>
-            <sub className={"block header"}>I'm Aaron Morris. I try to share thoughtful <Link href="/links"><a style={{fontSize: '32pt'}}>Links</a></Link>.</sub>
+            <h1>👋 Hey! I'm Aaron</h1>
+            <sub className={"block header"}>I try to share thoughtful
+                <Link href="/links"><a style={{fontSize: '32pt'}}> Links </a></Link>
+                and <Link href="/notes"><a style={{fontSize: '32pt'}}>Notes</a></Link>.
+            </sub>
         </div>
         <Block>
             <h2>My Link Tree</h2>
