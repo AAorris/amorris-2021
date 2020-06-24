@@ -9,8 +9,8 @@ function Notes({ notes }) {
         </Head>
         <ul style={{listStyle: 'none', padding: '0 2em'}}>
             {notes.map(note => (
-                <Link href="/notes/[slug]" as={`/notes/${note.path}`}><a className="plain">
-                <li className="note-container" key={note.path}>
+                <Link key={note.path} href="/notes/[slug]" as={`/notes/${note.path}`}><a className="plain">
+                <li className="note-container">
                     <div className="item-container">
                         {note.poster && <img className="poster" src={note.poster} />}
                         <span>

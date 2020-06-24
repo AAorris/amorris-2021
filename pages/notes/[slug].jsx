@@ -2,11 +2,15 @@ import { Fragment } from "react";
 import Head from "next/head";
 // import Link from "next/link";
 
-function Notes({ note: { body, headline, title} }) {
+function Notes({ note: { body, headline, title, poster } }) {
     return <main>
         <Head>
             <title>{title}</title>
             <meta name="description" value={headline} />
+            <meta name="og:description" value={headline} />
+            <meta name="og:title" content={title} />
+            <meta name="og:type" content="article" />
+            {poster ? <meta name="og:image" value={poster} /> : null}
         </Head>
         <div className="note" dangerouslySetInnerHTML={{__html: body }} />
         <style jsx>{`
