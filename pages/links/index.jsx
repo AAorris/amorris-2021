@@ -1,14 +1,7 @@
-import Head from "next/head";
-import LinkService from "../../services/links";
+import Head from "next/head"
+import Links from '../../components/links'
 
-function Tags({ children }) {
-    if (!children || !children.length) return null
-    return <sub className={"block-when-small float-right"}>
-        {children.map(tag => <span key={tag} className="tag">{tag}</span>)} 🏷️
-    </sub>
-}
-
-function Links({ links }) {
+function LinksPage({ links }) {
     return <main>
         <Head>
             <title>Links | Aaron Morris</title>
@@ -17,20 +10,7 @@ function Links({ links }) {
             <h1>My saved links</h1>
             <sub className={"block header"}>I save and tag links. Is that weird?</sub>
         </div>
-        {/* <img src="/img/p10.008.jpg" style={{width: 400}} />  */}
-        <ul style={{listStyle: 'none', padding: '0 2em'}}>
-            {links.map(post => (
-                <li key={post.uid}>
-                    <div className="item-container">
-                    <span>🔗 <a href={post.arg}>
-                        <b> {post.title} </b>
-                        <sub className={"block-when-small"}>{post.subtitle}</sub>
-                    </a></span>
-                        <Tags>{post.tags || []}</Tags>
-                    </div>
-                </li>
-            ))} 
-        </ul>
+        <Links items={links} />
     </main>
 }
 
@@ -42,4 +22,4 @@ export async function getServerSideProps(context) {
     return { props }
   }
 
-export default Links
+export default LinksPage
