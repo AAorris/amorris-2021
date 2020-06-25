@@ -15,7 +15,7 @@ function Notes({ note: { body, headline, title, poster } }) {
         <div className="note" dangerouslySetInnerHTML={{__html: body }} />
         <style jsx>{`
           div {
-            max-width: 72ch;
+            max-width: 920px;
             margin: auto;
           }
         `}</style>
