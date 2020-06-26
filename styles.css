@@ -71,6 +71,12 @@ body {
         flex-direction: 'row';
         align-items: 'center';
     }
+    .item-container > div {
+        padding-left: 1rem;
+    }
+    .item-container > div > h3 {
+        margin-block-start: 0;
+    }
 }
 
 h1 {
@@ -113,10 +119,11 @@ pre > code {
     line-height: 1.25em;
 }
 
-ul { padding-top: 0; margin-block-start: 0; }
-ul > li {
-    padding-block-start: 0.5rem;
-    padding-block-end:   0.5rem;
+ul, ol { padding-top: 0; margin-block-start: 0; }
+ul > li, ol > li {
+    padding-block-start: 0rem;
+    padding-block-end:   0rem;
+    line-height: 2rem;
 }
 
 p {
@@ -233,7 +240,7 @@ body {
 .poster {
     width: 300px;
     margin: auto;
-    padding-right: 1rem;
+    border-radius: 10px;
     display: block;
 }
 

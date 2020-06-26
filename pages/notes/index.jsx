@@ -13,11 +13,11 @@ function Notes({ notes }) {
                 <li className="note-container">
                     <div className="item-container">
                         {note.poster && <img className="poster" src={note.poster} />}
-                        <span>
+                        <div>
                                 <h3 style={{marginBlockEnd: 0}}> {note.title} </h3>
                                 <sub>Written {new Date(note.created_at).toLocaleDateString()}</sub><br/>
                                 <sub style={{marginBlockStart: 0}}>{note.headline}</sub>
-                        </span> 
+                        </div> 
                     </div>
                 </li>
                 </a></Link>
