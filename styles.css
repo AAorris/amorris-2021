@@ -10,8 +10,8 @@ header {
 
 header, footer {
     width: 100vw;
-    background: rgba(0, 0, 0, 0.5);
-    backdrop-filter: saturate(180%) blur(5px);
+    background: rgba(0, 0, 0, 0.7);
+    backdrop-filter: saturate(180%) blur(3px);
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -33,7 +33,9 @@ header, footer {
     border-radius: 10px;
     padding: 5px 10px;
     margin-right: 10px;
-    font-size: 24pt;
+    font-size: 18pt;
+    font-weight: bold;
+    letter-spacing: -0.02em;
 }
 
 .tag {
@@ -113,6 +115,7 @@ pre {
     background-color: #111;
     padding: 8px;
     border-radius: 4px;
+    overflow-x: auto;
 }
 pre > code {
     background: none;
@@ -227,6 +230,13 @@ input, textarea {
 
 body {
     margin-bottom: 1.5in;
+}
+
+@media (max-width: 600px) {
+    body {
+        font-size: 12pt;
+        padding: 1rem;
+    }
 }
 
 .note {
