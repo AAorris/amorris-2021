@@ -1,18 +1,22 @@
 .note {
-    /* font-size: 10pt; */
+    padding: 1.5rem;
 }
-
 .note img {
     max-width: 100%;
 }
-
+.note a {
+    color: black;
+    font-weight: bold;
+}
+.note p {
+    line-height: 1.5em;
+}
 .poster {
     width: 300px;
     margin: auto;
     border-radius: 10px;
     display: block;
 }
-
 .note-container {
     background: radial-gradient(#0f2c15, #08130a91);
     box-shadow: 4px 4px 20px #003a0c;
