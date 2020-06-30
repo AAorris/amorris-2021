@@ -31,7 +31,7 @@ function Home(props) {
                 height={height}
                 url={video.streamingUrl}
                 poster={blurUpThumb}
-                videoProps={{muted: true, autoPlay: true, loop: true}}
+                videoProps={{muted: true, autoPlay: true, loop: true, alt: "Hi! I'm Aaron. Welcome to my web-site."}}
             />
             {/* <img style={{width, height}} src={blurUpThumb} />s */}
             {/* <Poster
