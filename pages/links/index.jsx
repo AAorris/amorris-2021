@@ -6,10 +6,10 @@ function LinksPage({ links }) {
         <Head>
             <title>Links | Aaron Morris</title>
         </Head>
-        <div style={{padding: 80, textAlign: 'center'}}>
+        <section class="title intro">
             <h1>My saved links</h1>
             <sub className={"block header"}>I save and tag links. Is that weird?</sub>
-        </div>
+        </section>
         <Links items={links} />
     </main>
 }

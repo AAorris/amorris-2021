@@ -8,19 +8,12 @@ function LinksPage({ title, subtitle, items }) {
 			<Head>
 				<title>Tagged {title} links | amorris.ca</title>
 			</Head>
-			<div
-				style={{
-					padding: 80,
-					marginBottom: 30,
-					background: "white",
-					textAlign: "center",
-				}}
-			>
+			<section className="title intro">
 				<h1 style={{ color: "black", textTransform: "capitalize" }}>
 					Links Tagged {title}
 				</h1>
 				<sub className={"block header"}>{subtitle || ""}</sub>
-			</div>
+			</section>
 			<Links items={items} />
 		</main>
 	);

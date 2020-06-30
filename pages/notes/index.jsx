@@ -7,10 +7,10 @@ function Notes({ notes }) {
         <Head>
             <title>Notes | Aaron Morris </title>
         </Head>
-        <ul style={{listStyle: 'none', padding: '0 2em'}}>
+        <div className="note-items">
             {notes.map(note => (
-                <Link key={note.path} href="/notes/[slug]" as={`/notes/${note.path}`}><a className="plain">
-                <li className="note-container">
+                <div className="note-container">
+                    <Link key={note.path} href="/notes/[slug]" as={`/notes/${note.path}`}><a className="plain">
                     <div className="item-container">
                         {note.poster && <img className="poster" src={note.poster} />}
                         <div>
@@ -19,10 +19,10 @@ function Notes({ notes }) {
                                 <sub style={{marginBlockStart: 0}}>{note.headline}</sub>
                         </div> 
                     </div>
-                </li>
-                </a></Link>
+                    </a></Link>
+                </div>
             ))} 
-        </ul>
+        </div>
     </main>
 }
 

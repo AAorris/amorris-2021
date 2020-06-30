@@ -2,6 +2,7 @@ const _base = require('airtable').base('appaKRf92yu31M3Nf');
 const tagsById = {}
 const tagsByName = {}
 const links = []
+const recentLinks = []
 
 async function buildTags() {
   if (Object.keys(tagsById).length > 0) return;
@@ -16,6 +17,29 @@ async function buildTags() {
   })
   await iteration
   tagsById._built = true
+}
+
+async function buildRecentLinks() {
+  if (recentLinks.length > 0) return;
+  const _linkBase = _base('Links')
+  const selection = _linkBase.select({
+    view: 'Web',
+    maxRecords: 50,
+  })
+  const iteration = selection.eachPage((records, next) => {
+    for (let value of records) {
+      recentLinks.push({
+        uid: value.get('uri'),
+        arg: value.get('url'),
+        quicklookurl: value.get('url'),
+        subtitle: value.get('subtitle'),
+        title: value.get('uri'),
+        tags: (value.get('tags')||[]).map(id => tagsById[id].get('name')),
+      })
+    }
+    next()
+  })
+  await iteration
 }
 
 async function buildLinks() {
@@ -43,6 +67,11 @@ export default class LinkService {
     await buildTags()
     await buildLinks()
     return links
+  }
+  async getRecentLinks() {
+    await buildTags()
+    await buildRecentLinks()
+    return recentLinks
   }
   async getLinksforTag(tagName) {
     const items = await this.getAllLinks()

@@ -3,13 +3,21 @@ import Link from 'next/link'
 export default function Tags({ children }) {
 	if (!children || !children.length) return null;
 	return (
-		<sub className={"block-when-small float-right"}>
-			{children.map((tag) => (
-				<Link key={tag} href="/links/tagged/[tag]" as={`/links/tagged/${tag}`}><a className="plain sub">
-					<span className="tag">{tag}</span>
+		<span>&nbsp;&nbsp;
+			{children.map((tag, idx) => (
+				<Link key={tag} href="/links/tagged/[tag]" as={`/links/tagged/${tag}`}><a>
+					<span className="tag">{` #${tag}${idx === children.length ? '' : ' '}`}</span>
 				</a>
         </Link>
 			))}
-		</sub>
+			<style jsx>{`
+				 .tag {
+					display: inline-block;
+					padding: 4px;
+					text-align: center;
+					color: #307d6f;
+				}
+			`}</style>
+		</span>
 	);
 }

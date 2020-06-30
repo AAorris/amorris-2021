@@ -1,0 +1,26 @@
+.note {
+    /* font-size: 10pt; */
+}
+
+.note img {
+    max-width: 100%;
+}
+
+.poster {
+    width: 300px;
+    margin: auto;
+    border-radius: 10px;
+    display: block;
+}
+
+.note-container {
+    background: radial-gradient(#0f2c15, #08130a91);
+    box-shadow: 4px 4px 20px #003a0c;
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    border-radius: 1.5rem;
+    padding: 1.5rem;
+    margin: 1rem auto;
+    box-sizing: content-box;
+    width: 300px;
+    
+}
