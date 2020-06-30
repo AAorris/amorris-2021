@@ -24,13 +24,13 @@ function MyApp({ Component, pageProps }) {
     <Component {...pageProps} />
     <header>
       <Link href="/">
-        <a className="plain"><Icon graphic={() => '🏠'}/></a>
+        <a className="plain" aria-label="Home"><Icon graphic={() => '🏠'}/></a>
       </Link>
       <Link href="/notes" as="/notes">
-        <a className="plain"><Icon graphic={() => '📜'}/></a>
+        <a className="plain" aria-label="Notes"><Icon graphic={() => '📜'}/></a>
       </Link>
       <Link href="/links" as="/links">
-        <a className="plain"><Icon graphic={() => '🔗'}/></a>
+        <a className="plain" aria-label="Links"><Icon graphic={() => '🔗'}/></a>
       </Link>
     </header>
     <footer>
