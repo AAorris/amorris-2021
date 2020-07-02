@@ -1,7 +1,8 @@
 import { useState } from "react"
 import Head from "next/head"
-import MediaService from "../services/media"
-import ReactHLS from 'react-hls-player'
+import Link from "next/link"
+// import MediaService from "../services/media"
+// import ReactHLS from 'react-hls-player'
 import useSWR from 'swr'
 
 const Block = props => <section style={{
@@ -112,28 +113,54 @@ const Chat = () => {
 }
 
 function Home(props) {
-    const { blurUpThumb, width, height, video } = props.allFaceposts[0].media
+    // const { blurUpThumb, width, height, video } = props.allFaceposts[0].media
     return <main>
         <Head>
             <title>Links | Aaron Morris </title>
         </Head>
         <Block>
-            <ReactHLS
+            {/* <ReactHLS
                 width={width}
                 height={height}
                 url={video.streamingUrl}
                 poster={blurUpThumb}
                 videoProps={{muted: true, autoPlay: true, loop: true, alt: "Hi! I'm Aaron. Welcome to my web-site."}}
-            />
+            /> */}
+            <div className="headline">
+            <h1>Aaron Morris</h1>
+            <p>
+                👨‍💻@Zapier 
+                🏡 Tiny house 
+                📜 <Link href="/notes"><a>Notes</a></Link>&nbsp;
+                🔗 <Link href="/links"><a>Hyperlinks</a></Link>&nbsp;
+                🏳️‍🌈 He/His
+            </p>
+            </div>
             <Chat />
         </Block>
+        <style jsx>{`
+            .headline {
+                text-align: center;
+                background: yellow;
+                padding: 1rem;
+                font-size: 150%;
+                transform: rotateZ(-5deg) translateY(-50px);
+            }
+            .headline h1 {
+                font-size: 100pt;
+                margin-block-start: 0;
+            }
+            .headline a { 
+                color: black;
+            }
+        `}</style>
     </main>
 }
 
-export const getServerSideProps = async () => {
-    const service = new MediaService()
-    const props = await service.getLatest()
-    return { props }
-}
+// export const getServerSideProps = async () => {
+//     const service = new MediaService()
+//     const props = await service.getLatest()
+//     return { props }
+// }
 
 export default Home;
