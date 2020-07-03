@@ -126,7 +126,7 @@ function Home(props) {
     return <main>
         <Head>
             <title>Links | Aaron Morris </title>
-            {seoTags.map(({property, content}) => <meta key={property} name={property} content={content} />)}
+            {seoTags.map(({property, content}) => <meta key={property} property={property} content={content} />)}
         </Head>
         <Block>
             <video controls width={width} height={height} poster={thumbnailUrl} src={mp4Url}></video>
