@@ -7,8 +7,9 @@ export default function Links({ items }) {
 				<li key={post.uid}>
 					<div className="link item-container">
 						<span>
-							<a href={post.arg}>{post.title}</a>
-							<Tags>{post.tags || []}</Tags>
+							<a href={post.arg}>{post.title} ↗︎</a>
+							<Tags>{post.tags || []}</Tags><br/>
+							{post.subtitle}
 						</span>
 					</div>
 				</li>

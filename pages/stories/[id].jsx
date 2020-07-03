@@ -1,8 +1,8 @@
 import { useState } from "react"
 import Head from "next/head"
 import Link from "next/link"
-import MediaService from "../services/media"
-// import ReactHLS from 'react-hls-player'
+import MediaService from "../../services/media"
+import ReactHLS from 'react-hls-player'
 import useSWR from 'swr'
 
 const Block = props => <section style={{
@@ -121,31 +121,20 @@ const Chat = () => {
 }
 
 function Home(props) {
-    const post = props.allFaceposts[0]
+    const { width, height, video: { mp4Url, thumbnailUrl } } = props.facepost.media
+    const seoTags = props.facepost._seoMetaTags.map(x => x.attributes)
     return <main>
         <Head>
             <title>Links | Aaron Morris </title>
+            {seoTags.map(({property, content}) => <meta key={property} name={property} content={content} />)}
         </Head>
         <Block>
-            <div style={{margin: 0, transform: 'scale(3) rotateZ(-10deg) translateX(-20px) translateY(5px)'}}>👇</div>
-            <Link href={'/stories/[id]'} as={`/stories/${post.id}`}>
-                <a>
-                <div style={{border: '4px solid rgb(218, 0, 111)', backgroundPosition: '50% 40%', boxShadow: '3px 10px 30px rgba(20, 10, 0, 0.3)', width: 200, height: 200, marginBottom: 10, borderRadius: 150, backgroundImage: `url(${post.media.video.thumbnailUrl})`, backgroundSize: 'cover'}}></div>
-                </a>
-            </Link>
-            <div className="headline">
-            <h1>Aaron Morris</h1>
-            <p>
-                👨‍💻<a href="https://www.youtube.com/zapier">@Zapier</a>&nbsp;
-                🏡 <a href="/img/p10.008.jpg">Tiny house</a>&nbsp;
-                📜 <Link href="/notes"><a>Notes</a></Link>&nbsp;
-                🔗 <Link href="/links"><a>Hyperlinks</a></Link>&nbsp;
-                🏳️‍🌈 He/His
-            </p>
-            </div>
-            {/* <Chat /> */}
+            <video controls width={width} height={height} poster={thumbnailUrl} src={mp4Url}></video>
         </Block>
         <style jsx>{`
+          video {
+            margin-bottom: 70px;
+          }
             .headline {
                 text-align: center;
                 background: yellow;
@@ -172,9 +161,9 @@ function Home(props) {
     </main>
 }
 
-export const getServerSideProps = async () => {
+export const getServerSideProps = async ({params}) => {
     const service = new MediaService()
-    const props = await service.getLatest()
+    const props = await service.getById(params.id)
     return { props }
 }
 

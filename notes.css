@@ -18,8 +18,7 @@
     display: block;
 }
 .note-container {
-    background: radial-gradient(#0f2c15, #08130a91);
-    box-shadow: 4px 4px 20px #003a0c;
+    background: #111;
     border: 1px solid rgba(255, 255, 255, 0.2);
     border-radius: 1.5rem;
     padding: 1.5rem;

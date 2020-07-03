@@ -15,7 +15,7 @@ export default function Tags({ children }) {
 					display: inline-block;
 					padding: 4px;
 					text-align: center;
-					color: #307d6f;
+					color: #41fcc4;
 				}
 			`}</style>
 		</span>

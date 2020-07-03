@@ -31,7 +31,7 @@ module.exports = async (req, res) => {
       )
     )
     // ok
-    res.setHeader('Cache-Control', 's-maxage=60, max-age=5, stale-while-revalidate=3600, public')
+    res.setHeader('Cache-Control', 's-maxage=5, max-age=5, stale-while-revalidate, public')
     res.status(200).json(dbs.data.map(msg => msg.data.txt))
   } catch (e) {
     // something went wrong
