@@ -1,11 +1,12 @@
 .note {
+    color: #eee;
     padding: 1.5rem;
 }
 .note img {
     max-width: 100%;
 }
 .note a {
-    color: black;
+    color: #eee;
     font-weight: bold;
 }
 .note p {
