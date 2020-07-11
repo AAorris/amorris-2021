@@ -1,5 +1,3 @@
-import "../newstyles.css";
-import Head from "next/head";
 import Link from "next/link";
 import { Fragment } from "react";
 
@@ -60,7 +58,15 @@ const WebringSvg = () => (
 const Icon = ({ graphic }) => {
   const Graphic = graphic;
   return (
-    <div style={{ padding: 8, width: 40, height: 40, boxSizing: "border-box" }}>
+    <div
+      style={{
+        width: 120,
+        height: 40,
+        boxSizing: "border-box",
+        display: "grid",
+        placeItems: "center",
+      }}
+    >
       <Graphic />
     </div>
   );
@@ -69,7 +75,6 @@ const Icon = ({ graphic }) => {
 function MyApp({ Component, pageProps }) {
   return (
     <Fragment>
-      <Component {...pageProps} />
       <header>
         <Link href="/">
           <a className="plain" aria-label="Home">
@@ -87,6 +92,7 @@ function MyApp({ Component, pageProps }) {
           </a>
         </Link>
       </header>
+      <Component {...pageProps} />
       <footer>
         <a
           className="plain"
@@ -110,34 +116,47 @@ function MyApp({ Component, pageProps }) {
           <Icon graphic={WebringSvg} />
         </a>
       </footer>
-      <style jsx>{`
+      <style jsx global>{`
+        body {
+          background: #f8f8f8;
+          margin: 0;
+          width: 100vw;
+          min-height: 100vh;
+          font-family: -apple-system, BlinkMacSystemFont, sans-serif;
+        }
+        #__next {
+          height: 100vh;
+          display: grid;
+          grid-template-rows: auto 1fr auto;
+        }
         nav {
           display: flex;
-        }
-        header > *,
-        footer > * {
-          display: flex;
-          justify-content: center;
-          width: 100px;
-          margin: 10px;
         }
         header,
         footer {
           font-size: 24px;
-          position: fixed;
           width: 100vw;
           height: 60px;
           display: flex;
           justify-content: center;
           align-items: center;
-          background: rgba(0, 0, 0, 0.8);
-          backdrop-filter: saturate(180%) blur(3px);
+          background: black;
         }
-        header {
-          top: 0;
+        header a,
+        footer a {
+          text-decoration: none;
         }
-        footer {
-          bottom: 0;
+        @media (min-width: 900px) {
+          body {
+            font-size: 24pt;
+          }
+        }
+        img {
+          max-width: 100%;
+        }
+        ol,
+        ul {
+          line-height: 1.75em;
         }
       `}</style>
     </Fragment>

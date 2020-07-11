@@ -1,6 +1,6 @@
-import { Fragment } from "react";
 import Head from "next/head";
 import Link from "next/link";
+import NoteService from "../../services/notes";
 
 function Notes({ notes }) {
   return (
@@ -8,40 +8,77 @@ function Notes({ notes }) {
       <Head>
         <title>Notes | Aaron Morris </title>
       </Head>
-      <div className="note-items">
-        {notes.map(note => (
-          <div className="note-container">
-            <Link
-              key={note.path}
-              href="/notes/[slug]"
-              as={`/notes/${note.path}`}
-            >
-              <a className="plain">
-                <div className="item-container">
+      <div className="notes-outer">
+        {notes.map((note) => (
+          <div className="note-outer">
+            <div className="note-inner">
+              <Link
+                key={note.path}
+                href="/notes/[slug]"
+                as={`/notes/${note.path}`}
+              >
+                <a className="plain">
                   {note.poster && <img className="poster" src={note.poster} />}
-                  <div>
-                    <h3 style={{ marginBlockEnd: 0 }}> {note.title} </h3>
-                    <sub>
-                      Written {new Date(note.created_at).toLocaleDateString()}
-                    </sub>
-                    <br />
-                    <sub style={{ marginBlockStart: 0 }}>{note.headline}</sub>
-                  </div>
-                </div>
-              </a>
-            </Link>
+                  <h3 style={{ marginBlockEnd: 0 }}> {note.title} </h3>
+                </a>
+              </Link>
+              <sub>
+                Written {new Date(note.created_at).toLocaleDateString()}
+              </sub>
+              <br />
+              <sub style={{ marginBlockStart: 0 }}>{note.headline}</sub>
+            </div>
           </div>
         ))}
       </div>
+      <style jsx>{`
+        .note {
+          color: #eee;
+          padding: 1.5rem;
+        }
+        .note img {
+          max-width: 100%;
+        }
+        .note a {
+          color: #eee;
+          font-weight: bold;
+        }
+        .note p {
+          line-height: 1.5em;
+        }
+        .poster {
+          width: 400px;
+          margin: auto;
+          border-radius: 10px;
+          display: block;
+          border: 1px solid rgba(128, 128, 128, 0.2);
+        }
+        .note-outer {
+          background: #fff;
+          color: #444;
+          border: 1px solid rgba(128, 128, 128, 0.2);
+          border-radius: 1.5rem;
+          padding: 1.5rem;
+          margin: 1rem auto;
+          box-sizing: content-box;
+          flex: 0 1 400px;
+          margin: 1rem;
+        }
+        .notes-outer {
+          font-size: 18pt;
+          display: flex;
+          flex-wrap: wrap;
+          justify-content: center;
+          width: 100vw;
+        }
+      `}</style>
     </main>
   );
 }
 
-export async function getServerSideProps(context) {
-  const host = context.req.headers.host;
-  const protocol = host.includes("localhost") ? "http" : "https";
-  const resp = await fetch(`${protocol}://${host}/api/notes`);
-  const props = await resp.json();
+export async function getStaticProps() {
+  const notes = await new NoteService().getLatestNotes();
+  const props = { notes };
   return { props };
 }
 

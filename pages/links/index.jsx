@@ -1,28 +1,37 @@
+import { useState, useEffect } from "react";
 import Head from "next/head";
 import Links from "../../components/links";
+import LinkService from "../../services/links";
 
 function LinksPage({ links }) {
+  const [latestLinks, setLatestLinks] = useState([]);
+  useEffect(async () => {
+    if (!links) return () => {};
+    const uris = links.map(({ uri }) => uri);
+    const resp = await fetch("/api/links");
+    const { links } = await resp.json();
+    setLatestLinks(links.filter(({ uri }) => !uris.includes(uri)));
+    return () => {};
+  }, []);
   return (
     <main>
       <Head>
         <title>Links | Aaron Morris</title>
       </Head>
-      <section class="title intro">
-        <h1>My saved links</h1>
-        <sub className={"block header"}>
-          I save and tag links. Is that weird?
-        </sub>
-      </section>
+      <Links items={latestLinks} />
       <Links items={links} />
+      <style jsx>{`
+        main {
+          padding: 3rem;
+        }
+      `}</style>
     </main>
   );
 }
 
-export async function getServerSideProps(context) {
-  const host = context.req.headers.host;
-  const protocol = host.includes("localhost") ? "http" : "https";
-  const resp = await fetch(`${protocol}://${host}/api/links`);
-  const props = await resp.json();
+export async function getStaticProps() {
+  const links = await new LinkService().getAllLinks();
+  const props = { links };
   return { props };
 }
 
