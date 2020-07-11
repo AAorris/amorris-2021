@@ -10,7 +10,7 @@ function Notes({ notes }) {
       </Head>
       <div className="notes-outer">
         {notes.map((note) => (
-          <div className="note-outer">
+          <div key={note.path} className="note-outer">
             <div className="note-inner">
               <Link
                 key={note.path}

@@ -5,13 +5,17 @@ import LinkService from "../../services/links";
 
 function LinksPage({ links }) {
   const [latestLinks, setLatestLinks] = useState([]);
-  useEffect(async () => {
-    if (!links) return () => {};
+  useEffect(() => {
+    if (!links) return;
     const uris = links.map(({ uri }) => uri);
-    const resp = await fetch("/api/links");
-    const { links } = await resp.json();
-    setLatestLinks(links.filter(({ uri }) => !uris.includes(uri)));
-    return () => {};
+    const controller = new AbortController();
+    const { signal } = controller;
+    fetch("/api/links", { signal })
+      .then((resp) => resp.json())
+      .then((fresh) => {
+        setLatestLinks(fresh.links.filter(({ uri }) => !uris.includes(uri)));
+      });
+    return () => controller.abort();
   }, []);
   return (
     <main>
