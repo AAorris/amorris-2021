@@ -10,14 +10,17 @@ class MyDocument extends Document {
     return (
       <Html>
         <Head>
-          <meta name="application-name" content="PWA App" />
+          <meta name="application-name" content="amorris.ca" />
           <meta name="apple-mobile-web-app-capable" content="yes" />
           <meta
             name="apple-mobile-web-app-status-bar-style"
             content="default"
           />
-          <meta name="apple-mobile-web-app-title" content="PWA App" />
-          <meta name="description" content="Best PWA App in the world" />
+          <meta name="apple-mobile-web-app-title" content="amorris.ca" />
+          <meta
+            name="description"
+            content="I share imaginative ideas and notes on design, tech, education, and community."
+          />
           <meta name="format-detection" content="telephone=no" />
           <meta name="mobile-web-app-capable" content="yes" />
           <meta name="msapplication-TileColor" content="#000000" />
@@ -43,10 +46,10 @@ class MyDocument extends Document {
 
           <meta name="twitter:card" content="summary" />
           <meta name="twitter:url" content="https://amorris.ca" />
-          <meta name="twitter:title" content="PWA App" />
+          <meta name="twitter:title" content="amorris.ca" />
           <meta
             name="twitter:description"
-            content="Best PWA App in the world"
+            content="Experimental presentation of my notes and links."
           />
           <meta
             name="twitter:image"
@@ -54,9 +57,12 @@ class MyDocument extends Document {
           />
           <meta name="twitter:creator" content="@AAorris" />
           <meta property="og:type" content="website" />
-          <meta property="og:title" content="PWA App" />
-          <meta property="og:description" content="Best PWA App in the world" />
-          <meta property="og:site_name" content="PWA App" />
+          <meta property="og:title" content="amorris.ca" />
+          <meta
+            property="og:description"
+            content="Experimental presentation of my notes and links."
+          />
+          <meta property="og:site_name" content="amorris.ca" />
           <meta property="og:url" content="https://amorris.ca" />
           <meta
             property="og:image"
