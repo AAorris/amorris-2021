@@ -1,9 +1,6 @@
 import { useState } from "react";
 import Head from "next/head";
-import Link from "next/link";
 import MediaService from "../../services/media";
-import ReactHLS from "react-hls-player";
-import useSWR from "swr";
 
 const Block = (props) => (
   <section
@@ -23,53 +20,6 @@ const Block = (props) => (
     {props.children}
   </section>
 );
-
-const fetcher = async (key) => {
-  const resp = await fetch(key);
-  return await resp.json();
-};
-
-const ChatForm = ({ sendMessage }) => {
-  const [message, setMessage] = useState("");
-  const handleSubmit = (e) => {
-    e.preventDefault();
-    sendMessage(message);
-    setMessage("");
-  };
-  return (
-    <form className="form" onSubmit={handleSubmit}>
-      <input
-        id="message"
-        type="text"
-        placeholder="Send a message"
-        value={message}
-        onInput={(e) => setMessage(e.target.value)}
-      />
-      <button>Send</button>
-      <style jsx>{`
-        form {
-          width: 100%;
-          display: flex;
-          justify-content: space-between;
-        }
-        input {
-          flex-grow: 1;
-        }
-        input,
-        button {
-          font-size: 14pt;
-          background: black;
-          color: white;
-          outline: none;
-          border: none;
-          padding: 8px;
-          border: 1px solid #222;
-          box-sizing: border-box;
-        }
-      `}</style>
-    </form>
-  );
-};
 
 function Story(props) {
   const {
@@ -132,4 +82,4 @@ export const getServerSideProps = async ({ params }) => {
   return { props };
 };
 
-export default Home;
+export default Story;
