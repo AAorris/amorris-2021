@@ -5,9 +5,10 @@ function Home(props) {
   return (
     <main>
       <Head>
-        <title>Links | Aaron Morris </title>
+        <title>Aaron Morris</title>
       </Head>
       <div className="headline">
+        <img src="/images/icons/icon-384x384.png" />
         <h1>Aaron Morris</h1>
         <p>
           👨‍💻<a href="https://www.youtube.com/zapier">@Zapier</a>&nbsp; 🏡{" "}
@@ -19,7 +20,6 @@ function Home(props) {
           <Link href="/links">
             <a>Hyperlinks</a>
           </Link>
-          &nbsp; 🏳️‍🌈 He/His
         </p>
       </div>
       <style jsx>{`
@@ -27,10 +27,17 @@ function Home(props) {
           display: grid;
           place-items: center;
         }
+        img {
+          border-radius: 384px;
+          margin-bottom: -100px;
+        }
         .headline {
           text-align: center;
         }
         .headline h1 {
+          font-size: 72pt;
+          color: #444;
+          mix-blend-mode: color-burn;
           margin-block-start: 0;
           letter-spacing: -0.05em;
         }
