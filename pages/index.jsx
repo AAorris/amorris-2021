@@ -5,7 +5,7 @@ function Home(props) {
   return (
     <main>
       <Head>
-        <title>Links | Aaron Morris </title>
+        <title>Aaron Morris</title>
       </Head>
       <div className="headline">
         <h1>Aaron Morris</h1>
