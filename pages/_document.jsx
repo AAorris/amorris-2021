@@ -68,6 +68,12 @@ class MyDocument extends Document {
             property="og:image"
             content="https://amorris.ca/images/icons/icon-192x192.png"
           />
+          <script
+            async
+            defer
+            data-domain="amorris.ca"
+            src="https://plausible.io/js/plausible.js"
+          ></script>
         </Head>
         <body>
           <Main />
