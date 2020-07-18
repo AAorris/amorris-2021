@@ -118,7 +118,8 @@ function MyApp({ Component, pageProps }) {
       </footer>
       <style jsx global>{`
         body {
-          background: #ffe52a;
+          background: #2b2728;
+          color: #bdbdbd;
           margin: 0;
           width: 100vw;
           min-height: 100vh;
@@ -134,10 +135,10 @@ function MyApp({ Component, pageProps }) {
         }
         a,
         p {
-          color: black;
+          color: white;
         }
         a:visited {
-          color: #6f6f6f;
+          color: #a5a3a3;
         }
         header,
         footer {

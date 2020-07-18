@@ -1,6 +1,6 @@
 import { useState } from "react";
 import Head from "next/head";
-import MediaService from "../../services/media";
+import MediaService from "services/media";
 
 const Block = (props) => (
   <section

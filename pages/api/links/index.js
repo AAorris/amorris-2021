@@ -1,4 +1,4 @@
-import LinkService from "../../../services/links";
+import LinkService from "services/links";
 
 export default async (req, res) => {
   const service = new LinkService();

@@ -1,30 +1,43 @@
-import Head from "next/head"
-import Links from '../../../components/links'
-
+import Head from "next/head";
+import { useRouter } from "next/router";
+import Links from "components/links";
+import LinkService from "services/links";
 
 function LinksPage({ title, subtitle, items }) {
-	return (
-		<main>
-			<Head>
-				<title>Tagged {title} links | amorris.ca</title>
-			</Head>
-			<section className="title intro">
-				<h1 style={{ color: "black", textTransform: "capitalize" }}>
-					Links Tagged {title}
-				</h1>
-				<sub className={"block header"}>{subtitle || ""}</sub>
-			</section>
-			<Links items={items} />
-		</main>
-	);
+  const router = useRouter();
+  if (router.isFallback) {
+    return (
+      <main>
+        <section>
+          <h1>Loading, please wait...</h1>
+        </section>
+      </main>
+    );
+  }
+  return (
+    <main>
+      <Head>
+        <title>{title} | Aaron Morris</title>
+      </Head>
+      <Links items={items} />
+    </main>
+  );
 }
 
-export async function getServerSideProps(context) {
-  const host = context.req.headers.host
-  const protocol = host.includes('localhost') ? 'http' : 'https'
-  const resp = await fetch(`${protocol}://${host}/api/links/tagged/${context.query.tag}`);
-  const props = await resp.json()
-  return { props }
+export async function getStaticPaths() {
+  const tags = ["tech"];
+  const paths = tags.map((tag) => ({ params: { tag } }));
+  return {
+    paths,
+    fallback: true,
+  };
+}
+
+export async function getStaticProps({ params }) {
+  const service = new LinkService();
+  const { title, subtitle, items } = await service.getLinksForTag(params.tag);
+  const props = { title, subtitle, items };
+  return { props, unstable_revalidate: 1 };
 }
 
 export default LinksPage;
