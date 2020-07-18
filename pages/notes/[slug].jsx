@@ -1,6 +1,6 @@
 import Head from "next/head";
 import { useRouter } from "next/router";
-import NoteService from "../../services/notes";
+import NoteService from "services/notes";
 
 function Note({ note }) {
   const router = useRouter();

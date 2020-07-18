@@ -1,6 +1,6 @@
 import Head from "next/head";
 import Link from "next/link";
-import NoteService from "../../services/notes";
+import NoteService from "services/notes";
 
 function Notes({ notes }) {
   return (
