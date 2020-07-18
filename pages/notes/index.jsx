@@ -54,8 +54,8 @@ function Notes({ notes }) {
           border: 1px solid rgba(128, 128, 128, 0.2);
         }
         .note-outer {
-          background: #fff;
-          color: #444;
+          background: #313131;
+          color: #bdbdbd;
           border: 1px solid rgba(128, 128, 128, 0.2);
           border-radius: 1.5rem;
           padding: 1.5rem;

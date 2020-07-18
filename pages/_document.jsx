@@ -78,6 +78,11 @@ class MyDocument extends Document {
         <body>
           <Main />
           <NextScript />
+          <style jsx>{`
+            body[data-gr-c-s-loaded="true"] {
+              display: block;
+            }
+          `}</style>
         </body>
       </Html>
     );

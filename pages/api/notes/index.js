@@ -1,4 +1,4 @@
-import NotesService from "../../../services/notes";
+import NotesService from "services/notes";
 
 export default async (req, res) => {
   const service = new NotesService();

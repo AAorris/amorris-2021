@@ -4,25 +4,11 @@ import Links from "../../components/links";
 import LinkService from "../../services/links";
 
 function LinksPage({ links }) {
-  const [latestLinks, setLatestLinks] = useState([]);
-  useEffect(() => {
-    if (!links) return;
-    const uris = links.map(({ uri }) => uri);
-    const controller = new AbortController();
-    const { signal } = controller;
-    fetch("/api/links", { signal })
-      .then((resp) => resp.json())
-      .then((fresh) => {
-        setLatestLinks(fresh.links.filter(({ uri }) => !uris.includes(uri)));
-      });
-    return () => controller.abort();
-  }, []);
   return (
     <main>
       <Head>
         <title>Links | Aaron Morris</title>
       </Head>
-      <Links items={latestLinks} />
       <Links items={links} />
       <style jsx>{`
         main {
@@ -36,7 +22,7 @@ function LinksPage({ links }) {
 export async function getStaticProps() {
   const links = await new LinkService().getAllLinks();
   const props = { links };
-  return { props };
+  return { props, unstable_revalidate: 1 };
 }
 
 export default LinksPage;
