@@ -36,7 +36,7 @@ function Home(props) {
         }
         .headline h1 {
           font-size: 72pt;
-          color: #ff0c87;
+          color: #abffe8;
           mix-blend-mode: color-dodge;
           margin-block-start: 0;
           letter-spacing: -0.05em;

@@ -118,7 +118,7 @@ function MyApp({ Component, pageProps }) {
       </footer>
       <style jsx global>{`
         body {
-          background: #2b2728;
+          background: #050505;
           color: #bdbdbd;
           margin: 0;
           width: 100vw;
