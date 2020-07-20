@@ -79,7 +79,7 @@ function Notes({ notes }) {
 export async function getStaticProps() {
   const notes = await new NoteService().getLatestNotes();
   const props = { notes };
-  return { props };
+  return { props, unstable_revalidate: 1 };
 }
 
 export default Notes;
