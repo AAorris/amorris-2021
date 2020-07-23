@@ -24,8 +24,28 @@ function Note({ note }) {
       <div className="note" dangerouslySetInnerHTML={{ __html: body }} />
       <style jsx>{`
         div {
-          max-width: 920px;
+          font-size: 18px;
+          max-width: 62ch;
           margin: auto;
+        }
+      `}</style>
+      <style jsx global>{`
+        h1 {
+          text-transform: capitalize;
+        }
+        h1,
+        h2,
+        h3,
+        h4 {
+          color: #fafafa;
+        }
+        div,
+        p,
+        ul,
+        li,
+        ol {
+          line-height: 1.5em;
+          color: #bbb;
         }
       `}</style>
     </main>
