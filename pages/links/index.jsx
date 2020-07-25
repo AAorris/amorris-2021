@@ -1,4 +1,3 @@
-import { useState, useEffect } from "react";
 import Head from "next/head";
 import Links from "components/links";
 import LinkService from "services/links";

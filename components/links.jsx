@@ -1,4 +1,4 @@
-import Tags from "./Tags";
+import Tags from "./tags";
 
 export default function Links({ items }) {
   return (
