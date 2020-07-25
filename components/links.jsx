@@ -1,8 +1,8 @@
-import Tags from "./tags";
+import Tags from "./Tags";
 
 export default function Links({ items }) {
   return (
-    <div className="links container">
+    <div className="links container text-gray-400">
       {items.map((post) => (
         <div className="link-outer" key={post.uid}>
           <div className="link-inner">

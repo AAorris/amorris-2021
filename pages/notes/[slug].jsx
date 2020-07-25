@@ -12,7 +12,7 @@ function Note({ note }) {
     );
   const { body, headline, title, poster } = note;
   return (
-    <main>
+    <main className="mt-10">
       <Head>
         <title>{title}</title>
         <meta name="description" content={headline} />
@@ -21,31 +21,23 @@ function Note({ note }) {
         <meta name="og:type" content="article" />
         {poster ? <meta name="og:image" content={poster} /> : null}
       </Head>
-      <div className="note" dangerouslySetInnerHTML={{ __html: body }} />
-      <style jsx>{`
-        div {
+      <div
+        className="note prose mx-auto bg-white p-8 box-border rounded"
+        dangerouslySetInnerHTML={{ __html: body }}
+      />
+      <style jsx global>{`
+        .prose {
+          margin-top: 200px;
           font-size: 18px;
           max-width: 62ch;
           margin: auto;
         }
-      `}</style>
-      <style jsx global>{`
-        h1 {
+        .prose h1 {
           text-transform: capitalize;
         }
-        h1,
-        h2,
-        h3,
-        h4 {
-          color: #fafafa;
-        }
-        div,
-        p,
-        ul,
-        li,
-        ol {
-          line-height: 1.5em;
-          color: #bbb;
+        img {
+          border: 1px solid #eee;
+          border-radius: 4px;
         }
       `}</style>
     </main>
@@ -55,7 +47,7 @@ function Note({ note }) {
 export async function getStaticProps({ params }) {
   const note = await new NoteService().getNote(params.slug);
   const props = { note };
-  return { props };
+  return { props, unstable_revalidate: 1 };
 }
 
 export async function getStaticPaths() {

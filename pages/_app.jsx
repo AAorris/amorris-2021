@@ -1,5 +1,6 @@
 import Link from "next/link";
 import { Fragment } from "react";
+import "components/index.css";
 
 const TwitterSvg = () => (
   <svg
@@ -121,57 +122,6 @@ function MyApp({ Component, pageProps }) {
           <Icon graphic={WebringSvg} />
         </a>
       </footer>
-      <style jsx global>{`
-        body {
-          background: #050505;
-          color: #bdbdbd;
-          margin: 0;
-          width: 100vw;
-          min-height: 100vh;
-          font-family: -apple-system, BlinkMacSystemFont, sans-serif;
-        }
-        #__next {
-          height: 100vh;
-          display: grid;
-          grid-template-rows: auto 1fr auto;
-        }
-        nav {
-          display: flex;
-        }
-        a,
-        p {
-          color: white;
-        }
-        a:visited {
-          color: #a5a3a3;
-        }
-        header,
-        footer {
-          font-size: 24px;
-          width: 100vw;
-          height: 60px;
-          display: flex;
-          justify-content: center;
-          align-items: center;
-          background: black;
-        }
-        header a,
-        footer a {
-          text-decoration: none;
-        }
-        @media (min-width: 900px) {
-          body {
-            font-size: 24pt;
-          }
-        }
-        img {
-          max-width: 100%;
-        }
-        ol,
-        ul {
-          line-height: 1.75em;
-        }
-      `}</style>
     </Fragment>
   );
 }

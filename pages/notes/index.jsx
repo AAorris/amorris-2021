@@ -8,70 +8,41 @@ function Notes({ notes }) {
       <Head>
         <title>Notes | Aaron Morris </title>
       </Head>
-      <div className="notes-outer">
+      <div className="notes-outer md:mx-auto m-6 md:w-1/2">
         {notes.map((note) => (
-          <div key={note.path} className="note-outer">
+          <div
+            key={note.path}
+            className="note-outer py-6 border-b-2 border-gray-900"
+          >
             <div className="note-inner">
               <Link
                 key={note.path}
                 href="/notes/[slug]"
                 as={`/notes/${note.path}`}
               >
-                <a className="plain">
+                <a className="plain capitalize">
+                  <h3 className="text-white pb-3 text-2xl"> {note.title} </h3>
                   {note.poster && <img className="poster" src={note.poster} />}
-                  <h3 style={{ marginBlockEnd: 0 }}> {note.title} </h3>
                 </a>
               </Link>
-              <sub>
+              <sub className="text-gray-600">
                 Written {new Date(note.created_at).toLocaleDateString()}
               </sub>
               <br />
-              <sub style={{ marginBlockStart: 0 }}>{note.headline}</sub>
+              <sub className="text-gray-400">{note.headline} </sub>
+              <Link
+                key={note.path}
+                href="/notes/[slug]"
+                as={`/notes/${note.path}`}
+              >
+                <a className="text-gray-400">
+                  <sub>{`[read more]`}</sub>
+                </a>
+              </Link>
             </div>
           </div>
         ))}
       </div>
-      <style jsx>{`
-        .note {
-          color: #eee;
-          padding: 1.5rem;
-        }
-        .note img {
-          max-width: 100%;
-        }
-        .note a {
-          color: #eee;
-          font-weight: bold;
-        }
-        .note p {
-          line-height: 1.5em;
-        }
-        .poster {
-          width: 400px;
-          margin: auto;
-          border-radius: 10px;
-          display: block;
-          border: 1px solid rgba(128, 128, 128, 0.2);
-        }
-        .note-outer {
-          background: #313131;
-          color: #bdbdbd;
-          border: 1px solid rgba(128, 128, 128, 0.2);
-          border-radius: 1.5rem;
-          padding: 1.5rem;
-          margin: 1rem auto;
-          box-sizing: content-box;
-          flex: 0 1 400px;
-          margin: 1rem;
-        }
-        .notes-outer {
-          font-size: 18pt;
-          display: flex;
-          flex-wrap: wrap;
-          justify-content: center;
-          width: 100vw;
-        }
-      `}</style>
     </main>
   );
 }

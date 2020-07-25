@@ -8,28 +8,30 @@ function Home(props) {
         <title>Aaron Morris</title>
       </Head>
       <div className="headline">
-        <img src="/images/icons/icon-384x384.png" />
-        <h1>Aaron Morris</h1>
-        <p>
-          👨‍💻<a href="https://www.youtube.com/zapier">@Zapier</a>&nbsp; 🏡{" "}
-          <a href="/img/p10.008.jpg">Tiny house</a>&nbsp; 📜{" "}
-          <Link href="/notes">
-            <a>Notes</a>
-          </Link>
-          &nbsp; 🔗{" "}
-          <Link href="/links">
-            <a>Hyperlinks</a>
-          </Link>
-        </p>
+        <img src="/img/p10.011.jpg" width="400" height="400" />
+        <h1
+          className="font-hairline"
+          style={{ textShadow: "#e2e2e2 10px 30px 0px" }}
+        >
+          Aaron Morris
+        </h1>
+        <p>Full-Stack engineer at Zapier</p>
+        <sub>
+          Follow me on <a href="https://twitter.com/aaorris">Twitter</a> for
+          updates on tech, education, and community
+        </sub>
       </div>
       <style jsx>{`
         main {
           display: grid;
           place-items: center;
+          color: #eee;
         }
         img {
           border-radius: 384px;
-          margin-bottom: -100px;
+          margin: auto;
+          margin-bottom: -3.5em;
+          border: 1px solid #222;
         }
         .headline {
           text-align: center;
@@ -40,6 +42,7 @@ function Home(props) {
           mix-blend-mode: color-dodge;
           margin-block-start: 0;
           letter-spacing: -0.05em;
+          margin-bottom: 2rem;
         }
       `}</style>
     </main>

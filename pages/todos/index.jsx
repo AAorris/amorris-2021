@@ -8,7 +8,7 @@ function Notes({ todos }) {
       <Head>
         <title>Todos | Aaron Morris </title>
       </Head>
-      <div className="todos-outer">
+      <div className="todos-outer text-white">
         {todos
           .sort((l, r) => Number(l.order) - Number(r.order))
           .map(({ id, order, content, completed, created, due }) => {
