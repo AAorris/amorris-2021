@@ -59,15 +59,7 @@ const WebringSvg = () => (
 const Icon = ({ graphic }) => {
   const Graphic = graphic;
   return (
-    <div
-      style={{
-        width: 120,
-        height: 40,
-        boxSizing: "border-box",
-        display: "grid",
-        placeItems: "center",
-      }}
-    >
+    <div className="grid w-1/4 px-8 border-box">
       <Graphic />
     </div>
   );

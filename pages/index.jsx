@@ -7,10 +7,10 @@ function Home(props) {
       <Head>
         <title>Aaron Morris</title>
       </Head>
-      <div className="headline">
-        <img src="/img/p10.011.jpg" width="400" height="400" />
+      <div className="headline pb-8">
+        <img src="/img/p10.011.jpg" width="250" height="250" />
         <h1
-          className="font-hairline"
+          className="font-hairline leading-none"
           style={{ textShadow: "#e2e2e2 10px 30px 0px" }}
         >
           Aaron Morris
@@ -30,7 +30,7 @@ function Home(props) {
         img {
           border-radius: 384px;
           margin: auto;
-          margin-bottom: -3.5em;
+          margin-bottom: -1.75em;
           border: 1px solid #222;
         }
         .headline {
