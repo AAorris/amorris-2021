@@ -1,6 +1,6 @@
 import Head from "next/head";
 import { useRouter } from "next/router";
-import NoteService from "services/notes";
+import NoteRepository from "repositories/notes";
 
 function Note({ note }) {
   const router = useRouter();
@@ -45,15 +45,17 @@ function Note({ note }) {
 }
 
 export async function getStaticProps({ params }) {
-  const note = await new NoteService().getNote(params.slug);
+  const note = await new NoteRepository().getNote(params.slug);
   const props = { note };
   return { props, unstable_revalidate: 1 };
 }
 
 export async function getStaticPaths() {
-  const paths = (await new NoteService().getLatestNotes()).map(({ path }) => ({
-    params: { slug: path },
-  }));
+  const paths = (await new NoteRepository().getLatestNotes()).map(
+    ({ path }) => ({
+      params: { slug: path },
+    })
+  );
   return {
     paths,
     fallback: true,

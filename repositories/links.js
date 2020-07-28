@@ -62,7 +62,7 @@ async function buildLinks() {
   await iteration;
 }
 
-export default class LinkService {
+export default class LinkRepository {
   async getAllLinks() {
     await buildTags();
     await buildLinks();

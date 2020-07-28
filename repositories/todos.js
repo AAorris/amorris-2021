@@ -22,7 +22,7 @@ export function ago(val) {
   }
 }
 
-export default class TodoService {
+export default class TodoRepository {
   async getAllTodos() {
     const resp = await fetch(
       `https://api.todoist.com/rest/v1/tasks?project_id=${project}`,

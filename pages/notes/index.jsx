@@ -1,6 +1,6 @@
 import Head from "next/head";
 import Link from "next/link";
-import NoteService from "services/notes";
+import NoteRepository from "repositories/notes";
 
 function Notes({ notes }) {
   return (
@@ -48,7 +48,7 @@ function Notes({ notes }) {
 }
 
 export async function getStaticProps() {
-  const notes = await new NoteService().getLatestNotes();
+  const notes = await new NoteRepository().getLatestNotes();
   const props = { notes };
   return { props, unstable_revalidate: 1 };
 }

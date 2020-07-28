@@ -1,7 +1,7 @@
 import Head from "next/head";
 import { useRouter } from "next/router";
 import Links from "components/links";
-import LinkService from "services/links";
+import LinkRepository from "repositories/links";
 
 function LinksPage({ title, subtitle, items }) {
   const router = useRouter();
@@ -34,8 +34,10 @@ export async function getStaticPaths() {
 }
 
 export async function getStaticProps({ params }) {
-  const service = new LinkService();
-  const { title, subtitle, items } = await service.getLinksForTag(params.tag);
+  const repository = new LinkRepository();
+  const { title, subtitle, items } = await repository.getLinksForTag(
+    params.tag
+  );
   const props = { title, subtitle, items };
   return { props, unstable_revalidate: 1 };
 }

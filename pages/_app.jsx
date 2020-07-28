@@ -84,8 +84,8 @@ function MyApp({ Component, pageProps }) {
             <Icon graphic={() => "🔗"} />
           </a>
         </Link>
-        <Link href="/todos" as="/todos">
-          <a className="plain" aria-label="Todos">
+        <Link href="/now" as="/now">
+          <a className="plain" aria-label="now">
             <Icon graphic={() => "✅"} />
           </a>
         </Link>

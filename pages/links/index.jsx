@@ -1,6 +1,6 @@
 import Head from "next/head";
 import Links from "components/links";
-import LinkService from "services/links";
+import LinkRepository from "repositories/links";
 
 function LinksPage({ links }) {
   return (
@@ -19,7 +19,7 @@ function LinksPage({ links }) {
 }
 
 export async function getStaticProps() {
-  const links = await new LinkService().getAllLinks();
+  const links = await new LinkRepository().getAllLinks();
   const props = { links };
   return { props, unstable_revalidate: 1 };
 }

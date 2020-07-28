@@ -1,6 +1,6 @@
 import { useState } from "react";
 import Head from "next/head";
-import MediaService from "services/media";
+import MediaRepository from "repositories/media";
 
 const Block = (props) => (
   <section
@@ -77,8 +77,8 @@ function Story(props) {
 }
 
 export const getServerSideProps = async ({ params }) => {
-  const service = new MediaService();
-  const props = await service.getById(params.id);
+  const repository = new MediaRepository();
+  const props = await repository.getById(params.id);
   return { props };
 };
 
