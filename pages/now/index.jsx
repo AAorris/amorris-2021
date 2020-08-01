@@ -10,20 +10,27 @@ function renderItem(item) {
   switch (typeof item) {
     case "boolean":
       // return <input type="checkbox" checked={item} className="m-1 block mx-auto" />
-      return (
-        <div
-          className="bg-green-600 mx-auto"
-          style={{ opacity: item ? 1 : 0, width: 24, height: 24 }}
-        ></div>
-      );
+      if (item === true) {
+        return (
+          <div
+            className="bg-green-600 mx-auto"
+            style={{ width: 24, height: 24 }}
+          ></div>
+        );
+      } else {
+        return (
+          <div
+            className="bg-gray-900 mx-auto"
+            style={{ width: 24, height: 24 }}
+          ></div>
+        );
+      }
     case "string":
       return <span>{item}</span>;
     case "number":
       return (
         <div
-          className={`bg-${
-            item < 0.5 ? "pink" : item > 0.6 ? "green" : "gray"
-          }-500 mx-auto`}
+          className={"bg-green-500"}
           style={{ opacity: item, width: 24, height: 24 }}
         ></div>
       );
@@ -36,7 +43,6 @@ function NowPage({ todos, habits, notes }) {
   const habitKeys = "6A 7A 8A 9A C1 C2 C3 W1 W2 W3 EX LV FT OD AL 1P 2P 3P YH YE YM YI".split(
     " "
   );
-  console.log(habits);
   return (
     <main>
       <Head>
@@ -62,11 +68,7 @@ function NowPage({ todos, habits, notes }) {
           {habits.map((item) => (
             <tr key={item.Day}>
               {habitKeys.map((key) => {
-                // console.log(item[key])
-                // return <td key={key}>{habitKeys.length}</td>
-                return (
-                  <td key={key}>{item[key] && renderItem(item[key] || "")}</td>
-                );
+                return <td key={key}>{renderItem(item[key] || false)}</td>;
               })}
             </tr>
           ))}
@@ -82,7 +84,7 @@ function NowPage({ todos, habits, notes }) {
         {notes.map((item) => {
           const [timestamp, note] = item.split("\t");
           return (
-            <p className="mb-3">
+            <p key={timestamp} className="mb-3">
               <span className="text-gray-600">
                 {ago(new Date(timestamp))} ago
               </span>
