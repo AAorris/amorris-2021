@@ -1,10 +1,10 @@
 export class SimpleAirtableService {
-  constructor(base) {
-    this.base = require("airtable").base(base);
+  constructor(base, table) {
+    this.base = require("airtable").base(base)(table);
   }
   mapAll(fn) {
     const result = [];
-    return this.base("dailies")
+    return this.base
       .select({})
       .eachPage((records, next) => {
         for (let record of records) {
@@ -13,5 +13,8 @@ export class SimpleAirtableService {
         next();
       })
       .then(() => result);
+  }
+  selectAllFields() {
+    return this.mapAll((item) => item.fields);
   }
 }
