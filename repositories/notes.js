@@ -1,3 +1,4 @@
+import removeMarkdown from "remove-markdown";
 import toHtml from "marked";
 
 export default class NotesRepository {
@@ -41,8 +42,9 @@ export default class NotesRepository {
         const result = { ...note };
         if (options.body === false) return result;
 
-        result.body = body;
-        if (options.contentType !== "text/plain") {
+        if (options.contentType === "text/plain") {
+          result.body = removeMarkdown(body);
+        } else {
           result.body = toHtml(body);
         }
 

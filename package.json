@@ -32,6 +32,7 @@
     "react-datocms": "^1.2.5",
     "react-dom": "^16.13.1",
     "react-hls-player": "^0.1.6",
+    "remove-markdown": "^0.3.0",
     "swr": "^0.2.3",
     "tailwindcss": "^1.5.2",
     "use-comments": "^1.0.1",
