@@ -39,13 +39,19 @@ export default class NotesRepository {
         ...note
       }) => {
         const result = { ...note };
-        if (options.body !== false) result.body = toHtml(body);
+        if (options.body === false) return result;
+
+        result.body = body;
+        if (options.contentType !== "text/plain") {
+          result.body = toHtml(body);
+        }
+
         return result;
       }
     );
   }
-  async getNote(path) {
-    const notes = await this.getLatestNotes();
+  async getNote(path, options = {}) {
+    const notes = await this.getLatestNotes(options);
     const [found] = notes.filter((note) => note.path === path);
     if (!found) throw new Error(`Note ${path} not found.`);
     return found;
