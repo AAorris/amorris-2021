@@ -13,9 +13,11 @@ function renderItem(item) {
       if (item === true) {
         return (
           <div
-            className="bg-green-600 mx-auto"
+            className="bg-green-600 text-green-600 mx-auto"
             style={{ width: 24, height: 24 }}
-          ></div>
+          >
+            x
+          </div>
         );
       } else {
         return (
@@ -30,9 +32,11 @@ function renderItem(item) {
     case "number":
       return (
         <div
-          className={"bg-green-500"}
+          className="bg-green-500 text-green-500 text-sm"
           style={{ opacity: item, width: 24, height: 24 }}
-        ></div>
+        >
+          {item}
+        </div>
       );
     default:
       return <></>;
@@ -49,7 +53,7 @@ function NowPage({ todos, habits, notes }) {
         <title>Todos | Aaron Morris </title>
       </Head>
       <table
-        className="block dailies text-white my-3 py-3 px-1 mx-auto border-gray-700 border-t-2 border-b-2"
+        className="block dailies text-white my-3 py-3 px-1 mx-auto"
         style={{ width: "max-content" }}
       >
         <thead>
@@ -74,11 +78,10 @@ function NowPage({ todos, habits, notes }) {
           ))}
         </tbody>
       </table>
-      <div
-        className="text-sm text-gray-300 mx-auto border-b-2 border-gray-600"
-        style={{ width: "64ch" }}
-      >
+      <hr />
+      <div className="text-sm text-gray-300 mx-auto" style={{ width: "64ch" }}>
         <p className="mb-3 text-gray-600">
+          <br />
           Latest from feed.amorris.ca/hallway.txt
         </p>
         {notes.map((item) => {
@@ -94,35 +97,41 @@ function NowPage({ todos, habits, notes }) {
           );
         })}
       </div>
-      <div
-        className="todos-outer text-sm text-white pt-3"
-        style={{ width: "64ch" }}
-      >
+      <hr />
+      <div className="todos-outer text-sm text-white pt-3">
         <p className="mb-3 text-gray-600">Todos</p>
-        {todos
-          .sort((l, r) => Number(l.order) - Number(r.order))
-          .map(({ id, order, content, completed, created, due }) => {
-            return (
-              <div className="todo-outer" key={id}>
-                <div className="todo-inner">
-                  <div className="checkbox-outer">
-                    <input type="checkbox" value={completed} />
-                  </div>
-                  <div>
-                    <span className="content">{content}</span>
-                    <br />
-                    <span className="created">
-                      #{order} Created {ago(new Date(created).getTime())} ago
+        <ul style={{ width: "100%" }}>
+          {todos
+            .sort((l, r) => Number(l.order) - Number(r.order))
+            .map(({ id, order, content, completed, created, due }) => {
+              return (
+                <li className="todo-outer" key={id}>
+                  <div className="todo-inner">
+                    <span className="block checkbox-outer">
+                      <input type="checkbox" value={completed} />
                     </span>
-                    &nbsp;
-                    <span className="due">
-                      {due && `| Due within ${ago(new Date(due.date))}`}
+                    <span className="block">
+                      <span className="content">
+                        #{order} {content}
+                      </span>
+                      <span className="block"></span>
+                      <span className="created">
+                        &nbsp;- Created {ago(new Date(created).getTime())} ago
+                      </span>
+                      &nbsp;
+                      <span className="due">
+                        {due &&
+                          ((ago) =>
+                            ago[0] === "-"
+                              ? `- Due in ${ago.slice(1)}`
+                              : `- Due within ${ago}`)(ago(new Date(due.date)))}
+                      </span>
                     </span>
                   </div>
-                </div>
-              </div>
-            );
-          })}
+                </li>
+              );
+            })}
+        </ul>
       </div>
       <style jsx>{`
         .todos-outer {

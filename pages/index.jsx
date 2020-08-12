@@ -9,17 +9,10 @@ function Home(props) {
       </Head>
       <div className="headline pb-8">
         <img src="/img/p10.011.jpg" width="250" height="250" />
-        <h1
-          className="font-hairline leading-none"
-          style={{ textShadow: "#e2e2e2 10px 30px 0px" }}
-        >
-          Aaron Morris
-        </h1>
-        <p>Full-Stack engineer at Zapier</p>
-        <sub>
-          Follow me on <a href="https://twitter.com/aaorris">Twitter</a> for
-          updates on tech, education, and community
-        </sub>
+        <h1 className="font-hairline leading-none">Aaron Morris</h1>
+        <p>
+          I organize information about technology, education, and community.
+        </p>
       </div>
       <style jsx>{`
         main {

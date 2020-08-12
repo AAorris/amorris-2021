@@ -70,48 +70,49 @@ function MyApp({ Component, pageProps }) {
     <Fragment>
       <header>
         <Link href="/">
-          <a className="plain" aria-label="Home">
-            <Icon graphic={() => "🏠"} />
+          <a className="plain text-white px-3" aria-label="Home">
+            Home
           </a>
         </Link>
+        &nbsp;
         <Link href="/notes" as="/notes">
-          <a className="plain" aria-label="Notes">
-            <Icon graphic={() => "📜"} />
+          <a className="plain text-white px-3" aria-label="Notes">
+            Notes
           </a>
         </Link>
+        &nbsp;
         <Link href="/links" as="/links">
-          <a className="plain" aria-label="Links">
-            <Icon graphic={() => "🔗"} />
+          <a className="plain text-white px-3" aria-label="Links">
+            Links
           </a>
         </Link>
+        &nbsp;
         <Link href="/now" as="/now">
-          <a className="plain" aria-label="now">
-            <Icon graphic={() => "✅"} />
+          <a className="plain text-white px-3" aria-label="now">
+            Now
           </a>
         </Link>
+        <br />
+        <br />
       </header>
+      <hr className="display-none" />
       <Component {...pageProps} />
+      <hr className="display-none" />
       <footer>
         <a
-          className="plain"
-          title="Updates on Twitter"
-          href="https://twitter.com/aaorris"
-        >
-          <Icon graphic={TwitterSvg} />
-        </a>
-        <a
-          className="plain"
+          className="plain px-3 text-white"
           title="Code on Github"
           href="https://github.com/aaorris"
         >
-          <Icon graphic={GithubSvg} />
+          Github
         </a>
+        &nbsp;
         <a
-          className="plain"
+          className="plain px-3 text-white"
           title="Part of a Web Ring"
           href="https://webring.xxiivv.com "
         >
-          <Icon graphic={WebringSvg} />
+          Web Ring
         </a>
       </footer>
     </Fragment>

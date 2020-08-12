@@ -10,10 +10,7 @@ function Notes({ notes }) {
       </Head>
       <div className="notes-outer md:mx-auto m-6 md:w-1/2">
         {notes.map((note) => (
-          <div
-            key={note.path}
-            className="note-outer py-6 border-b-2 border-gray-900"
-          >
+          <div key={note.path} className="note-outer py-6">
             <div className="note-inner">
               <Link
                 key={note.path}
@@ -22,7 +19,6 @@ function Notes({ notes }) {
               >
                 <a className="plain capitalize">
                   <h3 className="text-white pb-3 text-2xl"> {note.title} </h3>
-                  {note.poster && <img className="poster" src={note.poster} />}
                 </a>
               </Link>
               <sub className="text-gray-600">
@@ -40,6 +36,8 @@ function Notes({ notes }) {
                 </a>
               </Link>
             </div>
+            <br />
+            <hr className="display-none" />
           </div>
         ))}
       </div>
