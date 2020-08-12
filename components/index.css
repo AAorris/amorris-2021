@@ -33,7 +33,7 @@ footer a {
 }
 @media (min-width: 900px) {
   body {
-    font-size: 18pt;
+    font-size: 16pt;
   }
 }
 img {
@@ -42,4 +42,7 @@ img {
 ol,
 ul {
   line-height: 1.75em;
+}
+hr {
+  border-color: #333;
 }

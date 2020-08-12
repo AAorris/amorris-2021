@@ -8,17 +8,12 @@ export default function Tags({ children }) {
       {children.map((tag, idx) => (
         <Link key={tag} href="/links/tagged/[tag]" as={`/links/tagged/${tag}`}>
           <a>
-            <span>{` #${tag}${idx === children.length ? "" : " "}`}</span>
+            <span className="p-1 text-center inline-block text-gray-600">{` #${tag}${
+              idx === children.length ? "" : " "
+            }`}</span>
           </a>
         </Link>
       ))}
-      <style jsx>{`
-        span {
-          display: inline-block;
-          padding: 4px;
-          text-align: center;
-        }
-      `}</style>
     </span>
   );
 }

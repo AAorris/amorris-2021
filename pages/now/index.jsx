@@ -12,73 +12,95 @@ function renderItem(item) {
       // return <input type="checkbox" checked={item} className="m-1 block mx-auto" />
       if (item === true) {
         return (
-          <div
-            className="bg-green-600 mx-auto"
+          <span
+            className="bg-green-600 text-green-600 mx-auto block"
             style={{ width: 24, height: 24 }}
-          ></div>
+          >
+            &nbsp;x&nbsp;
+          </span>
         );
       } else {
         return (
-          <div
-            className="bg-gray-900 mx-auto"
+          <span
+            className="bg-gray-900 mx-auto block"
             style={{ width: 24, height: 24 }}
-          ></div>
+          >
+            &nbsp;&nbsp;&nbsp;
+          </span>
         );
       }
     case "string":
       return <span>{item}</span>;
     case "number":
       return (
-        <div
-          className={"bg-green-500"}
-          style={{ opacity: item, width: 24, height: 24 }}
-        ></div>
+        <code
+          className="bg-green-500 text-green-500 block"
+          style={{
+            opacity: item,
+            width: 24,
+            height: 24,
+          }}
+        >
+          &nbsp;{Math.floor(item * 10)}&nbsp;
+        </code>
       );
     default:
       return <></>;
   }
 }
 
-function NowPage({ todos, habits, notes }) {
+function Table({ habits }) {
   const habitKeys = "6A 7A 8A 9A C1 C2 C3 W1 W2 W3 EX LV FT OD AL 1P 2P 3P YH YE YM YI".split(
     " "
   );
+  return (
+    <pre
+      className="block dailies text-white my-3 py-3 px-1 mx-auto"
+      style={{ width: "max-content" }}
+    >
+      <div>
+        <div>
+          <div className="text-left text-gray-600" colSpan="40">
+            Hydration, sleep, exercise, and other daily things.
+          </div>
+        </div>
+        <div className="text-gray-500">
+          {habitKeys.map((name) => (
+            <code key={name}>{name}&nbsp;</code>
+          ))}
+        </div>
+      </div>
+      <section>
+        {habits.map((item) => (
+          <div key={item.Day}>
+            {habitKeys.map((key) => {
+              return (
+                <span
+                  key={key}
+                  style={{ width: "3ch", display: "inline-block" }}
+                >
+                  {renderItem(item[key] || false)}
+                </span>
+              );
+            })}
+          </div>
+        ))}
+      </section>
+    </pre>
+  );
+}
+
+function NowPage({ todos, habits, notes }) {
   return (
     <main>
       <Head>
         <title>Todos | Aaron Morris </title>
       </Head>
-      <table
-        className="block dailies text-white my-3 py-3 px-1 mx-auto border-gray-700 border-t-2 border-b-2"
-        style={{ width: "max-content" }}
-      >
-        <thead>
-          <tr>
-            <th className="text-left text-gray-600" colSpan="40">
-              Hydration, sleep, exercise, and other daily things.
-            </th>
-          </tr>
-          <tr className="text-gray-500">
-            {habitKeys.map((name) => (
-              <th key={name}>{name}</th>
-            ))}
-          </tr>
-        </thead>
-        <tbody>
-          {habits.map((item) => (
-            <tr key={item.Day}>
-              {habitKeys.map((key) => {
-                return <td key={key}>{renderItem(item[key] || false)}</td>;
-              })}
-            </tr>
-          ))}
-        </tbody>
-      </table>
-      <div
-        className="text-sm text-gray-300 mx-auto border-b-2 border-gray-600"
-        style={{ width: "64ch" }}
-      >
+      <Table habits={habits} />
+      <hr />
+      <div className="text-sm text-gray-300 mx-auto" style={{ width: "64ch" }}>
         <p className="mb-3 text-gray-600">
+          <br />
           Latest from feed.amorris.ca/hallway.txt
         </p>
         {notes.map((item) => {
@@ -94,35 +116,38 @@ function NowPage({ todos, habits, notes }) {
           );
         })}
       </div>
-      <div
-        className="todos-outer text-sm text-white pt-3"
-        style={{ width: "64ch" }}
-      >
+      <hr />
+      <div className="todos-outer text-sm text-white pt-3">
         <p className="mb-3 text-gray-600">Todos</p>
-        {todos
-          .sort((l, r) => Number(l.order) - Number(r.order))
-          .map(({ id, order, content, completed, created, due }) => {
-            return (
-              <div className="todo-outer" key={id}>
-                <div className="todo-inner">
-                  <div className="checkbox-outer">
-                    <input type="checkbox" value={completed} />
-                  </div>
-                  <div>
-                    <span className="content">{content}</span>
-                    <br />
-                    <span className="created">
-                      #{order} Created {ago(new Date(created).getTime())} ago
+        <ul style={{ width: "100%" }}>
+          {todos
+            .sort((l, r) => Number(l.order) - Number(r.order))
+            .map(({ id, order, content, completed, created, due }) => {
+              return (
+                <li className="todo-outer" key={id}>
+                  <div className="todo-inner">
+                    <span className="block">
+                      <span className="content">
+                        #{order} {content}
+                      </span>
+                      <span className="block"></span>
+                      <span className="created">
+                        &nbsp;- Created {ago(new Date(created).getTime())} ago
+                      </span>
+                      &nbsp;
+                      <span className="due">
+                        {due &&
+                          ((ago) =>
+                            ago[0] === "-"
+                              ? `- Due in ${ago.slice(1)}`
+                              : `- Due within ${ago}`)(ago(new Date(due.date)))}
+                      </span>
                     </span>
-                    &nbsp;
-                    <span className="due">
-                      {due && `| Due within ${ago(new Date(due.date))}`}
-                    </span>
                   </div>
-                </div>
-              </div>
-            );
-          })}
+                </li>
+              );
+            })}
+        </ul>
       </div>
       <style jsx>{`
         .todos-outer {
