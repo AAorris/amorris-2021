@@ -31,53 +31,71 @@ function renderItem(item) {
       return <span>{item}</span>;
     case "number":
       return (
-        <div
-          className="bg-green-500 text-green-500 text-sm"
-          style={{ opacity: item, width: 24, height: 24 }}
+        <span
+          className="bg-green-500 text-green-500"
+          style={{
+            display: "inline-block",
+            opacity: item,
+            width: 24,
+            height: 24,
+          }}
         >
-          {item}
-        </div>
+          {Math.floor(item * 10)}
+        </span>
       );
     default:
       return <></>;
   }
 }
 
-function NowPage({ todos, habits, notes }) {
+function Table({ habits }) {
   const habitKeys = "6A 7A 8A 9A C1 C2 C3 W1 W2 W3 EX LV FT OD AL 1P 2P 3P YH YE YM YI".split(
     " "
   );
+  return (
+    <pre
+      className="block dailies text-white my-3 py-3 px-1 mx-auto"
+      style={{ width: "max-content" }}
+    >
+      <div>
+        <div>
+          <div className="text-left text-gray-600" colSpan="40">
+            Hydration, sleep, exercise, and other daily things.
+          </div>
+        </div>
+        <div className="text-gray-500">
+          {habitKeys.map((name) => (
+            <code key={name}>{name}&nbsp;</code>
+          ))}
+        </div>
+      </div>
+      <section>
+        {habits.map((item) => (
+          <div key={item.Day}>
+            {habitKeys.map((key) => {
+              return (
+                <span
+                  key={key}
+                  style={{ width: "3ch", display: "inline-block" }}
+                >
+                  {renderItem(item[key] || false)}
+                </span>
+              );
+            })}
+          </div>
+        ))}
+      </section>
+    </pre>
+  );
+}
+
+function NowPage({ todos, habits, notes }) {
   return (
     <main>
       <Head>
         <title>Todos | Aaron Morris </title>
       </Head>
-      <table
-        className="block dailies text-white my-3 py-3 px-1 mx-auto"
-        style={{ width: "max-content" }}
-      >
-        <thead>
-          <tr>
-            <th className="text-left text-gray-600" colSpan="40">
-              Hydration, sleep, exercise, and other daily things.
-            </th>
-          </tr>
-          <tr className="text-gray-500">
-            {habitKeys.map((name) => (
-              <th key={name}>{name}</th>
-            ))}
-          </tr>
-        </thead>
-        <tbody>
-          {habits.map((item) => (
-            <tr key={item.Day}>
-              {habitKeys.map((key) => {
-                return <td key={key}>{renderItem(item[key] || false)}</td>;
-              })}
-            </tr>
-          ))}
-        </tbody>
-      </table>
+      <Table habits={habits} />
       <hr />
       <div className="text-sm text-gray-300 mx-auto" style={{ width: "64ch" }}>
         <p className="mb-3 text-gray-600">
@@ -107,9 +125,6 @@ function NowPage({ todos, habits, notes }) {
               return (
                 <li className="todo-outer" key={id}>
                   <div className="todo-inner">
-                    <span className="block checkbox-outer">
-                      <input type="checkbox" value={completed} />
-                    </span>
                     <span className="block">
                       <span className="content">
                         #{order} {content}
