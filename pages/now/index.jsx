@@ -12,36 +12,37 @@ function renderItem(item) {
       // return <input type="checkbox" checked={item} className="m-1 block mx-auto" />
       if (item === true) {
         return (
-          <div
-            className="bg-green-600 text-green-600 mx-auto"
+          <span
+            className="bg-green-600 text-green-600 mx-auto block"
             style={{ width: 24, height: 24 }}
           >
-            x
-          </div>
+            &nbsp;x&nbsp;
+          </span>
         );
       } else {
         return (
-          <div
-            className="bg-gray-900 mx-auto"
+          <span
+            className="bg-gray-900 mx-auto block"
             style={{ width: 24, height: 24 }}
-          ></div>
+          >
+            &nbsp;&nbsp;&nbsp;
+          </span>
         );
       }
     case "string":
       return <span>{item}</span>;
     case "number":
       return (
-        <span
-          className="bg-green-500 text-green-500"
+        <code
+          className="bg-green-500 text-green-500 block"
           style={{
-            display: "inline-block",
             opacity: item,
             width: 24,
             height: 24,
           }}
         >
-          {Math.floor(item * 10)}
-        </span>
+          &nbsp;{Math.floor(item * 10)}&nbsp;
+        </code>
       );
     default:
       return <></>;
