@@ -95,7 +95,6 @@ function MyApp({ Component, pageProps }) {
         <br />
         <br />
       </header>
-      <hr className="display-none" />
       <Component {...pageProps} />
       <hr className="display-none" />
       <footer>
