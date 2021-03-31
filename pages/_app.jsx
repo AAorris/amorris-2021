@@ -75,21 +75,9 @@ function MyApp({ Component, pageProps }) {
           </a>
         </Link>
         &nbsp;
-        <Link href="/notes" as="/notes">
-          <a className="plain text-white px-3" aria-label="Notes">
-            Notes
-          </a>
-        </Link>
-        &nbsp;
         <Link href="/links" as="/links">
           <a className="plain text-white px-3" aria-label="Links">
             Links
-          </a>
-        </Link>
-        &nbsp;
-        <Link href="/now" as="/now">
-          <a className="plain text-white px-3" aria-label="now">
-            Now
           </a>
         </Link>
         <br />
@@ -104,14 +92,6 @@ function MyApp({ Component, pageProps }) {
           href="https://github.com/aaorris"
         >
           Github
-        </a>
-        &nbsp;
-        <a
-          className="plain px-3 text-white"
-          title="Part of a Web Ring"
-          href="https://webring.xxiivv.com "
-        >
-          Web Ring
         </a>
       </footer>
     </Fragment>

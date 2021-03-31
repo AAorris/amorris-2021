@@ -11,7 +11,8 @@ function LinksPage({ links }) {
       <Links items={links} />
       <style jsx>{`
         main {
-          padding: 3rem;
+          margin: 0;
+          padding: 0;
         }
       `}</style>
     </main>
